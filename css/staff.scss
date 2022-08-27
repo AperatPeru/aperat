@@ -12,11 +12,6 @@
   src: url("../fonts/Poppins-Bold.otf");
 }
 
-@font-face {
-  font-family: 'primary';
-  src: url("../fonts/CopperplateCC-Bold.otf");
-}
-
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
@@ -302,9 +297,6 @@ body{
                   }
                 }
               }
-              .selected{
-                color: $primary-color;
-              }
               .donate{
                 @media(min-width: 1024px){
                   color: #fff;
@@ -425,6 +417,10 @@ body{
                         margin: auto;
                       }
                     }
+                  }
+                  .selected{
+                    color: $primary-color;
+                    background-color: #f8f8f8;
                   }
                 }
               }
@@ -553,31 +549,41 @@ body{
         max-width: 1200px;
         margin: auto;
       }
+      h2{
+        text-align: center;
+        font-family: $tertiary-font;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        @media(min-width: 600px){
+          width: 100%;
+          margin-bottom: 2rem;
+        }
+        @media(min-width: 1024px){
+          width: 100%;
+          margin-bottom: 6rem;
+          font-size: 3rem;
+        }
+      }
       #directiva{
         padding: 0 1rem;
-        @media(min-width: 1024px){
-          display: flex;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+        justify-content: space-between;
+        box-sizing: border-box;
+        grid-gap: 1rem;
+        @media(min-width: 600px){
           padding: 0;
-          flex-wrap: wrap;
-          justify-content: space-between;
+          grid-gap: 2rem;
         }
-        h2{
-          text-align: center;
-          font-family: $font-primary;
-          color: $primary-color;
-          text-decoration: underline;
-          @media(min-width: 1024px){
-            width: 100%;
-            margin-bottom: 3rem;
-          }
+        @media(min-width: 1024px){
+          grid-template-columns: repeat(3, 20rem);
         }
         .profile{
           text-align: center;
           font-family: $tertiary-font;
           margin-bottom: 5rem;
-          @media(min-width: 1024px){
-            width: 25%;
-          }
           img{
             width: 100%;
             box-sizing: border-box;
@@ -595,17 +601,34 @@ body{
         }
         #henry{
           @media(min-width: 1024px){
-
+            order: 2;
+          }
+        }
+        #alicia{
+          @media(min-width: 1024px){
+            order: 1;
+          }
+        }
+        #billy{
+          @media(min-width: 1024px){
+            order: 2;
           }
         }
       }
       #asambleistas{
         padding: 0 1rem;
-        @media(min-width: 1024px){
-          display: flex;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+        justify-content: space-between;
+        box-sizing: border-box;
+        grid-gap: 1rem;
+        @media(min-width: 600px){
           padding: 0;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
+          grid-gap: 2rem;
+        }
+        @media(min-width: 1024px){
+          grid-template-columns: repeat(3, 20rem);
         }
         h2{
           text-align: center;
@@ -622,8 +645,7 @@ body{
           font-family: $tertiary-font;
           margin-bottom: 5rem;
           @media(min-width: 1024px){
-            width: 25%;
-            margin: 2rem;
+
           }
           img{
             width: 100%;
@@ -643,11 +665,17 @@ body{
       }
       #asociados{
         padding: 0 1rem;
-        @media(min-width: 1024px){
-          display: flex;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+        justify-content: center;
+        box-sizing: border-box;
+        @media(min-width: 600px){
           padding: 0;
-          flex-wrap: wrap;
-          justify-content: center;
+          grid-gap: 2rem;
+        }
+        @media(min-width: 1024px){
+          grid-template-columns: repeat(3, 20rem);
         }
         h2{
           text-align: center;
@@ -663,9 +691,7 @@ body{
           text-align: center;
           font-family: $tertiary-font;
           margin-bottom: 5rem;
-          @media(min-width: 1024px){
-            width: 25%;
-          }
+          grid-column: 2/3;
           img{
             width: 100%;
             box-sizing: border-box;
