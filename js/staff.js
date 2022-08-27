@@ -4,22 +4,17 @@ window.addEventListener('scroll',()=>{
   const scroll = document.documentElement.scrollTop;
   const header = document.getElementById('header');
   const headerContainer = document.getElementById('header-container');
-  const logo = document.getElementById('logo');
   const headerPrincipal = document.getElementById('header-principal');
   if(scroll > 150){
     headerPrincipal.classList.add('scroll-header-principal')
     header.classList.add('scroll-header');
     headerContainer.classList.add('header-container-scroll')
-    logo.classList.add('img-scroll');
   }else{
     headerPrincipal.classList.remove('scroll-header-principal')
     header.classList.remove('scroll-header')
     headerContainer.classList.remove('header-container-scroll')
-    logo.classList.remove('img-scroll');
   }
 })
-
-
 
 
 const buttonUp = document.getElementById('button-up')
@@ -71,7 +66,6 @@ we.addEventListener('click',()=>{
   weMenu.classList.toggle('visible')
   iconWeFirst.classList.toggle('rotate')
 })
-
 
 
 

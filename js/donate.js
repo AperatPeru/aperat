@@ -4,18 +4,17 @@ window.addEventListener('scroll',()=>{
   const scroll = document.documentElement.scrollTop;
   const header = document.getElementById('header');
   const headerContainer = document.getElementById('header-container');
-  const logo = document.getElementById('logo');
   const headerPrincipal = document.getElementById('header-principal');
   if(scroll > 1){
     headerPrincipal.classList.add('scroll-header-principal')
     header.classList.add('scroll-header');
     headerContainer.classList.add('header-container-scroll')
-    logo.classList.add('img-scroll');
+
   }else{
     headerPrincipal.classList.remove('scroll-header-principal')
     header.classList.remove('scroll-header')
     headerContainer.classList.remove('header-container-scroll')
-    logo.classList.remove('img-scroll');
+
   }
 })
 
@@ -56,32 +55,6 @@ close.addEventListener('click',()=>{
   menu.classList.remove('slide')
   burger.classList.remove('opacity')
   proyectsMenu.classList.remove('visible')
-})
-
-
-
-//Menu superior
-
-
-const we = document.getElementById('we')
-const weMenu = document.querySelector('.we__menu')
-const iconWeFirst = document.getElementById("icon-we-1")
-
-we.addEventListener('click',()=>{
-  weMenu.classList.toggle('visible')
-  iconWeFirst.classList.toggle('rotate')
-})
-
-
-
-
-const proyects = document.getElementById('proyects')
-const proyectsMenu = document.querySelector('.proyects__menu')
-const iconWeSecond = document.getElementById("icon-proyects")
-
-proyects.addEventListener('click',()=>{
-  proyectsMenu.classList.toggle('visible')
-  iconWeSecond.classList.toggle('rotate')
 })
 
 
