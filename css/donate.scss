@@ -23,7 +23,7 @@ $font-primary: 'primary';
 
 $secondary-color: #58b0f6;
 $tertiary-color: #2f5eaf;
-$primary-color: #2f5eaf;
+$primary-color: #004284;
 
 body{
   margin: 0;
@@ -204,8 +204,19 @@ body{
         @media(min-width: 1024px){
           max-width: 1340px;
         }
-        #logo{
+        .logo{
           height: 80%;
+        }
+        .logo-2{
+          height: 22%;
+          position: relative;
+          left: -3%;
+          @media(min-width: 1024px) and (max-width: 1250px){
+            display: none;
+          }
+          @media(min-width: 1250px){
+            left: -2%;
+          }
         }
         #burger{
           transition: opacity 0.3s;
@@ -643,23 +654,6 @@ body{
           p{
             width: 100%;
             text-align: center;
-          }
-          a{
-            margin: auto;
-            display: block;
-            text-align: center;
-            width: 50%;
-            border-radius: 100px;
-            border: solid 1px #0070ba;
-            padding: 1rem 3rem;
-            @media(min-width: 1024px){
-              width: 20%;
-            }
-            img{
-              width: 100%;
-              margin: auto;
-              text-align: center;
-            }
           }
         }
         .yape{

@@ -24,7 +24,7 @@ $font-primary: 'primary';
 
 $secondary-color: #58b0f6;
 $tertiary-color: #2f5eaf;
-$primary-color: #2f5eaf;
+$primary-color: #004284;
 
 body{
   margin: 0;
@@ -205,8 +205,19 @@ body{
         @media(min-width: 1024px){
           max-width: 1340px;
         }
-        #logo{
+        .logo{
           height: 80%;
+        }
+        .logo-2{
+          height: 22%;
+          position: relative;
+          left: -3%;
+          @media(min-width: 1024px) and (max-width: 1250px){
+            display: none;
+          }
+          @media(min-width: 1250px){
+            left: -2%;
+          }
         }
         #burger{
           transition: opacity 0.3s;
@@ -691,7 +702,9 @@ body{
           text-align: center;
           font-family: $tertiary-font;
           margin-bottom: 5rem;
-          grid-column: 2/3;
+          @media(min-width: 728px){
+            grid-column: 2/3;
+          }
           img{
             width: 100%;
             box-sizing: border-box;

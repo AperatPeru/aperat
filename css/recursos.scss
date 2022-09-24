@@ -29,7 +29,7 @@ $font-primary: 'primary';
 
 $secondary-color: #58b0f6;
 $tertiary-color: #2f5eaf;
-$primary-color: #2f5eaf;
+$primary-color: #004284;
 
 body{
   margin: 0;
@@ -209,16 +209,18 @@ body{
             box-shadow: none;
           }
         }
-        #logo{
-          width: 20%;
-          @media(min-width: 1024px){
-            width: 100%;
-            max-width: 5rem;
-            grid-column: 1/2;
-            grid-row: 1/2;
-            &.img-scroll{
-              width: 80%;
-            }
+        .logo{
+          height: 80%;
+        }
+        .logo-2{
+          height: 22%;
+          position: relative;
+          left: -3%;
+          @media(min-width: 1024px) and (max-width: 1250px){
+            display: none;
+          }
+          @media(min-width: 1250px){
+            left: -2%;
           }
         }
         h1{
