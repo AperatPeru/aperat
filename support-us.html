@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/2fe60e76a8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/support-us.min.css">
+  <link rel="icon" href="img/logo.png">
+  <title>Donación</title>
+</head>
+<body>
+  <header id="header-principal">
+    <div class="header__social">
+      <div class="header__social__container">
+        <div class="social__top">
+          <div class="phone">
+            <i class="fa-solid fa-phone"></i>
+            <p>929 630 098</p>
+          </div>
+          <div class="mail">
+            <i class="fa-solid fa-envelope"></i>
+            <p>contacto@aperat.org.pe</p>
+          </div>
+        </div>
+        <div class="social__redes">
+          <a target="_blank" href="https://www.facebook.com/APERAT"><i class="fa-brands fa-facebook-f"></i></a>
+          <a target="_blank" href="https://twitter.com/AteosPeru"><i class="fa-brands fa-twitter"></i></a>
+          <a target="_blank" href="https://www.youtube.com/user/ateosperuanos"><i class="fa-brands fa-youtube"></i></a>
+          <a target="_blank" href="https://www.instagram.com/aperatperu/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div id="header" class="header__container">
+      <div id="header-container" class="header__container__menu">
+        <img class="logo" src="img/logo.svg" alt="">
+        <img class="logo-2" src="img/logo-2.svg" alt="">
+        <button id="burger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="menu">
+          <ul>
+            <i class="fas fa-times"></i>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="we">
+              <p id="we">We</p>
+              <i id="icon-we-1" class="fa-solid fa-caret-down"></i>
+              <ul class="we__menu">
+                <li><a href="aperat.html">About the Aperat</a></li>
+                <li><a href="staff.html">Members of the Aperat</a></li>
+              </ul>
+            </li>
+            <li class="proyects">
+              <p id="proyects">Proyectos</p>
+              <i id="icon-proyects" class="fa-solid fa-caret-down"></i>
+              <ul class="proyects__menu">
+                <li><a href="exonerate.html">Exonerate yourself</a></li>
+                <li><a href="apostasia.html">Apostasy</a></li>
+                <li><a href="defensa.html">Legal Defense</a></li>
+                <li><a class="gastos" href="gastos.html">Financing the Church</a></li>
+              </ul>
+            </li>
+            <li><a href="recursos.html">Resources</a></li>
+            <li><a class="donate" href="donate.html">Donate</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="donate">
+      <div class="donate__container">
+        <h4>Can we support each other?</h4>
+        <p class="donate-text">The Peruvian Association of Atheists is one of the few organizations dedicated to the struggle for the achievement of a secular state in Peru, a country by tradition and confessional praxis. We support projects, events and groups that spread an atheist, naturalist and scientistic worldview. In addition, we legally defend and guide non-believers when their right to conscientious objection is affected. If you feel identified with our work, your support is very important to us. The proceeds will be used in actions such as:</p>
+        <ul>
+          <li>Creation and development of projects in favor of secularism in Peru.</li>
+          <li>Maintenance of the Legal Defense area of APERAT.</li>
+          <li>Coordinate meetings with different groups related to our ideas.</li>
+          <li>Dissemination of atheist and scientistic worldviews and philosophies.</li>
+          <li>Meetings with atheist people from different parts of the country.</li>
+        </ul>
+        <img class="img-donar" src="img/bob.jpg" alt="">
+        <div class="paypal">
+          <p>You can make a donation via PayPal:</p>
+          <div id="donate-button-container">
+          <div id="donate-button"></div>
+          <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+          <script>
+          PayPal.Donation.Button({
+          env:'production',
+          hosted_button_id:'NVULAB2G444ES',
+          image: {
+          src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+          alt:'Donate with PayPal button',
+          title:'PayPal - The safer, easier way to pay online!',
+          }
+          }).render('#donate-button');
+          </script>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <i id="button-up" class="fa-solid fa-chevron-up"></i>
+    <a class="fa-brands fa-whatsapp" href="https://api.whatsapp.com/send?phone=51929630098&text=¡Hola!%20Bienvenido%20a%20la%20Aperat.%20Escríbenos%20para%20cualquier%20duda%20o%20consulta%20que%20tengas." target="_blank">
+      <div class="joinchat__tooltip">
+				<p>¿Necesitas ayuda?</p>
+			</div>
+    </a>
+    <div class="footer__sections">
+      <div class="footer__section footer__section--main">
+        <h3>ABOUT US</h3>
+        <p>APERAT is an entity registered in the Public Registry as a non-profit association registered in the Public Registry under the Record No. 12658791. As an organization, APERAT brings together and provides spaces for action and dialogue to the community of non-believers and secular humanists in Peru. APERAT is part of Humanists International.</p>
+      </div>
+      <ul class="footer__section footer__section--pages">
+        <h3>Links</h3>
+        <li><a href="join-us.html">Join us</a></li>
+        <li><a href="#">Work with APERAT</a></li>
+
+      </ul>
+      <div class="footer__section footer__section--asociados">
+        <h3>ASSOCIATED ORGANIZATIONS</h3><br>
+        <a class="humanist-international" target="_blank" href="https://humanists.international/"><img class="humanist" src="img/humanist.png" alt=""></a>
+        <a class="sociedad-peruana" target="_blank" href="https://ssh.org.pe/"><img class="peruvian-humanist" src="img/sociedad.png" alt=""></a>
+        <a class="alliance" target="_blank" href="https://www.atheistalliance.org/"><img src="img/alliance.png" alt=""></a>
+        <a class="extrapolitica" target="_blank" href="https://extrapolitica.ssh.org.pe/"><img src="img/extrapolitica.png" alt=""></a>
+        <a class="manzana" target="_blank" href="https://manzana.ssh.org.pe/"><img src="img/manzana.png" alt=""></a>
+        <a class="tronico" target="_blank" href="https://www.thehuman.team/"><img src="img/tronico.png" alt=""></a>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <div class="footer__copyright__container">
+        <p>Designed and powered by<a target="_blank" href="https://www.facebook.com/AlexiaWeb98/">Alexia Web</a></p>
+      </div>
+    </div>
+  </footer>
+<script src="js/donate.js"></script>
+</body>
+</html>
