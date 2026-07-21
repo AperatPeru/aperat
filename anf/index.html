@@ -78,7 +78,35 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 35px;
+      margin-bottom: 24px;
+    }
+
+    .qr-container {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .qr-card {
+      display: inline-block;
+      background-color: #ffffff;
+      padding: 12px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+    }
+
+    .qr-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .qr-code {
+      width: 160px;
+      height: 160px;
+      display: block;
     }
 
     .btn-portal {
@@ -120,6 +148,12 @@
     <h1 class="title">Adrián Núñez Ferdmann</h1>
     <p class="subtitle">Vice President</p>
     
+    <div class="qr-container">
+      <a href="qr/" class="qr-card" title="Scan or click to view contact card">
+        <img src="qr/qr-blue.svg" alt="Contact QR Code" class="qr-code" />
+      </a>
+    </div>
+
     <a href="qr/" class="btn-portal">
       <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM13 21h3v-3h-3v3zM16 18h3v-3h-3v3zM13 15h3v-3h-3v3zM19 18h2v-3h-2v3zM19 21h2v-3h-2v3zM16 21h3v-3h-3v3zM18 13h3v-2h-3v2z" />
