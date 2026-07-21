@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About APERAT - Peruvian Association of Atheists</title>
+
+    <!-- SEO & Favicon -->
+    <meta
+      name="description"
+      content="Basic information and core pillars of APERAT, the Peruvian Association of Atheists, in English."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg-page: #002d5c; /* Darker navy blue for page background */
+        --bg-card: #004284; /* APERAT blue for the card */
+        --text-white: #ffffff;
+        --text-muted: #cbd5e1; /* Slate 300 - High contrast & readability */
+        --border-color: rgba(255, 255, 255, 0.15);
+        --accent-color: #25d366; /* Matching Green for secondary accents */
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        background-color: var(--bg-page);
+        color: var(--text-white);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 16px;
+        line-height: 1.6;
+      }
+
+      /* Container matching the contact card style but wider for readable articles */
+      .container {
+        width: 100%;
+        max-width: 480px;
+        background: var(--bg-card);
+        border-radius: 8px;
+        padding: 32px 24px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        border: 1px solid var(--border-color);
+      }
+
+      .logo-header {
+        margin-bottom: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .logo-header img {
+        width: 55%;
+        height: auto;
+        max-height: 150px;
+        object-fit: contain;
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 6px;
+        letter-spacing: -0.5px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 1.5px;
+        margin-bottom: 28px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        margin-top: 24px;
+        color: var(--text-white);
+        border-left: 3px solid var(--text-white);
+        padding-left: 10px;
+      }
+
+      p {
+        font-size: 14.5px;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+      }
+
+      /* Pillars list */
+      .pillars-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .pillar-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 6px;
+        padding: 16px;
+      }
+
+      .pillar-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--text-white);
+        margin-bottom: 6px;
+      }
+
+      .pillar-desc {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        margin: 0;
+      }
+
+      /* Actions/Navigation buttons */
+      .actions-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 32px;
+        border-top: 1px solid var(--border-color);
+        padding-top: 24px;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease;
+        text-align: center;
+      }
+
+      .btn-back {
+        background: var(--text-white);
+        color: var(--bg-card);
+        border: none;
+      }
+
+      .btn-back:hover {
+        background: #f1f5f9;
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--text-white);
+        border: 1px solid var(--border-color);
+      }
+
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: var(--text-white);
+      }
+
+      .footer-credits {
+        margin-top: 28px;
+        font-size: 11px;
+        color: var(--text-muted);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .footer-credits a {
+        color: var(--text-white);
+        text-decoration: none;
+      }
+
+      .footer-credits a:hover {
+        text-decoration: underline;
+      }
+
+      .icon-svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logo Inside Card -->
+      <div class="logo-header">
+        <img src="img/logo-aperat-full.svg" alt="APERAT Logo" />
+      </div>
+
+      <h1>About APERAT</h1>
+      <div class="subtitle">Peruvian Association of Atheists</div>
+
+      <h2>Who We Are</h2>
+      <p>
+        Founded on November 4, 2009, in Lima, the
+        <strong>Peruvian Association of Atheists (APERAT)</strong> is a
+        non-profit civil organization. APERAT represents and provides spaces for
+        action, dialogue, and community building for atheists, agnostics,
+        secular humanists, and freethinkers in Peru.
+      </p>
+
+      <h2>Our Core Pillars</h2>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-title">Scientism</div>
+          <div class="pillar-desc">
+            We adopt a scientific approach as the most reliable way to acquire
+            knowledge, applying reason and empirical inquiry to understanding
+            the human experience and the natural world.
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-title">Secular Humanism</div>
+          <div class="pillar-desc">
+            As human beings are responsible for giving meaning to their own
+            lives, we promote ethical values based on reason, empathy, and human
+            rights, without relying on supernatural beliefs.
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-title">Laicism / Secular State</div>
+          <div class="pillar-desc">
+            We advocate for a strictly secular state that guarantees absolute
+            freedom of conscience, equality before the law, and
+            non-discrimination for all citizens, regardless of their religious
+            beliefs.
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-title">Progressivism</div>
+          <div class="pillar-desc">
+            We support social liberty, sexual and reproductive rights, and equal
+            civil rights for all communities, rejecting conservatism rooted in
+            dogmatic religious traditions.
+          </div>
+        </div>
+      </div>
+
+      <h2>Global Connections</h2>
+      <p>
+        APERAT is actively engaged in international advocacy. We are proud
+        members of <strong>Humanists International</strong> (formerly IHEU) and
+        <strong>Atheist Alliance International</strong>, working with global
+        partners to promote secular values and protect freethinkers.
+      </p>
+
+      <!-- Navigation Buttons -->
+      <div class="actions-nav">
+        <a href="index.html" class="btn btn-outline">
+          Visit Official Site (Spanish)
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Info -->
+    <div class="footer-credits">
+      <span>© 2026 APERAT. All rights reserved.</span>
+      <span
+        >Official page of the
+        <a href="index.html">Peruvian Association of Atheists</a></span
+      >
+    </div>
+  </body>
+</html>

@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adrián Núñez Ferdmann - Vice President | APERAT</title>
+
+    <!-- SEO & Favicon -->
+    <meta
+      name="description"
+      content="Contact details for Adrián Núñez Ferdmann, Vice President of APERAT. Save contact info or get in touch via WhatsApp."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="../../img/logo.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg-page: #002d5c; /* Darker navy blue for page background */
+        --bg-card: #004284; /* APERAT blue for the card */
+        --text-white: #ffffff;
+        --text-muted: #cbd5e1; /* Slate 300 - High contrast & readability on blue */
+        --border-color: rgba(255, 255, 255, 0.15);
+        --whatsapp-color: #25d366;
+        --whatsapp-hover: #20ba56;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        background-color: var(--bg-page);
+        color: var(--text-white);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 16px;
+      }
+
+      /* Minimal Card - Solid APERAT blue background */
+      .card-container {
+        width: 100%;
+        max-width: 360px;
+        background: var(--bg-card);
+        border-radius: 8px;
+        padding: 32px 24px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        border: 1px solid var(--border-color);
+      }
+
+      /* Logo inside the card (header of the card) */
+      .logo-header {
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .logo-header a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .logo-header img {
+        width: 60%;
+        height: auto;
+        max-height: 150px;
+        object-fit: contain;
+      }
+
+      /* Avatar */
+      .avatar-wrapper {
+        width: 108px;
+        height: 108px;
+        margin: 0 auto 16px;
+      }
+
+      .avatar-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        object-fit: cover;
+        border: 1px solid var(--border-color);
+      }
+
+      /* User Profile Info */
+      .profile-info {
+        margin-bottom: 24px;
+      }
+
+      .profile-name {
+        font-size: 21px;
+        font-weight: 700;
+        color: var(--text-white);
+        margin-bottom: 4px;
+        letter-spacing: -0.3px;
+      }
+
+      .profile-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Action Buttons - Minimal & Flat */
+      .actions-primary {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 13px 16px;
+        border-radius: 4px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: background-color 0.2s ease;
+      }
+
+      .btn:active {
+        transform: translateY(0);
+      }
+
+      .btn-vcard {
+        background: var(--text-white);
+        color: var(--bg-card);
+      }
+
+      .btn-vcard:hover {
+        background: #f1f5f9;
+      }
+
+      .btn-whatsapp {
+        background: var(--whatsapp-color);
+        color: var(--text-white);
+      }
+
+      .btn-whatsapp:hover {
+        background: var(--whatsapp-hover);
+      }
+
+      /* Contact Details - Minimalist List on dark background */
+      .contact-details {
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: left;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-white);
+        padding: 8px 10px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.2s ease;
+      }
+
+      .contact-item:hover {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+
+      .contact-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        color: var(--text-muted);
+        flex-shrink: 0;
+      }
+
+      .contact-item:hover .contact-icon {
+        color: var(--text-white);
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .contact-label {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-muted);
+        margin-bottom: 1px;
+      }
+
+      .contact-value {
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      /* Footer Reference */
+      .footer-credits {
+        margin-top: 24px;
+        font-size: 11px;
+        color: var(--text-muted);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        text-align: center;
+      }
+
+      .footer-credits a {
+        color: var(--text-white);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .footer-credits a:hover {
+        text-decoration: underline;
+      }
+
+      /* Vector Icons */
+      .icon-svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Business Card -->
+    <div class="card-container">
+      <!-- Logo Inside Card -->
+      <div class="logo-header">
+        <a href="../../aperat-en.html">
+          <img src="../../img/logo-aperat-full.svg" alt="APERAT Logo" />
+        </a>
+      </div>
+
+      <!-- Profile Photo with Square/Elegant layout -->
+      <div class="avatar-wrapper">
+        <img
+          src="../../img/adrian_nunez_profile.webp"
+          alt="Adrián Núñez Ferdmann"
+          class="avatar-image"
+        />
+      </div>
+
+      <!-- Profile Details -->
+      <div class="profile-info">
+        <h1 class="profile-name">Adrián Núñez Ferdmann</h1>
+        <p class="profile-title">Vice President</p>
+      </div>
+
+      <!-- Minimalist Buttons -->
+      <div class="actions-primary">
+        <a
+          href="adrian_nunez.vcf"
+          download="adrian_nunez.vcf"
+          class="btn btn-vcard"
+        >
+          <svg
+            class="icon-svg"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2v9.67z"
+            />
+          </svg>
+          Save Contact (vCard)
+        </a>
+
+        <a
+          href="https://wa.me/5199444510?text=Hi%20Adri%C3%A1n,%20I%20scanned%20your%20QR%20code%20and%20would%20like%20to%20connect."
+          target="_blank"
+          rel="noopener"
+          class="btn btn-whatsapp"
+        >
+          <img
+            src="../../img/whatsapp-logo.svg"
+            alt="WhatsApp"
+            class="icon-svg"
+          />
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- Contact Details List -->
+      <div class="contact-details">
+        <!-- Email -->
+        <a href="mailto:adrian@aperat.org.pe" class="contact-item">
+          <span class="contact-icon">
+            <svg
+              class="icon-svg"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+          </span>
+          <div class="contact-info">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">adrian@aperat.org.pe</span>
+          </div>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+5199444510" class="contact-item">
+          <span class="contact-icon">
+            <svg
+              class="icon-svg"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              />
+            </svg>
+          </span>
+          <div class="contact-info">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+51 994 444 510</span>
+          </div>
+        </a>
+
+        <!-- Website -->
+        <a
+          href="https://aperat.org.pe"
+          target="_blank"
+          rel="noopener"
+          class="contact-item"
+        >
+          <span class="contact-icon">
+            <svg
+              class="icon-svg"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+              />
+            </svg>
+          </span>
+          <div class="contact-info">
+            <span class="contact-label">Website</span>
+            <span class="contact-value">aperat.org.pe</span>
+          </div>
+        </a>
+
+        <!-- About APERAT in English -->
+        <a href="../../aperat-en.html" class="contact-item">
+          <span class="contact-icon">
+            <svg
+              class="icon-svg"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+              />
+            </svg>
+          </span>
+          <div class="contact-info">
+            <span class="contact-label">Association</span>
+            <span class="contact-value">About APERAT (English)</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Info -->
+    <div class="footer-credits">
+      <span>© 2026 APERAT. All rights reserved.</span>
+      <span
+        >Official page of the
+        <a href="https://aperat.org.pe" target="_blank" rel="noopener"
+          >Peruvian Association of Atheists</a
+        ></span
+      >
+    </div>
+  </body>
+</html>
