@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adrián Núñez Ferdmann - Portal</title>
+  <meta name="description" content="Adrián Núñez Ferdmann - Personal Portal. Access contact information, vCard, and more.">
+  
+  <!-- Typography & Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-color: #002d5c;
+      --card-bg: #004284;
+      --text-white: #ffffff;
+      --text-muted: #a3c4f7;
+      --border-color: rgba(255, 255, 255, 0.15);
+      --accent-color: #ffffff;
+      --accent-hover: #e6f0fa;
+      --text-dark: #004284;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .logo-header {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo-header img {
+      width: 60%;
+      height: auto;
+      max-height: 120px;
+      object-fit: contain;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 35px;
+    }
+
+    .btn-portal {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px;
+      background-color: var(--accent-color);
+      color: var(--text-dark);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn-portal:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-portal:active {
+      transform: scale(0.98);
+    }
+
+    .icon-svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-header">
+      <img src="../img/logo-aperat-full.svg" alt="APERAT Logo" />
+    </div>
+    <h1 class="title">Adrián Núñez Ferdmann</h1>
+    <p class="subtitle">Vice President</p>
+    
+    <a href="qr/" class="btn-portal">
+      <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM13 21h3v-3h-3v3zM16 18h3v-3h-3v3zM13 15h3v-3h-3v3zM19 18h2v-3h-2v3zM19 21h2v-3h-2v3zM16 21h3v-3h-3v3zM18 13h3v-2h-3v2z" />
+      </svg>
+      View Contact Card
+    </a>
+  </div>
+</body>
+</html>
