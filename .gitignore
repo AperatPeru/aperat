@@ -16,3 +16,6 @@ node_modules/
 dist/
 build/
 .cache/
+
+# Copia temporal de respaldo / referencia local
+version-anterior/
