@@ -1,0 +1,107 @@
+/**
+ * APERAT - Guía Oficial de Tokens de Diseño
+ * Extraído de la carpeta /design/ y de los manuales de marca de Aperat.
+ * 
+ * Colores de marca:
+ * - Color Primario: Cosmic Blue (#023660)
+ * - Color Secundario: Horizon Sky (#07A5D6)
+ * - Color Terciario: Rationalist Steel (#424D59)
+ */
+
+:root {
+  /* Colores Oficiales Principales */
+  --color-primary: #023660;
+  --color-primary-rgb: 2, 54, 96;
+  --color-primary-dark: #011f38;
+  --color-primary-light: #034b85;
+
+  --color-secondary: #07A5D6;
+  --color-secondary-rgb: 7, 165, 214;
+  --color-secondary-dark: #0584ab;
+  --color-secondary-light: #44bbe0;
+  --color-secondary-tint: #e7f6fd;
+  --color-secondary-tint-20: #f2faff;
+
+  --color-tertiary: #424D59;
+  --color-tertiary-rgb: 66, 77, 89;
+  --color-tertiary-light: #576575;
+  --color-tertiary-tint: #eff2f4;
+
+  /* Rango de Color (Brand Guidelines Pag. 2) */
+  --primary-100: #023660;
+  --primary-90:  #1b4a70;
+  --primary-80:  #355e80;
+  --primary-70:  #4e7390;
+  --primary-60:  #6787a0;
+  --primary-50:  #819bb0;
+  --primary-40:  #9ab0bf;
+  --primary-30:  #b3c4cf;
+  --primary-20:  #cdd8df;
+
+  --secondary-100: #07A5D6;
+  --secondary-90:  #20aed9;
+  --secondary-80:  #39b7dc;
+  --secondary-70:  #52c0e0;
+  --secondary-60:  #6bc9e3;
+  --secondary-50:  #83d2e7;
+  --secondary-40:  #9cdbea;
+  --secondary-30:  #b5e4ee;
+  --secondary-20:  #ceecf2;
+
+  --tertiary-100: #424D59;
+  --tertiary-90:  #555f6a;
+  --tertiary-80:  #68717a;
+  --tertiary-70:  #7b828b;
+  --tertiary-60:  #8e949b;
+  --tertiary-50:  #a1a6ac;
+  --tertiary-40:  #b3b8bc;
+  --tertiary-30:  #c6cacc;
+  --tertiary-20:  #d9dbdc;
+
+  /* Colores Neutros y Semánticos */
+  --color-white: #ffffff;
+  --color-black: #0c1015;
+  --color-text-main: #2b3642;
+  --color-text-muted: #5e6b78;
+  --color-text-light: #8e9ca8;
+  --color-bg-page: #ffffff;
+  --color-bg-alt: #f0f7fb;
+  --color-bg-footer: #eaf5fc;
+  --color-border-light: rgba(2, 54, 96, 0.08);
+  --color-border-subtle: rgba(7, 165, 214, 0.15);
+
+  /* Tipografías Oficiales */
+  --font-serif-display: 'Asterone', Georgia, 'Times New Roman', serif;
+  --font-sans-title: 'Noway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans-body: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Espaciados y Dimensiones */
+  --container-width: 1240px;
+  --container-padding: 24px;
+  --header-top-height: 42px;
+  --header-nav-height: 84px;
+
+  /* Sombras y Elevaciones */
+  --shadow-sm: 0 2px 8px rgba(2, 54, 96, 0.06);
+  --shadow-md: 0 8px 24px rgba(2, 54, 96, 0.08);
+  --shadow-lg: 0 16px 40px rgba(2, 54, 96, 0.12);
+  --shadow-card: 0 10px 30px rgba(2, 54, 96, 0.07);
+
+  /* Bordes Redondeados */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+
+  /* Transiciones */
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index */
+  --z-negative: -1;
+  --z-elevate: 10;
+  --z-header: 100;
+  --z-modal: 1000;
+}
