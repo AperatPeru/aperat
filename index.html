@@ -4,332 +4,652 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://kit.fontawesome.com/2fe60e76a8.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/styles.min.css">
-  <link rel="icon" href="img/logo.png">
-  <title>APERAT - Asociación Peruana de Ateos</title>
+
+  <!-- Metadatos SEO Primarios -->
+  <title>APERAT - Asociación Peruana de Ateos | Una sociedad donde la conciencia sea libre</title>
+  <meta name="title" content="APERAT - Asociación Peruana de Ateos | Una sociedad donde la conciencia sea libre">
+  <meta name="description" content="La Asociación Peruana de Ateos (APERAT) reúne desde 2009 a personas ateas, agnósticas, humanistas y no creyentes que defienden la libertad de conciencia, el pensamiento crítico, los derechos humanos y un Estado verdaderamente laico.">
+  <meta name="keywords" content="APERAT, Asociación Peruana de Ateos, ateísmo Perú, laicismo, humanismo secular, libertad de conciencia, estado laico, derechos humanos">
+  <meta name="author" content="APERAT">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.aperat.org.pe/">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.aperat.org.pe/">
+  <meta property="og:title" content="APERAT - Asociación Peruana de Ateos">
+  <meta property="og:description" content="Defendiendo la razón, la libertad de conciencia y el Estado laico en el Perú desde 2009.">
+  <meta property="og:image" content="https://www.aperat.org.pe/assets/img/hero/hero_bg.jpg">
+
+  <!-- Favicon Oficial -->
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="apple-touch-icon" href="img/logo.png">
+
+  <!-- Hojas de Estilo Vanilla -->
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <header id="header-principal">
-    <div class="header__social">
-      <div class="header__social__container">
-        <div class="social__top">
-          <div class="phone">
-            <i class="fa-solid fa-phone"></i>
-            <p>929 630 098</p>
-          </div>
-          <div class="mail">
-            <i class="fa-solid fa-envelope"></i>
-            <p>contacto@aperat.org.pe</p>
-          </div>
-        </div>
-        <div class="social__redes">
-          <a target="_blank" href="https://www.facebook.com/APERAT"><i class="fa-brands fa-facebook-f"></i></a>
-          <a target="_blank" href="https://twitter.com/AteosPeru"><i class="fa-brands fa-twitter"></i></a>
-          <a target="_blank" href="https://www.youtube.com/user/ateosperuanos"><i class="fa-brands fa-youtube"></i></a>
-          <a target="_blank" href="https://www.instagram.com/aperatperu/"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+
+  <!-- ==========================================================================
+       BARRA SUPERIOR (TOPBAR)
+       ========================================================================== -->
+  <aside class="topbar" aria-label="Información de contacto rápido">
+    <div class="container topbar__container">
+      <div class="topbar__contacts">
+        <a href="tel:+51997230431" class="topbar__item" title="Llamar a APERAT">
+          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.47a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.48a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.21 2.09z"/>
+          </svg>
+          <span>+51 997 230 431</span>
+        </a>
+        <a href="mailto:contacto@aperat.org.pe" class="topbar__item" title="Escribir correo a APERAT">
+          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <span>contacto@aperat.org.pe</span>
+        </a>
+      </div>
+      <div class="topbar__location">
+        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+        <span>Calle Benjamín Ugarteche 181, Pueblo Libre 15084, Lima</span>
       </div>
     </div>
-    <div id="header" class="header__container">
-      <div id="header-container" class="header__container__menu">
-        <img class="logo" src="img/logo.svg" alt="">
-        <img class="logo-2" src="img/logo-2.svg" alt="">
-        <button id="burger">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <nav id="menu">
-          <ul>
-            <i class="fas fa-times"></i>
-            <li><a class="selected" href="index.html">Inicio</a></li>
-            <li class="we">
-              <p id="we">Nosotros</p>
-              <i id="icon-we-1" class="fa-solid fa-caret-down"></i>
-              <ul class="we__menu">
-                <li><a href="aperat.html">Sobre la Aperat</a></li>
-                <li><a href="staff.html">Miembros de la Aperat</a></li>
-              </ul>
-            </li>
-            <li class="proyects">
-              <p id="proyects">Proyectos</p>
-              <i id="icon-proyects" class="fa-solid fa-caret-down"></i>
-              <ul class="proyects__menu">
-                <li><a href="exonerate.html">Exonérate</a></li>
-                <li><a href="apostasia.html">Apostasía</a></li>
-                <li><a href="defensa.html">Defensa Legal</a></li>
-                <li><a class="gastos" href="gastos.html">Financiamiento a la Iglesia</a></li>
-              </ul>
-            </li>
-            <li><a href="recursos.html">Recursos</a></li>
-            <li><a class="donate" href="donate.html">Donación</a></li>
-          </ul>
-        </nav>
+  </aside>
+
+  <!-- ==========================================================================
+       HEADER & NAVEGACIÓN PRINCIPAL
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar">
+      <div class="navbar__brand">
+        <a href="index.html" class="navbar__brand-link" aria-label="Ir a Inicio - APERAT">
+          <img src="assets/img/logos/aperat-horizontal.png" alt="APERAT - Asociación Peruana de Ateos" class="navbar__logo">
+        </a>
       </div>
+
+      <button class="navbar__toggle" id="navbar-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navbar-menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <nav class="navbar__menu" id="navbar-menu" aria-label="Navegación principal">
+        <div class="navbar__divider" aria-hidden="true"></div>
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a href="#inicio" class="navbar__link active">Inicio</a>
+          </li>
+          <li class="navbar__separator" aria-hidden="true"></li>
+          <li class="navbar__item">
+            <a href="#sobre-nosotros" class="navbar__link">Sobre Nosotros</a>
+          </li>
+          <li class="navbar__separator" aria-hidden="true"></li>
+          <li class="navbar__item">
+            <a href="#principios" class="navbar__link">Laicidad y Derechos</a>
+          </li>
+          <li class="navbar__separator" aria-hidden="true"></li>
+          <li class="navbar__item">
+            <a href="#participa" class="navbar__link">Participa</a>
+          </li>
+        </ul>
+
+        <div class="navbar__separator" aria-hidden="true"></div>
+
+        <div class="navbar__socials">
+          <a href="https://www.facebook.com/APERAT" target="_blank" rel="noopener noreferrer" class="navbar__social-link" title="Facebook de APERAT" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/aperatperu/" target="_blank" rel="noopener noreferrer" class="navbar__social-link" title="Instagram de APERAT" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/user/ateosperuanos" target="_blank" rel="noopener noreferrer" class="navbar__social-link" title="Canal YouTube de APERAT" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+
+        <div class="navbar__divider" aria-hidden="true"></div>
+
+        <div class="navbar__cta">
+          <a href="#donar" class="btn btn-primary" data-open-modal="donar" role="button">Donar</a>
+        </div>
+      </nav>
     </div>
   </header>
+
   <main>
-    <section id="slide">
-      <img class="slide__img__full"src="img/portada.jpg">
-      <img class="slide__img__small"src="img/small.jpg" alt="">
-      <div class="title__slide">
-        <h3>ASOCIACIÓN PERUANA DE ATEOS <br>APERAT </h3>
+    <!-- ==========================================================================
+         SECCIÓN 1: HERO (PORTADA SAM HARRIS)
+         ========================================================================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="container hero__container">
+        <span class="hero__pretitle">Asociación Peruana de Ateos</span>
+        <h1 class="hero__title" id="hero-title">Una sociedad donde la conciencia sea libre</h1>
+        <p class="hero__description">
+          La Asociación Peruana de Ateos (APERAT) reúne desde 2009 a personas ateas, agnósticas, humanistas y no creyentes que defienden la libertad de conciencia, el pensamiento crítico, los derechos humanos y un Estado verdaderamente laico.
+        </p>
+        <div class="hero__cta">
+          <a href="#sobre-nosotros" class="btn btn-outline-white">Conoce APERAT</a>
+        </div>
+      </div>
+
+      <!-- Cinta Divisora Angular Oficial (Cosmic Blue + Horizon Sky) -->
+      <div class="hero-ribbon" aria-hidden="true">
+        <svg viewBox="0 0 1200 48" preserveAspectRatio="none">
+          <polygon fill="#07A5D6" points="0,48 1200,18 1200,28 0,48"></polygon>
+          <polygon fill="#023660" points="0,48 1200,28 1200,48 0,48"></polygon>
+        </svg>
       </div>
     </section>
-    <section id="cards">
-      <div class="container__cards">
-        <div class="card__father">
-          <div class="card">
-            <div class="card__front" style="background-image:url(img/science.jpg)">
-              <div class="layout"></div>
-              <div class="body__card-front">
-                <img src="img/science.png" alt="">
-                <h4>CIENTIFICISMO</h4>
-              </div>
-            </div>
-            <div class="card__back"style="background-image:url(img/science.jpg)">
-              <div class="layout"></div>
-              <div class="body__card-back">
-                <p>Creemos en la existencia del método científico como la manera más objetiva de conocer la realidad. Además, creemos que este "método" puede extenderse a otros ámbitos fuera de la Ciencia.</p>
-                <a href="aperat.html">Leer más...</a>
-              </div>
-            </div>
+
+    <!-- ==========================================================================
+         SECCIÓN 2: COMUNIDAD (15 AÑOS CONSTRUYENDO COMUNIDAD)
+         ========================================================================== -->
+    <section class="community" id="sobre-nosotros" aria-labelledby="community-title">
+      <div class="container">
+        <div class="community__grid">
+          <!-- Columna Izquierda: Composición Asimétrica de Fotos -->
+          <div class="community__visuals">
+            <img src="assets/img/community/dawkins.jpg" alt="Richard Dawkins - Referente del pensamiento científico y racional" class="community__image-dawkins" loading="lazy">
+            <img src="assets/img/community/jovenes.jpg" alt="Comunidad de jóvenes en encuentro humanista" class="community__image-youth" loading="lazy">
           </div>
-        </div>
-        <div class="card__father">
-          <div class="card">
-            <div class="card__front" style="background-image:url(img/humanismo.jpg)">
-              <div class="layout"></div>
-              <div class="body__card-front">
-                <img src="img/humanism.png" alt="">
-                <h4>HUMANISMO SECULAR</h4>
-              </div>
-            </div>
-            <div class="card__back" style="background-image:url(img/humanismo.jpg)">
-              <div class="layout"></div>
-              <div class="body__card-back">
-                <p>Creemos en la interpretación racional y naturalista de la realidad. Fomentamos una Ética basada en la Razón lejos de toda interpretación sobrenatural. Rechazamos lo sobrenatural, las Pseudociencias (Astrología, Ufología, Creacionismo, Terraplanismo, etc.) y su difusión.</p>
-                <a href="aperat.html">Leer más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card__father">
-          <div class="card">
-            <div class="card__front" style="background-image:url(img/laicismo.jpg)">
-              <div class="layout"></div>
-              <div class="body__card-front">
-                <img src="img/churche.png" alt="">
-                <h4>LAICISMO</h4>
-              </div>
-            </div>
-            <div class="card__back" style="background-image:url(img/laicismo.jpg)">
-              <div class="layout"></div>
-              <div class="body__card-back">
-                <p>Creemos en la COMPLETA separación entre la "iglesia" y el Estado. Ninguna religión (por mayoritaria que sea) debe ser respaldada, financiada o institucionalizada por ningún Estado. El trato debe ser ESTRICTAMENTE igualitario para todas las formas de creencia y no creencia.</p>
-                <a href="aperat.html">Leer más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card__father">
-          <div class="card">
-            <div class="card__front" style="background-image:url(img/progresismo.jpg)">
-              <div class="layout"></div>
-              <div class="body__card-front">
-                <img src="img/progresismo.png" alt="">
-                <h4>PROGRESISMO</h4>
-              </div>
-            </div>
-            <div class="card__back"style="background-image:url(img/progresismo.jpg)">
-              <div class="layout"></div>
-              <div class="body__card-back">
-                <p>Somos liberales en lo social, creemos en los derechos sexuales y reproductivos y en que los derechos civiles se extiendan a todas las comunidades sin discriminación en congruencia con nuestro firme humanismo, rechazando el conservadurismo.</p>
-                <a href="aperat.html">Leer más</a>
-              </div>
-            </div>
+
+          <!-- Columna Derecha: Contenido Institucional -->
+          <div class="community__content">
+            <div class="community__brand-mark font-title">APERAT</div>
+            <h2 class="community__title" id="community-title">Más de 15 años construyendo comunidad</h2>
+            <p class="community__paragraph">
+              La APERAT nació en Lima en 2009 para reunir a personas que no encontraban un espacio para expresar y defender públicamente una forma de vida basada en la razón, la libertad de conciencia y los valores humanistas.
+            </p>
+            <p class="community__paragraph">
+              Desde entonces hemos mantenido una actividad ininterrumpida, organizando encuentros, conferencias y proyectos, defendiendo los derechos de las personas no creyentes y promoviendo la separación entre las instituciones religiosas y el Estado.
+            </p>
+            <p class="community__paragraph">
+              Hoy formamos parte del movimiento humanista internacional y seguimos trabajando desde el Perú por una sociedad más libre, plural e igualitaria.
+            </p>
+            <a href="#principios" class="community__link">
+              <span>Conoce más de nosotros</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
-    <section id="about">
-      <div class="about__container">
-        <h2 class="right">¿Quiénes somos?</h2>
-        <img class="left" src="img/nosotros.webp">
-        <p class="right">La Asociación Peruana de Ateos (APERAT) es una organización sin fines de lucro fundada el año 2009. Como organización la APERAT congrega y brinda espacios de acción y diálogo a la comunidad de no creyentes y humanistas seculares en el Perú. Nos dedicamos principalmente a formular proyectos y actividades en pro de conseguir un Estado laico. Formamos parte de la 'International Humanist and Ethical Union' y de la 'Atheist Alliance International'.</p>
-        <a class="read-more right" href="aperat.html"><i class="fa-solid fa-angle-right"></i>Leer más...</a>
-      </div>
+
+    <!-- ==========================================================================
+         SECCIÓN 3: FRANJA DE CONTADORES E IMPACTO
+         ========================================================================== -->
+    <section class="stats-strip" aria-label="Logros y trayectoria institucional">
+      <!-- Tarjeta 1: Horizon Sky -->
+      <article class="stats-card stats-card--sky">
+        <div class="stats-card__inner">
+          <div class="stats-card__number">17</div>
+          <h3 class="stats-card__title">Años de Actividad</h3>
+          <p class="stats-card__subtitle">Ateísmo Militante Ininterrumpido</p>
+        </div>
+      </article>
+
+      <!-- Tarjeta 2: Cosmic Blue -->
+      <article class="stats-card stats-card--cosmic">
+        <div class="stats-card__inner">
+          <svg class="stats-card__icon" viewBox="0 0 100 100" aria-hidden="true">
+            <!-- Icono Happy Human estilizado -->
+            <path d="M50 15 a10 10 0 1 0 0 20 a10 10 0 1 0 0 -20 M50 42 c-15 0 -22 18 -22 38 h10 c0 -14 5 -26 12 -26 s12 12 12 26 h10 c0 -20 -7 -38 -22 -38 z M28 28 c-6 6 -8 15 -8 24 h6 c0 -7 2 -14 6 -19 z M72 28 c6 6 8 15 8 24 h-6 c0 -7 -2 -14 -6 -19 z"/>
+          </svg>
+          <h3 class="stats-card__title">International Humanist</h3>
+          <p class="stats-card__subtitle">Organización miembro.</p>
+        </div>
+      </article>
+
+      <!-- Tarjeta 3: Rationalist Steel -->
+      <article class="stats-card stats-card--steel">
+        <div class="stats-card__inner">
+          <svg class="stats-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+          </svg>
+          <h3 class="stats-card__title">Fundación: 2009</h3>
+          <p class="stats-card__subtitle">Defendiendo la razón, la libertad y el humanismo</p>
+        </div>
+      </article>
     </section>
-    <section id="beliefs">
-      <div class="beliefs__container">
-        <h2 class="left">¿En qué creemos?</h2>
-        <img class="right" src="img/roads.jpg">
-        <p class="left">Creemos en la no existencia real de entidades sobrenaturales como cualquier dios o demonio, y en una visión materialista-fisicalista de la realidad. Apostamos en la libertad de pensamiento con el método científico como guía para analizar toda la realidad y en una ética naturalista e independiente de cualquier divinidad, que esté de acuerdo con los derechos humanos y el respeto de los derechos de las minorías.</p>
-        <a class="read-more left" href="aperat.html"><i class="fa-solid fa-angle-right"></i>Leer más...</a>
-      </div>
-    </section>
-    <section id="objectives">
-      <div class="objectives__container">
-        <h2 class="right">¿Qué queremos?</h2>
-        <img class="left" src="img/poster.png" alt="">
-        <p class="right">La APERAT busca propiciar y fomentar puntos de vista racionalistas y científicos. Trabajamos activamente en promover valores éticos basados en la lógica y la razón. También fomentamos y protegemos la libertad de pensamiento y consciencia al mismo tiempo que luchamos por la laicidad del Estado Peruano.</p>
-        <a class="read-more right" href="aperat.html"><i class="fa-solid fa-angle-right"></i>Leer más...</a>
-      </div>
-    </section>
-    <section id="join-us">
-      <div class="join-us__container">
-        <h2>¡Únete a nosotros!</h2>
-        <img src="img/join.jpg" alt="">
-        <p>Únete a la lucha por el laicismo en el Perú afiliándote a la APERAT en cualquier de sus tres modalidades.</p>
-        <a href="join-us.html">Leer más</a>
-      </div>
-    </section>
-    <section id="proyects">
-      <div class="proyects__container">
-        <h2>Últimos proyectos</h2>
-        <p>La Asociación Peruana de Ateos trabaja activamente en la creación de proyectos en favor de la laicicidad del Estado Peruano.</p>
-        <div class="proyects__cards">
-          <div class="proyect__card left">
-            <div class="image__container">
-              <img src="img/defensa.jpg" alt="">
-            </div>
-            <h4>Defensa legal de ateos</h4>
-            <p>Buscamos defender, de manera efectiva y mediante nuestra área legal, los derechos a la libertad de pensamiento y objeción de conciencia.</p>
-            <a href="defensa.html">Leer más...</a>
+
+    <!-- ==========================================================================
+         SECCIÓN 4: NUESTROS PRINCIPIOS (GRID 2X2 CON TARJETAS FLOTANTES)
+         ========================================================================== -->
+    <section class="principles" id="principios" aria-labelledby="principles-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__badge">
+            <!-- Emblema estilizado 'A' de APERAT -->
+            <svg class="section-header__badge-icon" viewBox="0 0 40 40" aria-hidden="true">
+              <path fill="#023660" d="M20 2 L5 36 h10 l5 -12 l5 12 h10 z"/>
+              <path fill="#07A5D6" d="M12 28 a12 12 0 0 1 16 0 z"/>
+            </svg>
           </div>
-          <div class="proyect__card left">
-            <div class="image__container">
-              <img src="img/escolar.jpg" alt="">
+          <h2 class="section-header__title font-title" id="principles-title">Nuestros Principios</h2>
+          <p class="section-header__subtitle">
+            Noticias, actividades y reflexiones sobre humanismo, laicidad, libertad de conciencia y actualidad.
+          </p>
+        </div>
+
+        <div class="principles__grid">
+          <!-- Principio 1: Razón y Pensamiento Crítico y Científico -->
+          <article class="principle-item">
+            <div class="principle-item__media">
+              <img src="assets/img/principles/principio_ciencia.jpg" alt="Investigación y método científico como guía del conocimiento" class="principle-item__image" loading="lazy">
             </div>
-            <h4>Exonérate del curso de Religión</h4>
-            <p>Buscamos difundir y defender el derecho que tiene todo padre de familia de exonerar del curso de religión a sus hijos en todos los colegios a nivel nacional.</p>
-            <a href="exonerate.html">Leer más...</a>
-          </div>
-          <div class="proyect__card right">
-            <div class="image__container">
-              <img src="img/gastos.jpg" alt="">
+            <div class="principle-item__card principle-item__card--sky">
+              <h3 class="principle-item__title">Razón y Pensamiento Crítico y Científico</h3>
+              <p class="principle-item__text">
+                Buscamos comprender el mundo a partir de la evidencia, la razón y el conocimiento científico.
+              </p>
             </div>
-            <h4>Financiamiento estatal de la Iglesia</h4>
-            <p>Realizamos investigaciones sobre cómo el Estado Peruano subvenciona a la Iglesia Católica gracias al Concordato Perú-Vaticano.</p>
-            <a href="gastos.html">Leer más...</a>
-          </div>
-          <div class="proyect__card right">
-            <div class="image__container">
-              <img src="img/atheist.jpg" alt="">
+          </article>
+
+          <!-- Principio 2: Libertad de Consciencia -->
+          <article class="principle-item">
+            <div class="principle-item__media">
+              <img src="assets/img/principles/principio_pinker.jpg" alt="Libertad intelectual y pensamiento humanista ilustrado" class="principle-item__image" loading="lazy">
             </div>
-            <h4>Apostasía de la Iglesia</h4>
-            <p>Buscamos difundir y defender el derecho que tiene todo peruano para realizar el procedimiento de apostasía en el Perú.</p>
-            <a href="apostasia.html">Leer más...</a>
+            <div class="principle-item__card principle-item__card--cosmic">
+              <h3 class="principle-item__title">Libertad de Consciencia</h3>
+              <p class="principle-item__text">
+                Toda persona debe poder construir, cambiar o mantener sus propias convicciones, religiosas o no religiosas, sin coerción ni discriminación.
+              </p>
+            </div>
+          </article>
+
+          <!-- Principio 3: Estado Laico -->
+          <article class="principle-item">
+            <div class="principle-item__media">
+              <img src="assets/img/principles/principio_laico.jpg" alt="Campaña Nacional por un Estado Laico en el Perú" class="principle-item__image" loading="lazy">
+            </div>
+            <div class="principle-item__card principle-item__card--steel">
+              <h3 class="principle-item__title">Estado Laico</h3>
+              <p class="principle-item__text">
+                Las instituciones públicas deben actuar con independencia y neutralidad frente a las distintas creencias. Ninguna religión debe determinar las políticas públicas ni recibir un trato privilegiado por parte del Estado.
+              </p>
+            </div>
+          </article>
+
+          <!-- Principio 4: Derechos Humanos -->
+          <article class="principle-item">
+            <div class="principle-item__media">
+              <img src="assets/img/principles/principio_derechos.jpg" alt="Dignidad, igualdad y defensa de los derechos humanos universales" class="principle-item__image" loading="lazy">
+            </div>
+            <div class="principle-item__card principle-item__card--sky">
+              <h3 class="principle-item__title">Derechos Humanos</h3>
+              <p class="principle-item__text">
+                Defendemos una sociedad basada en la dignidad, la igualdad y la libertad de todas las personas, incluidas las minorías religiosas y las personas no creyentes.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 5: BANNER WHC (EL HUMANISMO MUNDIAL LLEGA A LIMA)
+         ========================================================================== -->
+    <section class="whc-banner" id="congreso" aria-labelledby="whc-title">
+      <div class="container whc-banner__grid">
+        <div class="whc-banner__badge-wrapper">
+          <div class="whc-banner__badge">
+            <img src="assets/img/whc/whc_emblem.png" alt="World Humanist Congress 2026 - Lima, Perú" loading="lazy">
           </div>
         </div>
-      </div>
-    </section>
-    <section id="why">
-      <div class="why__container">
-        <h3><a href="why.html">#¿PorQueSoyAteo?</a></h3>
-        <p>¡Conoce las razones por la que muchas personas han preferido el ateísmo para sus vidas!</p>
-        <img src="img/thinking-2.png" alt="">
-      </div>
-    </section>
-    <div id="modal">
-      <i id="close-modal" class="fa-solid fa-xmark"></i>
-      <div class="modal-image">
-        <img id="modal-image" src="" alt="">
-      </div>
-    </div>
-    <section class="gallery">
-      <h2>Galería</h2>
-      <div id="gallery__container">
-        <div class="img__container">
-          <img src="img/1.jpg" alt="Evento Random">
-        </div>
-        <div class="img__container">
-          <img src="img/2.jpg" alt="Evento Random">
-        </div>
-        <div class="img__container">
-          <img src="img/3.jpg" alt="Evento Random">
-        </div>
-        <div class="img__container">
-          <img src="img/4.jpg" alt="Evento Random">
-        </div>
-        <div class="img__container">
-          <img src="img/5.jpg" alt="Evento Random">
-        </div>
-        <div class="img__container">
-          <img src="img/6.jpg" alt="Evento Random">
-        </div>
-        <div class="img__container">
-          <img src="img/7.jpg" alt="Evento Random">
-        </div>
-        <div class="img__container">
-          <img src="img/8.jpg" alt="Evento Random">
-        </div>
-        <div class="img__container">
-          <img src="img/9.jpg" alt="Evento Random">
+        <div class="whc-banner__content">
+          <h2 class="whc-banner__title" id="whc-title">El Humanismo Mundial Llega a Lima</h2>
+          <p class="whc-banner__paragraph">
+            En 2027, Lima será sede del World Humanist Congress, el encuentro mundial que reúne a organizaciones y activistas humanistas de todo el planeta.
+          </p>
+          <p class="whc-banner__paragraph">
+            El Congreso es organizado por Humanists International y contará con la colaboración logística de la Asociación Peruana de Ateos.
+          </p>
+          <p class="whc-banner__paragraph">
+            Será una oportunidad única para que Perú y América Latina sean el punto de encuentro de personas comprometidas con la razón, la ética, los derechos humanos y la libertad de conciencia.
+          </p>
         </div>
       </div>
     </section>
-    <section id="donate">
-      <div class="donate__container">
-        <h2 class="right">¿Deseas apoyarnos?</h4>
-        <img class="left" src="img/done.jpg" alt="">
-        <p class="right">La Asociación Peruana de Ateos trabaja constantemente en la creación de nuevos proyectos en favor de un Estado Laico en el Perú y en la difusión de nuestra cosmovisión a través de eventos, reuniones y conferencias, al mismo tiempo que mantenemos un área legal para la defensa de nuestros derechos. <br> <br> ¡Cualquier apoyo tuyo es importante para nosotros!</p>
-        <a class="right" href="donate.html">Donar</a>
+
+    <!-- ==========================================================================
+         SECCIÓN 6: NOTICIAS Y ARTÍCULOS
+         ========================================================================== -->
+    <section class="articles" id="noticias" aria-labelledby="articles-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__badge">
+            <svg class="section-header__badge-icon" viewBox="0 0 40 40" aria-hidden="true">
+              <path fill="#023660" d="M20 2 L5 36 h10 l5 -12 l5 12 h10 z"/>
+              <path fill="#07A5D6" d="M12 28 a12 12 0 0 1 16 0 z"/>
+            </svg>
+          </div>
+          <h2 class="section-header__title font-title" id="articles-title">Noticias y Artículos</h2>
+          <p class="section-header__subtitle">
+            Noticias, actividades y reflexiones sobre humanismo, laicidad, libertad de conciencia y actualidad.
+          </p>
+        </div>
+
+        <div class="articles__grid">
+          <!-- Artículo 1 -->
+          <article class="article-card">
+            <div class="article-card__media">
+              <img src="assets/img/articles/russell.jpg" alt="Bertrand Russell, filósofo y matemático humanista" class="article-card__image" loading="lazy">
+            </div>
+            <div class="article-card__meta">
+              <span class="article-card__meta-tag">Ateísmo</span>
+              <span class="article-card__meta-sep" aria-hidden="true">■</span>
+              <time class="article-card__meta-date" datetime="2026-08-25">25 Agosto 2026</time>
+            </div>
+            <h3 class="article-card__title">
+              ¿Por qué no creo en Dios? Una mirada racional al ateísmo y la ausencia de evidencia.
+            </h3>
+            <p class="article-card__excerpt">
+              El ateísmo no consiste simplemente en negar una creencia, sino en cuestionar racionalmente las afirmaciones sobre la existencia de dioses. Una reflexión sobre evidencia, pensamiento crítico y libertad intelectual.
+            </p>
+            <a href="#contacto" class="article-card__link">Leer artículo</a>
+            <div class="article-card__divider" aria-hidden="true"></div>
+            <div class="article-card__author">
+              <svg class="article-card__author-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+              <span class="article-card__author-label">POR:</span>
+              <span class="article-card__author-name">ADRIÁN NÚÑEZ</span>
+            </div>
+          </article>
+
+          <!-- Artículo 2 -->
+          <article class="article-card">
+            <div class="article-card__media">
+              <img src="assets/img/articles/amigos.jpg" alt="Comunidad juvenil viviendo valores humanistas y solidarios" class="article-card__image" loading="lazy">
+            </div>
+            <div class="article-card__meta">
+              <span class="article-card__meta-tag">Humanismo</span>
+              <span class="article-card__meta-sep" aria-hidden="true">■</span>
+              <time class="article-card__meta-date" datetime="2026-09-25">25 Sept 2026</time>
+            </div>
+            <h3 class="article-card__title">
+              Humanismo: construir una vida con sentido sin necesidad de respuestas sobrenaturales.
+            </h3>
+            <p class="article-card__excerpt">
+              El humanismo propone que podemos desarrollar una ética basada en la razón, la empatía y la dignidad humana. Una perspectiva sobre cómo encontrar propósito y responsabilidad en un mundo sin certezas divinas.
+            </p>
+            <a href="#contacto" class="article-card__link">Leer artículo</a>
+            <div class="article-card__divider" aria-hidden="true"></div>
+            <div class="article-card__author">
+              <svg class="article-card__author-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+              <span class="article-card__author-label">POR:</span>
+              <span class="article-card__author-name">ADRIÁN NÚÑEZ</span>
+            </div>
+          </article>
+
+          <!-- Artículo 3 -->
+          <article class="article-card">
+            <div class="article-card__media">
+              <img src="assets/img/articles/ciencia.jpg" alt="Investigación de laboratorio con microscopio y análisis científico" class="article-card__image" loading="lazy">
+            </div>
+            <div class="article-card__meta">
+              <span class="article-card__meta-tag">Ciencia</span>
+              <span class="article-card__meta-sep" aria-hidden="true">■</span>
+              <time class="article-card__meta-date" datetime="2026-10-25">25 Octubre 2026</time>
+            </div>
+            <h3 class="article-card__title">
+              Ciencia y pensamiento crítico: cómo aprendemos lo que realmente sabemos sobre el mundo
+            </h3>
+            <p class="article-card__excerpt">
+              La ciencia avanza mediante preguntas, evidencia, experimentación y revisión constante. Descubre por qué cuestionar nuestras propias ideas es una de las herramientas más poderosas para acercarnos al conocimiento.
+            </p>
+            <a href="#contacto" class="article-card__link">Leer artículo</a>
+            <div class="article-card__divider" aria-hidden="true"></div>
+            <div class="article-card__author">
+              <svg class="article-card__author-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+              <span class="article-card__author-label">POR:</span>
+              <span class="article-card__author-name">ADRIÁN NÚÑEZ</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Controles de Carrusel (Mockup Desktop) -->
+        <div class="slider-controls" aria-label="Navegación de noticias">
+          <button class="slider-btn slider-btn--prev" aria-label="Noticia anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          </button>
+          <div class="slider-dots">
+            <button class="slider-dot active" aria-label="Página 1 de noticias" aria-current="true"></button>
+            <button class="slider-dot" aria-label="Página 2 de noticias"></button>
+            <button class="slider-dot" aria-label="Página 3 de noticias"></button>
+          </div>
+          <button class="slider-btn slider-btn--next" aria-label="Noticia siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </button>
+        </div>
       </div>
     </section>
-    <section id="contact">
-      <div class="contact__container">
-        <div class="address">
-          <i class="fa-solid fa-location-dot"></i>
-          <p>direccion <br> Calle Benjamin Ugarteche 181, Pueblo Libre 15084, Lima</p>
+
+    <!-- ==========================================================================
+         SECCIÓN 7: BOLETÍN MENSUAL (NEWSLETTER)
+         ========================================================================== -->
+    <section class="newsletter" id="participa" aria-labelledby="newsletter-title">
+      <div class="container newsletter__container">
+        <div class="newsletter__info">
+          <h2 class="newsletter__title" id="newsletter-title">Boletín Mensual</h2>
+          <p class="newsletter__subtitle">Ingresa tu email y recibe nuestras actualizaciones.</p>
         </div>
-        <div class="phone">
-          <i class="fa-solid fa-phone"></i>
-          <p>teléfono <br>997 230 431</p>
-        </div>
-        <div class="times">
-          <i class="fa-solid fa-envelope"></i>
-          <p>correo: <br>contacto@aperat.org.pe</p>
-        </div>
+        <form class="newsletter__form" action="#" method="POST">
+          <div class="newsletter__input-capsule">
+            <label for="newsletter-email" class="newsletter__label">Correo</label>
+            <input type="email" id="newsletter-email" class="newsletter__input" placeholder="tu-correo@ejemplo.com" required>
+          </div>
+          <button type="submit" class="newsletter__btn">Enviar</button>
+        </form>
       </div>
-    </section>
-    <section id="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15605.967639354336!2d-77.0642588!3d-12.0784396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x796f2265082fc10a!2sAsociaci%C3%B3n%20Peruana%20de%20Ateos!5e0!3m2!1ses!2spe!4v1652016355855!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
-  <footer id="footer">
-    <i id="button-up" class="fa-solid fa-chevron-up"></i>
-    <a class="fa-brands fa-whatsapp" href="https://api.whatsapp.com/send?phone=51929630098&text=¡Hola!%20Bienvenido%20a%20la%20Aperat.%20Escríbenos%20para%20cualquier%20duda%20o%20consulta%20que%20tengas." target="_blank">
-      <div class="joinchat__tooltip">
-				<p>¿Necesitas ayuda?</p>
-			</div>
-    </a>
-    <div class="footer__sections">
-      <div class="footer__section footer__section--main">
-        <h3>NOSOTROS</h3>
-        <p>La APERAT es una entidad inscrita en Registros Públicos como asociación sin fines de lucro inscrita en Registros Públicos bajo la Partida N°12658791. Como organización la APERAT congrega y brinda espacios de acción y diálogo a la comunidad de no creyentes y humanistas seculares en el Perú. La APERAT forma parte de la International Humanist and Ethical Union y de la Atheist Alliance International.</p>
-      </div>
-      <ul class="footer__section footer__section--pages">
-        <h3>Enlaces de Interés</h3>
-        <li><a href="join-us.html">Únete a nosotros</a></li>
-        <li><a href="#">Trabaja con la APERAT</a></li>
 
-      </ul>
-      <div class="footer__section footer__section--asociados">
-        <h3>ORGANIZACIONES ASOCIADAS</h3><br>
-        <a class="humanist-international" target="_blank" href="https://humanists.international/"><img class="humanist" src="img/humanist.png" alt=""></a>
-        <a class="sociedad-peruana" target="_blank" href="https://ssh.org.pe/"><img class="peruvian-humanist" src="img/sociedad.png" alt=""></a>
-        <a class="alliance" target="_blank" href="https://www.atheistalliance.org/"><img src="img/alliance.png" alt=""></a>
-        <a class="extrapolitica" target="_blank" href="https://extrapolitica.ssh.org.pe/"><img src="img/extrapolitica.png" alt=""></a>
-        <a class="manzana" target="_blank" href="https://manzana.ssh.org.pe/"><img src="img/manzana.png" alt=""></a>
-        <a class="tronico" target="_blank" href="https://www.thehuman.team/"><img src="img/tronico.png" alt=""></a>
+  <!-- ==========================================================================
+       FOOTER PRINCIPAL Y ORGANIZACIONES ASOCIADAS
+       ========================================================================== -->
+  <footer class="site-footer" id="contacto">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Columna 1: Identidad y Misión -->
+        <div class="footer-col__brand">
+          <img src="assets/img/logos/aperat-vertical.png" alt="APERAT - Asociación Peruana de Ateos" class="footer-col__logo">
+          <p class="footer-col__desc">
+            Desde 2009 trabajando por la libertad de conciencia, el pensamiento crítico, los derechos humanos y un Estado laico.
+          </p>
+        </div>
+
+        <!-- Columna 2: Quicklinks -->
+        <div class="footer-col__nav">
+          <h3 class="footer-col__heading">Quicklinks</h3>
+          <ul class="footer-col__nav-list">
+            <li class="footer-col__nav-item"><a href="#inicio" class="footer-col__nav-link">Inicio</a></li>
+            <li class="footer-col__nav-item"><a href="#sobre-nosotros" class="footer-col__nav-link">Sobre Nosotros</a></li>
+            <li class="footer-col__nav-item"><a href="#principios" class="footer-col__nav-link">Laicidad y Derechos</a></li>
+            <li class="footer-col__nav-item"><a href="#participa" class="footer-col__nav-link">Participa</a></li>
+            <li class="footer-col__nav-item"><a href="#donar" class="footer-col__nav-link" data-open-modal="donar">Donar</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Entradas -->
+        <div class="footer-col__nav">
+          <h3 class="footer-col__heading">Entradas</h3>
+          <ul class="footer-col__nav-list">
+            <li class="footer-col__nav-item"><a href="#principios" class="footer-col__nav-link">Laicismo</a></li>
+            <li class="footer-col__nav-item"><a href="#congreso" class="footer-col__nav-link">Eventos</a></li>
+            <li class="footer-col__nav-item"><a href="#principios" class="footer-col__nav-link">Derechos Humanos</a></li>
+            <li class="footer-col__nav-item"><a href="#noticias" class="footer-col__nav-link">Ateísmo</a></li>
+            <li class="footer-col__nav-item"><a href="#noticias" class="footer-col__nav-link">Ciencia y Tecnología</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Búsqueda, Contactos y Redes -->
+        <div class="footer-col__interactive">
+          <form class="footer-search" role="search">
+            <svg class="footer-search__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+            <input type="search" class="footer-search__input" placeholder="Buscar en APERAT..." aria-label="Buscar en APERAT">
+            <button type="submit" class="footer-search__btn">Buscar</button>
+          </form>
+
+          <div class="footer-contact-group">
+            <span class="footer-contact-label">Whatsapp Business:</span>
+            <a href="https://wa.me/51997230431" target="_blank" rel="noopener noreferrer" class="footer-contact-pill">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.47a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.48a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.21 2.09z"/></svg>
+              <span>+51 997 230 431</span>
+            </a>
+          </div>
+
+          <div class="footer-contact-group">
+            <span class="footer-contact-label">Correo Electrónico:</span>
+            <a href="mailto:contacto@aperat.org.pe" class="footer-contact-pill">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span>contacto@aperat.org.pe</span>
+            </a>
+          </div>
+
+          <div class="footer-social-row">
+            <span class="footer-social-label">Redes Sociales:</span>
+            <a href="https://www.facebook.com/APERAT" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Facebook" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/aperatperu/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/user/ateosperuanos" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="YouTube" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
+
+      <!-- Organizaciones Asociadas -->
+      <section class="partners-section" aria-labelledby="partners-title">
+        <h3 class="partners-title" id="partners-title">Organizaciones Asociadas</h3>
+        <div class="partners-card">
+          <div class="partner-logo-item" title="Humanists International">
+            <img src="assets/img/partners/partner_1_humanists_international.png" alt="Humanists International" loading="lazy">
+          </div>
+          <div class="partner-divider" aria-hidden="true"></div>
+          <div class="partner-logo-item" title="Atheist Alliance International">
+            <img src="assets/img/partners/partner_2_aai.png" alt="Atheist Alliance International" loading="lazy">
+          </div>
+          <div class="partner-divider" aria-hidden="true"></div>
+          <div class="partner-logo-item" title="Sociedad Secular y Humanista del Perú">
+            <img src="assets/img/partners/partner_3_ssh.png" alt="Sociedad Secular y Humanista del Perú" loading="lazy">
+          </div>
+          <div class="partner-divider" aria-hidden="true"></div>
+          <div class="partner-logo-item" title="Solidaridad y Humanismo">
+            <img src="assets/img/partners/partner_4_secular.png" alt="Solidaridad Humanista" loading="lazy">
+          </div>
+          <div class="partner-divider" aria-hidden="true"></div>
+          <div class="partner-logo-item" title="World Humanist Congress 2026">
+            <img src="assets/img/partners/partner_5_whc.png" alt="World Humanist Congress 2026 Lima Perú" loading="lazy">
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="footer__copyright">
-      <div class="footer__copyright__container">
-        <p>Diseñado y elaborado por <a target="_blank" href="https://www.facebook.com/AlexiaWeb98/">Alexia Web</a></p>
+
+    <!-- Sub-footer -->
+    <div class="subfooter">
+      <div class="container subfooter__container">
+        <p class="subfooter__copyright">
+          © APERAT - Asociación Peruana de Ateos | Lima, Perú. Todos los derechos reservados.
+        </p>
+        <p class="subfooter__credit">
+          Desarrollado por: Jules Brand Studio
+        </p>
       </div>
     </div>
   </footer>
-  <script src="js/app.js"></script>
+
+  <!-- ==========================================================================
+       MODAL DE DONACIÓN
+       ========================================================================== -->
+  <div class="modal" id="modal-donar" role="dialog" aria-modal="true" aria-labelledby="modal-donar-title" aria-hidden="true">
+    <div class="modal__dialog">
+      <div class="modal__header">
+        <h3 class="modal__title" id="modal-donar-title">Apoya a APERAT</h3>
+        <button class="modal__close" data-close-modal aria-label="Cerrar ventana modal">&times;</button>
+      </div>
+      <div class="modal__body">
+        <p style="margin-bottom: 20px; font-size: 0.95rem; color: #556270;">
+          Tu contribución hace posible la defensa legal de ateos, la promoción del Estado laico, la educación científica y la realización de conferencias y proyectos en el Perú.
+        </p>
+
+        <div class="modal__tabs" role="tablist">
+          <button class="modal__tab-btn active" data-tab="yape" role="tab">Yape / Plin</button>
+          <button class="modal__tab-btn" data-tab="bbva" role="tab">BBVA Banco</button>
+          <button class="modal__tab-btn" data-tab="paypal" role="tab">PayPal (Internacional)</button>
+        </div>
+
+        <!-- Tab 1: Yape / Plin -->
+        <div class="modal__tab-content active" id="tab-yape" role="tabpanel">
+          <div style="background: #f0f7fc; padding: 18px; border-radius: 12px; margin-bottom: 16px;">
+            <p style="font-weight: 700; color: #023660; margin-bottom: 6px;">Transferencia inmediata por celular:</p>
+            <p style="font-size: 1.25rem; font-family: monospace; font-weight: bold; color: #07A5D6; margin-bottom: 8px;">
+              997 230 431
+            </p>
+            <p style="font-size: 0.875rem; color: #5a6b7c; margin-bottom: 12px;">Titular: Asociación Peruana de Ateos</p>
+            <button class="btn btn-primary btn-copy" data-copy="997230431" style="font-size: 0.8125rem; padding: 8px 18px;">
+              Copiar número
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab 2: BBVA -->
+        <div class="modal__tab-content" id="tab-bbva" role="tabpanel">
+          <div style="background: #f0f7fc; padding: 18px; border-radius: 12px; margin-bottom: 16px;">
+            <p style="font-weight: 700; color: #023660; margin-bottom: 6px;">BBVA Perú (Cuenta Corriente Soles):</p>
+            <p style="font-size: 1.05rem; font-family: monospace; font-weight: bold; color: #07A5D6; margin-bottom: 6px;">
+              0011-0175-0100062400
+            </p>
+            <p style="font-weight: 700; color: #023660; margin-bottom: 6px;">CCI (Transferencias Interbancarias):</p>
+            <p style="font-size: 1.05rem; font-family: monospace; font-weight: bold; color: #07A5D6; margin-bottom: 12px;">
+              011-175-000100062400-75
+            </p>
+            <button class="btn btn-primary btn-copy" data-copy="001101750100062400" style="font-size: 0.8125rem; padding: 8px 18px;">
+              Copiar número de cuenta
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab 3: PayPal -->
+        <div class="modal__tab-content" id="tab-paypal" role="tabpanel">
+          <div style="background: #f0f7fc; padding: 18px; border-radius: 12px; margin-bottom: 16px; text-align: center;">
+            <p style="font-weight: 700; color: #023660; margin-bottom: 8px;">Donaciones en dólares / internacionales:</p>
+            <p style="font-size: 0.9375rem; color: #5a6b7c; margin-bottom: 16px;">
+              Acepta tarjetas de crédito, débito o saldo PayPal desde cualquier país.
+            </p>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=H8B4X4392YQCE" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex;">
+              Donar con PayPal
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón Volver Arriba -->
+  <button class="scroll-top-btn" aria-label="Volver al inicio de la página" title="Subir al inicio">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
+
+  <!-- Script Vanilla Principal -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

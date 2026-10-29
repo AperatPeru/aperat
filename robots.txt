@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /version-anterior/
+
+Sitemap: https://www.aperat.org.pe/sitemap.xml
