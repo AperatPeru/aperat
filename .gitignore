@@ -19,3 +19,4 @@ build/
 
 # Copia temporal de respaldo / referencia local
 version-anterior/
+temp/
