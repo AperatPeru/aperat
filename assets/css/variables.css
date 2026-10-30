@@ -70,10 +70,10 @@
   --color-border-light: rgba(2, 54, 96, 0.08);
   --color-border-subtle: rgba(7, 165, 214, 0.15);
 
-  /* Tipografías Oficiales */
-  --font-serif-display: 'Asterone', Georgia, 'Times New Roman', serif;
-  --font-sans-title: 'Noway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-sans-body: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Tipografías Oficiales Modernas */
+  --font-serif-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans-title: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans-body: 'Karla', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Espaciados y Dimensiones */
   --container-width: 1240px;
@@ -86,31 +86,33 @@
   --gradient-secondary: linear-gradient(135deg, #07A5D6 0%, #0584ab 100%);
   --gradient-secondary-hover: linear-gradient(135deg, #20aed9 0%, #07A5D6 100%);
   --gradient-accent: linear-gradient(135deg, #07A5D6 0%, #44bbe0 50%, #7fe1ff 100%);
-  --gradient-hero: linear-gradient(180deg, rgba(2, 24, 44, 0.48) 0%, rgba(1, 15, 28, 0.85) 100%);
-  --gradient-card-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 247, 251, 0.8) 100%);
-  --gradient-glow: radial-gradient(circle, rgba(7, 165, 214, 0.28) 0%, transparent 70%);
+  --gradient-hero: linear-gradient(180deg, rgba(2, 24, 44, 0.55) 0%, rgba(1, 15, 28, 0.92) 100%);
+  --gradient-card-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(240, 247, 251, 0.88) 100%);
+  --gradient-glow: radial-gradient(circle, rgba(7, 165, 214, 0.3) 0%, transparent 70%);
+  --gradient-stats: linear-gradient(135deg, #02233f 0%, #011627 100%);
 
   /* Sombras y Elevaciones Modernas Multi-capa */
   --shadow-sm: 0 2px 8px rgba(2, 54, 96, 0.06);
   --shadow-md: 0 8px 24px rgba(2, 54, 96, 0.08);
   --shadow-lg: 0 16px 40px rgba(2, 54, 96, 0.12);
-  --shadow-card: 0 12px 32px -4px rgba(2, 54, 96, 0.08), 0 4px 12px -2px rgba(2, 54, 96, 0.04);
-  --shadow-card-hover: 0 24px 48px -8px rgba(2, 54, 96, 0.15), 0 8px 24px -4px rgba(7, 165, 214, 0.12);
-  --shadow-glow-blue: 0 0 24px rgba(7, 165, 214, 0.35);
-  --shadow-glass: 0 8px 32px 0 rgba(2, 54, 96, 0.08);
+  --shadow-card: 0 14px 34px -4px rgba(2, 54, 96, 0.07), 0 4px 12px -2px rgba(2, 54, 96, 0.03);
+  --shadow-card-hover: 0 24px 50px -8px rgba(2, 54, 96, 0.14), 0 10px 24px -4px rgba(7, 165, 214, 0.15);
+  --shadow-glow-blue: 0 0 28px rgba(7, 165, 214, 0.4);
+  --shadow-glass: 0 12px 36px 0 rgba(2, 54, 96, 0.09);
 
   /* Glassmorphism Tokens */
-  --glass-bg: rgba(255, 255, 255, 0.88);
-  --glass-bg-dark: rgba(2, 31, 56, 0.82);
-  --glass-border: 1px solid rgba(255, 255, 255, 0.25);
-  --glass-blur: blur(14px) saturate(180%);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-bg-dark: rgba(2, 26, 46, 0.86);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.28);
+  --glass-border-dark: 1px solid rgba(7, 165, 214, 0.22);
+  --glass-blur: blur(16px) saturate(180%);
 
   /* Bordes Redondeados */
   --radius-xs: 4px;
   --radius-sm: 8px;
   --radius-md: 14px;
-  --radius-lg: 22px;
-  --radius-xl: 30px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
   --radius-pill: 9999px;
 
   /* Transiciones y Curvas Bézier Suaves */

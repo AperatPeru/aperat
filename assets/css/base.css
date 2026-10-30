@@ -113,17 +113,23 @@ button {
 
 /* 3. Tipografía Jerárquica */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans-title);
   color: var(--color-primary);
-  line-height: 1.25;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   font-feature-settings: 'kern' 1;
 }
 
 .font-display {
-  font-family: var(--font-serif-display);
+  font-family: var(--font-sans-title);
+  font-weight: 800;
+  letter-spacing: -0.03em;
 }
 
 .font-title {
   font-family: var(--font-sans-title);
+  font-weight: 700;
 }
 
 .font-body {
