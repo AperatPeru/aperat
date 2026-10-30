@@ -81,23 +81,43 @@
   --header-top-height: 42px;
   --header-nav-height: 84px;
 
-  /* Sombras y Elevaciones */
+  /* Gradientes Modernos */
+  --gradient-primary: linear-gradient(135deg, #023660 0%, #034b85 100%);
+  --gradient-secondary: linear-gradient(135deg, #07A5D6 0%, #0584ab 100%);
+  --gradient-secondary-hover: linear-gradient(135deg, #20aed9 0%, #07A5D6 100%);
+  --gradient-accent: linear-gradient(135deg, #07A5D6 0%, #44bbe0 50%, #7fe1ff 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(2, 24, 44, 0.48) 0%, rgba(1, 15, 28, 0.85) 100%);
+  --gradient-card-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 247, 251, 0.8) 100%);
+  --gradient-glow: radial-gradient(circle, rgba(7, 165, 214, 0.28) 0%, transparent 70%);
+
+  /* Sombras y Elevaciones Modernas Multi-capa */
   --shadow-sm: 0 2px 8px rgba(2, 54, 96, 0.06);
   --shadow-md: 0 8px 24px rgba(2, 54, 96, 0.08);
   --shadow-lg: 0 16px 40px rgba(2, 54, 96, 0.12);
-  --shadow-card: 0 10px 30px rgba(2, 54, 96, 0.07);
+  --shadow-card: 0 12px 32px -4px rgba(2, 54, 96, 0.08), 0 4px 12px -2px rgba(2, 54, 96, 0.04);
+  --shadow-card-hover: 0 24px 48px -8px rgba(2, 54, 96, 0.15), 0 8px 24px -4px rgba(7, 165, 214, 0.12);
+  --shadow-glow-blue: 0 0 24px rgba(7, 165, 214, 0.35);
+  --shadow-glass: 0 8px 32px 0 rgba(2, 54, 96, 0.08);
+
+  /* Glassmorphism Tokens */
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-bg-dark: rgba(2, 31, 56, 0.82);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.25);
+  --glass-blur: blur(14px) saturate(180%);
 
   /* Bordes Redondeados */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
   --radius-pill: 9999px;
 
-  /* Transiciones */
-  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Transiciones y Curvas Bézier Suaves */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* Z-Index */
   --z-negative: -1;

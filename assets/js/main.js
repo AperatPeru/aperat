@@ -1,17 +1,27 @@
 /**
- * APERAT - Script Principal (JavaScript Vanilla)
- * Funcionalidad interactiva: Navbar móvil, sticky header, modal de donación,
+ * APERAT - Script Principal (JavaScript Vanilla Moderno)
+ * Funcionalidades: Barra de progreso de lectura, Scroll Reveal animado,
+ * contador numérico interactivo, Header sticky dinámico, Modal de donación con pestañas,
  * carrusel de artículos, scroll suave y botón volver arriba.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Header con sombra dinámica al hacer scroll
+  // 1. Barra de progreso de lectura y Header con sombra/glassmorphism al hacer scroll
   const siteHeader = document.querySelector('.site-header');
   const scrollTopBtn = document.querySelector('.scroll-top-btn');
+  const progressBar = document.getElementById('scroll-progress');
 
   const handleScroll = () => {
     const scrollY = window.scrollY || window.pageYOffset;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
 
+    // Actualizar barra de progreso de lectura
+    if (progressBar && docHeight > 0) {
+      const scrollPercent = Math.min(100, Math.max(0, (scrollY / docHeight) * 100));
+      progressBar.style.width = `${scrollPercent}%`;
+    }
+
+    // Header scrolled state
     if (siteHeader) {
       if (scrollY > 20) {
         siteHeader.classList.add('scrolled');
@@ -20,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    // Botón volver arriba
     if (scrollTopBtn) {
       if (scrollY > 350) {
         scrollTopBtn.classList.add('is-visible');
@@ -42,7 +53,75 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Menú móvil (Toggle Hamburger)
+  // 3. Animaciones Scroll Reveal con IntersectionObserver
+  const revealElements = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -60px 0px',
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback directo si no hay IntersectionObserver
+    revealElements.forEach(el => el.classList.add('is-revealed'));
+  }
+
+  // 4. Contador Numérico Interactivo para Métricas
+  const counterElements = document.querySelectorAll('[data-counter]');
+  if (counterElements.length > 0) {
+    const animateCounter = (el) => {
+      const target = parseInt(el.getAttribute('data-counter'), 10);
+      if (isNaN(target)) return;
+
+      const duration = 1600; // ms
+      const startTime = performance.now();
+
+      const updateCounter = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Easing out cubic
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const currentVal = Math.round(easeOut * target);
+
+        el.textContent = currentVal;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          el.textContent = target;
+        }
+      };
+
+      requestAnimationFrame(updateCounter);
+    };
+
+    if ('IntersectionObserver' in window) {
+      const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.3
+      });
+
+      counterElements.forEach(el => counterObserver.observe(el));
+    } else {
+      counterElements.forEach(el => animateCounter(el));
+    }
+  }
+
+  // 5. Menú móvil (Toggle Hamburger)
   const navToggle = document.querySelector('.navbar__toggle');
   const navMenu = document.querySelector('.navbar__menu');
 
@@ -74,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Modal de Donación
+  // 6. Modal de Donación
   const modalDonar = document.getElementById('modal-donar');
   const openModalBtns = document.querySelectorAll('[data-open-modal="donar"], a[href="#donar"]');
   const closeModalBtns = document.querySelectorAll('[data-close-modal]');
@@ -160,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Carrusel / Slider de Artículos
+  // 7. Carrusel / Slider de Artículos
   const sliderDots = document.querySelectorAll('.slider-dot');
   const sliderPrevBtn = document.querySelector('.slider-btn--prev');
   const sliderNextBtn = document.querySelector('.slider-btn--next');
@@ -192,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Formulario de Boletín Mensual
+  // 8. Formulario de Boletín Mensual
   const newsletterForm = document.querySelector('.newsletter__form');
   if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
@@ -200,19 +279,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const input = newsletterForm.querySelector('.newsletter__input');
       if (input && input.value.trim() !== '') {
         const btn = newsletterForm.querySelector('.newsletter__btn');
-        const originalText = btn.textContent;
-        btn.textContent = '¡Suscrito!';
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span>✓ ¡Suscrito!</span>';
         btn.style.backgroundColor = '#0584ab';
         input.value = '';
         setTimeout(() => {
-          btn.textContent = originalText;
+          btn.innerHTML = originalText;
           btn.style.backgroundColor = '';
         }, 3000);
       }
     });
   }
 
-  // 7. Búsqueda Rápida en Footer
+  // 9. Búsqueda Rápida en Footer
   const footerSearchForm = document.querySelector('.footer-search');
   if (footerSearchForm) {
     footerSearchForm.addEventListener('submit', (e) => {
@@ -239,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. Enlace de Navegación Activo según Scroll (IntersectionObserver)
+  // 10. Enlace de Navegación Activo según Scroll (IntersectionObserver)
   const sections = document.querySelectorAll('section[id], header[id]');
   const navAnchorLinks = document.querySelectorAll('.navbar__link');
 

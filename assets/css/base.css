@@ -149,7 +149,91 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: var(--container-padding);
 }
 
-/* 5. Utilidades Accesibles y Visuales */
+/* 5. Utilidades Accesibles y Visuales Modernas */
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Scrollbar personalizada sutil */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f4f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b5c7d6;
+  border-radius: var(--radius-pill);
+  border: 2px solid #f0f4f8;
+  transition: background var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Barra de progreso de lectura superior */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--gradient-secondary);
+  z-index: 10000;
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
+/* Accesibilidad y foco moderno */
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+
+/* Animaciones modernas de Scroll Reveal */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal="fade"] {
+  transform: translateY(0);
+}
+
+[data-reveal="left"] {
+  transform: translateX(-30px);
+}
+
+[data-reveal="left"].is-revealed {
+  transform: translateX(0);
+}
+
+[data-reveal="right"] {
+  transform: translateX(30px);
+}
+
+[data-reveal="right"].is-revealed {
+  transform: translateX(0);
+}
+
+[data-reveal-delay="100"] { transition-delay: 0.1s; }
+[data-reveal-delay="150"] { transition-delay: 0.15s; }
+[data-reveal-delay="200"] { transition-delay: 0.2s; }
+[data-reveal-delay="250"] { transition-delay: 0.25s; }
+[data-reveal-delay="300"] { transition-delay: 0.3s; }
+[data-reveal-delay="400"] { transition-delay: 0.4s; }
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -165,3 +249,4 @@ h1, h2, h3, h4, h5, h6 {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
+

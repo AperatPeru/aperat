@@ -1,18 +1,20 @@
 /**
- * APERAT - Componentes Reutilizables y Estructuras Modulares
+ * APERAT - Componentes Reutilizables y Estructuras Modulares (Modern UI/UX)
  */
 
 /* ==========================================================================
    1. Barra Superior (Topbar)
    ========================================================================== */
 .topbar {
-  background-color: var(--color-primary);
+  background: linear-gradient(90deg, #01223e 0%, var(--color-primary) 50%, #034b85 100%);
   color: var(--color-white);
   font-family: var(--font-sans-body);
   font-size: 0.8125rem;
   line-height: 1;
-  padding: 10px 0;
+  padding: 11px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: calc(var(--z-header) + 1);
 }
 
 .topbar__container {
@@ -20,13 +22,13 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
 }
 
 .topbar__contacts {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 26px;
   flex-wrap: wrap;
 }
 
@@ -35,18 +37,25 @@
   align-items: center;
   gap: 8px;
   color: #e2ecf5;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
+  padding: 2px 0;
 }
 
 .topbar__item:hover {
-  color: var(--color-secondary-light);
+  color: #7fe1ff;
+  transform: translateY(-1px);
 }
 
 .topbar__icon {
   width: 14px;
   height: 14px;
-  fill: var(--color-secondary);
+  fill: var(--color-secondary-light);
   flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.topbar__item:hover .topbar__icon {
+  transform: scale(1.15);
 }
 
 .topbar__location {
@@ -57,21 +66,25 @@
 }
 
 /* ==========================================================================
-   2. Navegación Principal (Header & Navbar)
+   2. Navegación Principal (Header & Navbar) con Glassmorphism
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   z-index: var(--z-header);
-  transition: box-shadow var(--transition-normal), background-color var(--transition-normal);
-  box-shadow: 0 2px 12px rgba(2, 54, 96, 0.06);
+  transition: box-shadow var(--transition-normal), background-color var(--transition-normal), border-bottom var(--transition-normal);
+  border-bottom: 1px solid rgba(2, 54, 96, 0.06);
 }
 
 .site-header.scrolled {
-  box-shadow: 0 4px 20px rgba(2, 54, 96, 0.12);
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 10px 30px -10px rgba(2, 54, 96, 0.12);
+  border-bottom: 1px solid rgba(7, 165, 214, 0.18);
 }
 
 .navbar {
@@ -89,6 +102,11 @@
   flex-shrink: 0;
 }
 
+.navbar__brand-link {
+  display: inline-flex;
+  align-items: center;
+}
+
 .navbar__logo {
   height: 48px;
   width: auto;
@@ -101,9 +119,9 @@
 
 .navbar__divider {
   width: 1px;
-  height: 38px;
-  background-color: rgba(2, 54, 96, 0.15);
-  margin: 0 4px;
+  height: 34px;
+  background-color: rgba(2, 54, 96, 0.12);
+  margin: 0 6px;
 }
 
 .navbar__menu {
@@ -115,7 +133,7 @@
 .navbar__list {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 2px;
 }
 
 .navbar__item {
@@ -125,51 +143,51 @@
 
 .navbar__link {
   font-family: var(--font-sans-title);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 10px 18px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
   position: relative;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
-.navbar__link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 18px;
-  right: 18px;
-  height: 3px;
-  background-color: var(--color-secondary);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform var(--transition-normal);
+.navbar__link:hover {
+  color: var(--color-secondary-dark);
+  background-color: var(--color-secondary-tint);
 }
 
-.navbar__link:hover,
 .navbar__link.active {
   color: var(--color-secondary);
+  background-color: var(--color-secondary-tint);
 }
 
-.navbar__link:hover::after,
 .navbar__link.active::after {
-  transform: scaleX(1);
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-secondary);
 }
 
 .navbar__separator {
   width: 1px;
-  height: 24px;
-  background-color: rgba(2, 54, 96, 0.12);
-  margin: 0 8px;
+  height: 20px;
+  background-color: rgba(2, 54, 96, 0.1);
+  margin: 0 4px;
 }
 
 .navbar__socials {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 12px;
+  gap: 8px;
+  padding: 0 10px;
 }
 
 .navbar__social-link {
@@ -179,37 +197,46 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: var(--color-secondary);
-  color: var(--color-white);
-  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  background-color: var(--color-secondary-tint);
+  color: var(--color-secondary);
+  transition: all var(--transition-fast);
+  border: 1px solid rgba(7, 165, 214, 0.2);
 }
 
 .navbar__social-link svg {
   width: 15px;
   height: 15px;
-  fill: var(--color-white);
+  fill: var(--color-secondary);
+  transition: fill var(--transition-fast);
 }
 
 .navbar__social-link:hover {
   transform: translateY(-2px);
-  background-color: var(--color-secondary-dark);
+  background: var(--gradient-secondary);
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(7, 165, 214, 0.35);
+}
+
+.navbar__social-link:hover svg {
+  fill: var(--color-white);
 }
 
 .navbar__cta {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
-/* Botón Hamburguesa Móvil */
+/* Botón Hamburguesa Móvil Moderno */
 .navbar__toggle {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 32px;
-  height: 26px;
-  padding: 0;
+  width: 34px;
+  height: 28px;
+  padding: 2px;
   background: transparent;
   cursor: pointer;
   z-index: calc(var(--z-header) + 1);
+  border-radius: var(--radius-xs);
 }
 
 .navbar__toggle-bar {
@@ -233,13 +260,13 @@
 }
 
 /* ==========================================================================
-   3. Botones y Llamados a la Acción
+   3. Botones y Llamados a la Acción Modernos
    ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   font-family: var(--font-sans-title);
   font-weight: 700;
   font-size: 0.9375rem;
@@ -251,36 +278,75 @@
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-primary {
-  background-color: var(--color-secondary);
+  background: var(--gradient-secondary);
   color: var(--color-white);
-  box-shadow: 0 4px 14px rgba(7, 165, 214, 0.3);
+  box-shadow: 0 4px 16px rgba(7, 165, 214, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.65s ease;
+}
+
+.btn-primary:hover::after {
+  left: 120%;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-secondary-dark);
-  box-shadow: 0 6px 18px rgba(7, 165, 214, 0.45);
+  background: var(--gradient-secondary-hover);
+  box-shadow: 0 8px 26px rgba(7, 165, 214, 0.5);
   transform: translateY(-2px);
+}
+
+.btn-donar {
+  border-radius: var(--radius-pill);
+  padding: 10px 24px;
+  font-size: 0.875rem;
+}
+
+.btn-icon-heart {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  transition: transform var(--transition-fast);
+}
+
+.btn-donar:hover .btn-icon-heart {
+  transform: scale(1.2);
 }
 
 .btn-dark {
-  background-color: var(--color-primary);
+  background: var(--gradient-primary);
   color: var(--color-white);
+  box-shadow: 0 4px 14px rgba(2, 54, 96, 0.25);
 }
 
 .btn-dark:hover {
-  background-color: var(--color-primary-dark);
+  background: linear-gradient(135deg, #011f38 0%, #023660 100%);
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(2, 54, 96, 0.4);
 }
 
 .btn-outline-white {
-  background-color: rgba(18, 22, 28, 0.65);
+  background-color: rgba(255, 255, 255, 0.08);
   color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
   border-radius: var(--radius-sm);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .btn-outline-white:hover {
@@ -288,49 +354,147 @@
   color: var(--color-primary);
   border-color: var(--color-white);
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+}
+
+.btn-hero-primary {
+  border-radius: var(--radius-pill);
+  padding: 14px 34px;
+}
+
+.btn-hero-secondary {
+  border-radius: var(--radius-pill);
+  padding: 14px 30px;
+}
+
+.btn-arrow {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
 }
 
 .btn-pill {
   border-radius: var(--radius-pill);
 }
 
+/* Botón Magnético Moderno (Estilo Pill con círculo de flecha) */
+.btn-magnetic {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans-title);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 10px 18px 10px 4px;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+}
+
+.btn-magnetic__arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-secondary-tint);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(7, 165, 214, 0.2);
+}
+
+.btn-magnetic__arrow svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: transform var(--transition-fast);
+}
+
+.btn-magnetic:hover {
+  color: var(--color-secondary-dark);
+}
+
+.btn-magnetic:hover .btn-magnetic__arrow {
+  background: var(--gradient-secondary);
+  color: var(--color-white);
+  transform: translateX(4px) scale(1.08);
+  box-shadow: 0 6px 18px rgba(7, 165, 214, 0.4);
+}
+
+/* Tag de sección overline */
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-sans-title);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-secondary);
+  background-color: var(--color-secondary-tint);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 14px;
+  border: 1px solid rgba(7, 165, 214, 0.2);
+}
+
 /* ==========================================================================
-   4. Títulos y Encabezados de Sección
+   4. Títulos y Encabezados de Sección Modernos
    ========================================================================== */
 .section-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
 
 .section-header__badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-secondary-tint);
+  margin-bottom: 16px;
+  box-shadow: 0 6px 20px rgba(7, 165, 214, 0.15);
+  border: 1px solid rgba(7, 165, 214, 0.25);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.section-header:hover .section-header__badge {
+  transform: scale(1.08) rotate(4deg);
+  box-shadow: 0 8px 24px rgba(7, 165, 214, 0.25);
 }
 
 .section-header__badge-icon {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 }
 
 .section-header__title {
   font-family: var(--font-sans-title);
-  font-size: 2.25rem;
+  font-size: clamp(2.1rem, 3.6vw, 2.85rem);
   font-weight: 700;
-  color: var(--color-secondary);
-  margin-bottom: 12px;
-  letter-spacing: -0.01em;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
 }
 
 .section-header__subtitle {
   font-family: var(--font-sans-body);
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   color: var(--color-text-muted);
-  max-width: 650px;
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* ==========================================================================
@@ -354,7 +518,7 @@
 }
 
 /* ==========================================================================
-   6. Modal de Donación y Apoyo
+   6. Modal de Donación con Glassmorphism
    ========================================================================== */
 .modal {
   position: fixed;
@@ -362,8 +526,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(2, 24, 44, 0.75);
-  backdrop-filter: blur(6px);
+  background-color: rgba(1, 15, 28, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,12 +546,13 @@
 
 .modal__dialog {
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   max-width: 580px;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-  transform: translateY(20px) scale(0.96);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateY(24px) scale(0.96);
   transition: transform var(--transition-normal);
 }
 
@@ -395,71 +561,78 @@
 }
 
 .modal__header {
-  background-color: var(--color-primary);
+  background: var(--gradient-primary);
   color: var(--color-white);
-  padding: 24px 28px;
+  padding: 24px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .modal__title {
-  font-family: var(--font-serif-display);
-  font-size: 1.5rem;
+  font-family: var(--font-sans-title);
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--color-white);
 }
 
 .modal__close {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
   color: var(--color-white);
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   cursor: pointer;
   border-radius: 50%;
-  transition: background-color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .modal__close:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: rotate(90deg);
 }
 
 .modal__body {
-  padding: 28px;
+  padding: 30px;
 }
 
 .modal__tabs {
   display: flex;
   gap: 8px;
   margin-bottom: 24px;
-  border-bottom: 1px solid var(--color-border-light);
-  padding-bottom: 12px;
+  background: #f0f4f8;
+  padding: 6px;
+  border-radius: var(--radius-pill);
   overflow-x: auto;
 }
 
 .modal__tab-btn {
-  padding: 8px 16px;
+  flex: 1;
+  padding: 10px 16px;
   font-family: var(--font-sans-title);
   font-weight: 700;
   font-size: 0.875rem;
   color: var(--color-text-muted);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-pill);
   transition: all var(--transition-fast);
   cursor: pointer;
   white-space: nowrap;
+  text-align: center;
 }
 
 .modal__tab-btn.active {
-  background-color: var(--color-secondary-tint);
-  color: var(--color-primary);
+  background: var(--gradient-secondary);
+  color: var(--color-white);
+  box-shadow: 0 4px 14px rgba(7, 165, 214, 0.35);
 }
 
 .modal__tab-content {
   display: none;
-  animation: fadeIn 0.25s ease;
+  animation: fadeIn 0.28s ease;
 }
 
 .modal__tab-content.active {
@@ -472,25 +645,28 @@
 }
 
 /* ==========================================================================
-   7. Botón Scroll to Top
+   7. Botón Scroll to Top Moderno con Glassmorphism
    ========================================================================== */
 .scroll-top-btn {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-sm);
-  background-color: var(--color-tertiary);
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(2, 54, 96, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(2, 54, 96, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   z-index: 90;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(12px);
+  transform: translateY(16px);
   transition: all var(--transition-normal);
   cursor: pointer;
 }
@@ -502,12 +678,13 @@
 }
 
 .scroll-top-btn:hover {
-  background-color: var(--color-primary);
-  transform: translateY(-3px);
+  background: var(--gradient-secondary);
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 12px 30px rgba(7, 165, 214, 0.45);
 }
 
 .scroll-top-btn svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   fill: currentColor;
 }

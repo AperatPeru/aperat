@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+  <!-- Barra de Progreso de Lectura -->
+  <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ==========================================================================
        BARRA SUPERIOR (TOPBAR)
@@ -112,7 +114,12 @@
         <div class="navbar__divider" aria-hidden="true"></div>
 
         <div class="navbar__cta">
-          <a href="#donar" class="btn btn-primary" data-open-modal="donar" role="button">Donar</a>
+          <a href="#donar" class="btn btn-primary btn-donar" data-open-modal="donar" role="button">
+            <svg class="btn-icon-heart" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span>Donar</span>
+          </a>
         </div>
       </nav>
     </div>
@@ -124,14 +131,28 @@
          ========================================================================== -->
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__container">
-        <span class="hero__pretitle">Asociación Peruana de Ateos</span>
-        <h1 class="hero__title" id="hero-title">Una sociedad donde la conciencia sea libre</h1>
-        <p class="hero__description">
+        <div class="hero__badge" data-reveal>
+          <span class="hero__badge-pulse" aria-hidden="true"></span>
+          <span>Asociación Peruana de Ateos • Desde 2009</span>
+        </div>
+        <h1 class="hero__title" id="hero-title" data-reveal data-reveal-delay="100">
+          Una sociedad donde la <span class="hero__title-gradient">conciencia sea libre</span>
+        </h1>
+        <p class="hero__description" data-reveal data-reveal-delay="200">
           La Asociación Peruana de Ateos (APERAT) reúne desde 2009 a personas ateas, agnósticas, humanistas y no creyentes que defienden la libertad de conciencia, el pensamiento crítico, los derechos humanos y un Estado verdaderamente laico.
         </p>
-        <div class="hero__cta">
-          <a href="#sobre-nosotros" class="btn btn-outline-white">Conoce APERAT</a>
+        <div class="hero__cta" data-reveal data-reveal-delay="300">
+          <a href="#sobre-nosotros" class="btn btn-primary btn-hero-primary">
+            <span>Conoce APERAT</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/>
+            </svg>
+          </a>
+          <a href="#principios" class="btn btn-outline-white btn-hero-secondary">
+            <span>Nuestros Principios</span>
+          </a>
         </div>
       </div>
 
@@ -151,14 +172,22 @@
       <div class="container">
         <div class="community__grid">
           <!-- Columna Izquierda: Composición Asimétrica de Fotos -->
-          <div class="community__visuals">
-            <img src="assets/img/community/dawkins.jpg?v=2" alt="Richard Dawkins - Referente del pensamiento científico y racional" class="community__image-dawkins" loading="lazy">
-            <img src="assets/img/community/aperat_comunidad_selfie.jpg" alt="Miembros de la comunidad de APERAT reunidos en Lima" class="community__image-youth" loading="lazy">
+          <div class="community__visuals" data-reveal="left">
+            <div class="community__dawkins-wrapper">
+              <img src="assets/img/community/dawkins.jpg?v=2" alt="Richard Dawkins - Referente del pensamiento científico y racional" class="community__image-dawkins" loading="lazy">
+            </div>
+            <div class="community__youth-wrapper">
+              <img src="assets/img/community/aperat_comunidad_selfie.jpg" alt="Miembros de la comunidad de APERAT reunidos en Lima" class="community__image-youth" loading="lazy">
+              <div class="community__floating-tag">
+                <span class="community__floating-dot"></span>
+                <span class="community__floating-text">Comunidad activa en Lima</span>
+              </div>
+            </div>
           </div>
 
           <!-- Columna Derecha: Contenido Institucional -->
-          <div class="community__content">
-            <div class="community__brand-mark font-title">APERAT</div>
+          <div class="community__content" data-reveal="right">
+            <span class="section-tag">Comunidad & Trayectoria</span>
             <h2 class="community__title" id="community-title">Más de 15 años construyendo comunidad</h2>
             <p class="community__paragraph">
               La APERAT nació en Lima en 2009 para reunir a personas que no encontraban un espacio para expresar y defender públicamente una forma de vida basada en la razón, la libertad de conciencia y los valores humanistas.
@@ -166,14 +195,27 @@
             <p class="community__paragraph">
               Desde entonces hemos mantenido una actividad ininterrumpida, organizando encuentros, conferencias y proyectos, defendiendo los derechos de las personas no creyentes y promoviendo la separación entre las instituciones religiosas y el Estado.
             </p>
-            <p class="community__paragraph">
-              Hoy formamos parte del movimiento humanista internacional y seguimos trabajando desde el Perú por una sociedad más libre, plural e igualitaria.
-            </p>
-            <a href="#principios" class="community__link">
+            <div class="community__features">
+              <div class="community__feature-item">
+                <span class="community__feature-icon">✦</span>
+                <span>Razón, evidencia y método científico como guía</span>
+              </div>
+              <div class="community__feature-item">
+                <span class="community__feature-icon">✦</span>
+                <span>Defensa del Estado Laico y derechos de las minorías</span>
+              </div>
+              <div class="community__feature-item">
+                <span class="community__feature-icon">✦</span>
+                <span>Miembros de la red global de Humanists International</span>
+              </div>
+            </div>
+            <a href="#principios" class="btn-magnetic">
               <span>Conoce más de nosotros</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/>
-              </svg>
+              <span class="btn-magnetic__arrow">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/>
+                </svg>
+              </span>
             </a>
           </div>
         </div>
@@ -185,37 +227,47 @@
          ========================================================================== -->
     <section class="stats-strip" aria-label="Logros y trayectoria institucional">
       <!-- Tarjeta 1: Horizon Sky -->
-      <article class="stats-card stats-card--sky">
+      <article class="stats-card stats-card--sky" data-reveal data-reveal-delay="100">
         <div class="stats-card__inner">
-          <div class="stats-card__number">17</div>
+          <div class="stats-card__topline" aria-hidden="true"></div>
+          <div class="stats-card__number-wrap">
+            <span class="stats-card__number" data-counter="17">17</span>
+            <span class="stats-card__plus">+</span>
+          </div>
           <h3 class="stats-card__title">Años de Actividad</h3>
           <p class="stats-card__subtitle">Ateísmo Militante Ininterrumpido</p>
         </div>
       </article>
 
       <!-- Tarjeta 2: Cosmic Blue -->
-      <article class="stats-card stats-card--cosmic">
+      <article class="stats-card stats-card--cosmic" data-reveal data-reveal-delay="200">
         <div class="stats-card__inner">
-          <svg class="stats-card__icon" viewBox="440 0 370 605" aria-hidden="true">
-            <!-- Icono oficial Happy Human de Humanists International -->
-            <path d="m 621.53149,0.999997 c 1.63416,0.333277 2.78968,0.915198 3.96692,0.962991 21.8675,0.887777 42.75391,5.959771 63.12366,13.871361 18.66827,7.250713 35.89557,16.96795 51.55206,29.282777 22.2442,17.496518 41.48432,37.788155 54.83643,63.069984 8.06158,15.26445 2.77984,28.73188 -10.31574,37.7943 -3.26647,2.26044 -6.98059,4.01139 -10.70288,5.43871 -4.11236,1.57686 -7.73456,0.58536 -10.0321,-3.60819 -5.39252,-9.84297 -10.86225,-19.64381 -16.22778,-29.50138 C 736.37842,97.452034 721.82239,78.997681 703.87592,63.607075 681.68665,44.57782 656.18133,31.886232 627.28668,25.785297 c -18.47632,-3.901155 -37.08093,-4.82319 -55.59717,-3.433687 -13.6416,1.023701 -27.04925,5.226668 -40.54327,8.097431 -2.52557,0.537302 -4.95007,1.991003 -7.45081,2.068545 -2.12408,0.06586 -5.4002,-0.632971 -6.19519,-2.078001 -1.41827,-2.577889 -1.08984,-5.934222 2.50336,-7.421204 9.73999,-4.030674 19.36884,-8.383512 29.28986,-11.910927 16.55652,-5.886683 33.74792,-8.777599 51.51306,-9.72075 C 607.68762,1 614.37531,1 621.53149,0.999997 Z"/>
-            <path d="m 602.00867,245.00203 c 7.38397,6.77089 15.99554,10.47435 25.448,10.78561 8.0448,0.26494 15.59234,-2.74696 22.11541,-7.847 12.8963,-10.0829 19.25897,-24.06744 22.22266,-39.47532 2.0658,-10.74002 2.44208,-21.83535 3.13855,-32.79956 0.65057,-10.24141 1.13074,-20.52626 0.95166,-30.77915 -0.20435,-11.70015 -1.3205,-23.3817 -1.83582,-35.08035 -0.21106,-4.79266 2.37409,-8.15878 6.84937,-9.66209 3.85614,-1.295301 8.64947,1.04711 10.63495,4.96083 1.02099,2.01239 1.97198,4.16343 2.39477,6.3596 3.10553,16.13016 6.23725,32.25871 9.02478,48.4456 2.24176,13.01738 4.18549,26.09282 5.92792,39.18691 1.03912,7.80867 1.44733,15.70192 2.1167,23.55906 1.33917,15.71701 2.66894,31.43482 3.98071,47.15413 0.0967,1.1586 0.0212,2.33176 0.0213,3.49817 5.5e-4,20.85224 0.23993,41.70819 -0.086,62.55533 -0.20892,13.3656 -0.99767,26.73715 -1.99163,40.07135 -1.01172,13.57272 -2.10407,27.17337 -4.04236,40.63492 -2.78473,19.34039 -5.94812,38.64871 -9.73194,57.81631 -3.51849,17.82398 -7.96325,35.46946 -12.23559,53.13663 -0.8606,3.55908 -2.82074,6.84552 -4.19629,10.28864 -1.78705,4.47314 -5.59064,5.242 -9.57172,4.69604 -4.74359,-0.65051 -7.12835,-4.30853 -7.01861,-8.66705 0.2149,-8.53815 1.06134,-17.06507 1.79358,-25.58399 0.57574,-6.69803 1.61523,-13.36221 2.0249,-20.06732 1.13696,-18.61209 3.16156,-37.26138 2.76526,-55.85181 -0.45856,-21.50491 -2.68701,-43.07846 -12.86249,-62.7525 -5.46185,-10.56057 -12.69666,-19.32446 -24.70447,-23.02438 -9.90741,-3.05274 -18.18451,-0.15769 -25.59851,6.41009 -14.09582,12.48691 -19.47131,29.47608 -23.42376,46.91153 -4.4018,19.41757 -6.482,39.1579 -6.20289,59.14435 0.13855,9.92197 -0.60571,19.85535 -0.90869,29.78482 -0.15948,5.22528 -3.50104,11.63056 -10.32867,10.0603 -2.22968,-0.51278 -5.33624,-2.10226 -5.95239,-3.91107 -2.96753,-8.71118 -5.70221,-17.56308 -7.61805,-26.5571 -3.0495,-14.31619 -5.62567,-28.74597 -7.94275,-43.20132 -1.75933,-10.97586 -2.89013,-22.05643 -4.14446,-33.10812 -1.42298,-12.53803 -2.80115,-25.08399 -3.9452,-37.6496 -0.62847,-6.90289 -0.97961,-13.85153 -1.03003,-20.78262 -0.1369,-18.82825 -0.17236,-37.65925 -0.006,-56.487 0.12482,-14.09617 0.13757,-28.22199 1.08704,-42.27471 1.11578,-16.51462 2.64154,-33.04268 4.97741,-49.42406 3.51813,-24.67271 7.26776,-49.34764 12.12787,-73.78117 3.15015,-15.836966 8.14722,-31.340857 12.9494,-46.797438 1.82862,-5.885712 5.58088,-7.330894 10.86335,-5.771046 4.59124,1.35577 6.30041,4.810807 5.97332,9.519207 -1.05029,15.11673 -2.03601,30.238053 -3.00476,45.360287 -0.70623,11.02217 -1.49829,22.042 -1.97485,33.07486 -0.51477,11.92018 -1.13379,23.86149 -0.93195,35.78047 0.2522,14.89964 1.685,29.86215 8.2591,43.44206 3.27698,6.7691 8.78412,12.4586 13.64148,18.69867 z"/>
-            <path d="m 666.92786,580 c 21.76281,-0.96692 42.62146,-4.41687 62.79101,-11.43018 3.05933,-1.06384 4.64881,-0.12139 6.22815,2.13129 1.86542,2.66071 0.96076,4.96503 -1.46722,6.21185 -6.90485,3.54578 -13.72687,7.55268 -21.05371,9.91083 -13.25202,4.2652 -26.66248,8.6134 -40.34668,10.80896 -15.72126,2.52252 -31.69361,3.03528 -47.82245,1.64288 -19.50885,-1.68414 -38.31244,-5.66076 -56.59723,-12.30938 -21.12195,-7.6803 -40.66535,-18.35761 -57.90476,-32.84149 -8.97329,-7.53907 -18.1405,-15.12671 -25.71591,-23.9795 -9.50036,-11.10229 -18.35815,-22.9837 -25.88067,-35.4982 -12.90726,-21.47259 3.03201,-40.49627 21.30282,-45.40402 3.82337,-1.02698 8.15592,2.4953 11.39392,8.20038 8.58734,15.13 16.71918,30.57581 26.23532,45.10816 14.83234,22.65069 34.66834,40.28948 58.00287,54.05859 19.32978,11.40594 40.31208,17.94653 62.31995,21.24011 9.24963,1.38428 18.6933,1.47235 28.51459,2.14972 z"/>
-            <path d="m 593.94226,204.06148 c -2.76129,-13.96628 0.45435,-25.73693 7.84839,-36.01257 14.80237,-20.5709 37.1593,-23.47352 54.0769,-6.99427 15.6322,15.22744 14.94959,39.69762 -1.41162,54.18128 -14.67322,12.98934 -34.78918,12.16433 -51.36536,-1.20063 -3.42431,-2.76111 -6.65759,-6.02704 -9.14831,-9.97381 z"/>
-          </svg>
+          <div class="stats-card__topline" aria-hidden="true"></div>
+          <div class="stats-card__icon-box">
+            <svg class="stats-card__icon" viewBox="440 0 370 605" aria-hidden="true">
+              <!-- Icono oficial Happy Human de Humanists International -->
+              <path d="m 621.53149,0.999997 c 1.63416,0.333277 2.78968,0.915198 3.96692,0.962991 21.8675,0.887777 42.75391,5.959771 63.12366,13.871361 18.66827,7.250713 35.89557,16.96795 51.55206,29.282777 22.2442,17.496518 41.48432,37.788155 54.83643,63.069984 8.06158,15.26445 2.77984,28.73188 -10.31574,37.7943 -3.26647,2.26044 -6.98059,4.01139 -10.70288,5.43871 -4.11236,1.57686 -7.73456,0.58536 -10.0321,-3.60819 -5.39252,-9.84297 -10.86225,-19.64381 -16.22778,-29.50138 C 736.37842,97.452034 721.82239,78.997681 703.87592,63.607075 681.68665,44.57782 656.18133,31.886232 627.28668,25.785297 c -18.47632,-3.901155 -37.08093,-4.82319 -55.59717,-3.433687 -13.6416,1.023701 -27.04925,5.226668 -40.54327,8.097431 -2.52557,0.537302 -4.95007,1.991003 -7.45081,2.068545 -2.12408,0.06586 -5.4002,-0.632971 -6.19519,-2.078001 -1.41827,-2.577889 -1.08984,-5.934222 2.50336,-7.421204 9.73999,-4.030674 19.36884,-8.383512 29.28986,-11.910927 16.55652,-5.886683 33.74792,-8.777599 51.51306,-9.72075 C 607.68762,1 614.37531,1 621.53149,0.999997 Z"/>
+              <path d="m 602.00867,245.00203 c 7.38397,6.77089 15.99554,10.47435 25.448,10.78561 8.0448,0.26494 15.59234,-2.74696 22.11541,-7.847 12.8963,-10.0829 19.25897,-24.06744 22.22266,-39.47532 2.0658,-10.74002 2.44208,-21.83535 3.13855,-32.79956 0.65057,-10.24141 1.13074,-20.52626 0.95166,-30.77915 -0.20435,-11.70015 -1.3205,-23.3817 -1.83582,-35.08035 -0.21106,-4.79266 2.37409,-8.15878 6.84937,-9.66209 3.85614,-1.295301 8.64947,1.04711 10.63495,4.96083 1.02099,2.01239 1.97198,4.16343 2.39477,6.3596 3.10553,16.13016 6.23725,32.25871 9.02478,48.4456 2.24176,13.01738 4.18549,26.09282 5.92792,39.18691 1.03912,7.80867 1.44733,15.70192 2.1167,23.55906 1.33917,15.71701 2.66894,31.43482 3.98071,47.15413 0.0967,1.1586 0.0212,2.33176 0.0213,3.49817 5.5e-4,20.85224 0.23993,41.70819 -0.086,62.55533 -0.20892,13.3656 -0.99767,26.73715 -1.99163,40.07135 -1.01172,13.57272 -2.10407,27.17337 -4.04236,40.63492 -2.78473,19.34039 -5.94812,38.64871 -9.73194,57.81631 -3.51849,17.82398 -7.96325,35.46946 -12.23559,53.13663 -0.8606,3.55908 -2.82074,6.84552 -4.19629,10.28864 -1.78705,4.47314 -5.59064,5.242 -9.57172,4.69604 -4.74359,-0.65051 -7.12835,-4.30853 -7.01861,-8.66705 0.2149,-8.53815 1.06134,-17.06507 1.79358,-25.58399 0.57574,-6.69803 1.61523,-13.36221 2.0249,-20.06732 1.13696,-18.61209 3.16156,-37.26138 2.76526,-55.85181 -0.45856,-21.50491 -2.68701,-43.07846 -12.86249,-62.7525 -5.46185,-10.56057 -12.69666,-19.32446 -24.70447,-23.02438 -9.90741,-3.05274 -18.18451,-0.15769 -25.59851,6.41009 -14.09582,12.48691 -19.47131,29.47608 -23.42376,46.91153 -4.4018,19.41757 -6.482,39.1579 -6.20289,59.14435 0.13855,9.92197 -0.60571,19.85535 -0.90869,29.78482 -0.15948,5.22528 -3.50104,11.63056 -10.32867,10.0603 -2.22968,-0.51278 -5.33624,-2.10226 -5.95239,-3.91107 -2.96753,-8.71118 -5.70221,-17.56308 -7.61805,-26.5571 -3.0495,-14.31619 -5.62567,-28.74597 -7.94275,-43.20132 -1.75933,-10.97586 -2.89013,-22.05643 -4.14446,-33.10812 -1.42298,-12.53803 -2.80115,-25.08399 -3.9452,-37.6496 -0.62847,-6.90289 -0.97961,-13.85153 -1.03003,-20.78262 -0.1369,-18.82825 -0.17236,-37.65925 -0.006,-56.487 0.12482,-14.09617 0.13757,-28.22199 1.08704,-42.27471 1.11578,-16.51462 2.64154,-33.04268 4.97741,-49.42406 3.51813,-24.67271 7.26776,-49.34764 12.12787,-73.78117 3.15015,-15.836966 8.14722,-31.340857 12.9494,-46.797438 1.82862,-5.885712 5.58088,-7.330894 10.86335,-5.771046 4.59124,1.35577 6.30041,4.810807 5.97332,9.519207 -1.05029,15.11673 -2.03601,30.238053 -3.00476,45.360287 -0.70623,11.02217 -1.49829,22.042 -1.97485,33.07486 -0.51477,11.92018 -1.13379,23.86149 -0.93195,35.78047 0.2522,14.89964 1.685,29.86215 8.2591,43.44206 3.27698,6.7691 8.78412,12.4586 13.64148,18.69867 z"/>
+              <path d="m 666.92786,580 c 21.76281,-0.96692 42.62146,-4.41687 62.79101,-11.43018 3.05933,-1.06384 4.64881,-0.12139 6.22815,2.13129 1.86542,2.66071 0.96076,4.96503 -1.46722,6.21185 -6.90485,3.54578 -13.72687,7.55268 -21.05371,9.91083 -13.25202,4.2652 -26.66248,8.6134 -40.34668,10.80896 -15.72126,2.52252 -31.69361,3.03528 -47.82245,1.64288 -19.50885,-1.68414 -38.31244,-5.66076 -56.59723,-12.30938 -21.12195,-7.6803 -40.66535,-18.35761 -57.90476,-32.84149 -8.97329,-7.53907 -18.1405,-15.12671 -25.71591,-23.9795 -9.50036,-11.10229 -18.35815,-22.9837 -25.88067,-35.4982 -12.90726,-21.47259 3.03201,-40.49627 21.30282,-45.40402 3.82337,-1.02698 8.15592,2.4953 11.39392,8.20038 8.58734,15.13 16.71918,30.57581 26.23532,45.10816 14.83234,22.65069 34.66834,40.28948 58.00287,54.05859 19.32978,11.40594 40.31208,17.94653 62.31995,21.24011 9.24963,1.38428 18.6933,1.47235 28.51459,2.14972 z"/>
+              <path d="m 593.94226,204.06148 c -2.76129,-13.96628 0.45435,-25.73693 7.84839,-36.01257 14.80237,-20.5709 37.1593,-23.47352 54.0769,-6.99427 15.6322,15.22744 14.94959,39.69762 -1.41162,54.18128 -14.67322,12.98934 -34.78918,12.16433 -51.36536,-1.20063 -3.42431,-2.76111 -6.65759,-6.02704 -9.14831,-9.97381 z"/>
+            </svg>
+          </div>
           <h3 class="stats-card__title">Humanists International</h3>
-          <p class="stats-card__subtitle">Organización miembro.</p>
+          <p class="stats-card__subtitle">Organización miembro oficial</p>
         </div>
       </article>
 
       <!-- Tarjeta 3: Rationalist Steel -->
-      <article class="stats-card stats-card--steel">
+      <article class="stats-card stats-card--steel" data-reveal data-reveal-delay="300">
         <div class="stats-card__inner">
-          <svg class="stats-card__icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-          </svg>
-          <h3 class="stats-card__title">Fundación: 2009</h3>
-          <p class="stats-card__subtitle">Defendiendo la razón, la libertad y el humanismo</p>
+          <div class="stats-card__topline" aria-hidden="true"></div>
+          <div class="stats-card__icon-box">
+            <svg class="stats-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+            </svg>
+          </div>
+          <h3 class="stats-card__title">Fundada en 2009</h3>
+          <p class="stats-card__subtitle">Defendiendo la razón y la libertad</p>
         </div>
       </article>
     </section>
@@ -225,7 +277,7 @@
          ========================================================================== -->
     <section class="principles" id="principios" aria-labelledby="principles-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-reveal>
           <div class="section-header__badge">
             <!-- Emblema estilizado 'A' de APERAT -->
             <svg class="section-header__badge-icon" viewBox="0 0 40 40" aria-hidden="true">
@@ -235,59 +287,63 @@
           </div>
           <h2 class="section-header__title font-title" id="principles-title">Nuestros Principios</h2>
           <p class="section-header__subtitle">
-            Noticias, actividades y reflexiones sobre humanismo, laicidad, libertad de conciencia y actualidad.
+            Pilares éticos, filosóficos y cívicos que orientan nuestro activismo por una sociedad más justa, racional y libre.
           </p>
         </div>
 
         <div class="principles__grid">
           <!-- Principio 1: Razón y Pensamiento Crítico y Científico -->
-          <article class="principle-item">
+          <article class="principle-item" data-reveal data-reveal-delay="100">
             <div class="principle-item__media">
               <img src="assets/img/principles/principio_ciencia.jpg" alt="Investigación y método científico como guía del conocimiento" class="principle-item__image" loading="lazy">
+              <span class="principle-item__badge-tag">01 / CIENCIA</span>
             </div>
             <div class="principle-item__card principle-item__card--sky">
-              <h3 class="principle-item__title">Razón y Pensamiento Crítico y Científico</h3>
+              <h3 class="principle-item__title">Razón y Pensamiento Crítico</h3>
               <p class="principle-item__text">
-                Buscamos comprender el mundo a partir de la evidencia, la razón y el conocimiento científico.
+                Buscamos comprender el mundo a partir de la evidencia, la razón y el conocimiento científico contrastable.
               </p>
             </div>
           </article>
 
           <!-- Principio 2: Libertad de Consciencia -->
-          <article class="principle-item">
+          <article class="principle-item" data-reveal data-reveal-delay="200">
             <div class="principle-item__media">
               <img src="assets/img/principles/principio_pinker.jpg" alt="Libertad intelectual y pensamiento humanista ilustrado" class="principle-item__image" loading="lazy">
+              <span class="principle-item__badge-tag">02 / CONCIENCIA</span>
             </div>
             <div class="principle-item__card principle-item__card--cosmic">
               <h3 class="principle-item__title">Libertad de Consciencia</h3>
               <p class="principle-item__text">
-                Toda persona debe poder construir, cambiar o mantener sus propias convicciones, religiosas o no religiosas, sin coerción ni discriminación.
+                Toda persona debe poder construir, cambiar o mantener sus propias convicciones sin coerción ni discriminación.
               </p>
             </div>
           </article>
 
           <!-- Principio 3: Estado Laico -->
-          <article class="principle-item">
+          <article class="principle-item" data-reveal data-reveal-delay="300">
             <div class="principle-item__media">
               <img src="assets/img/principles/principio_laico.jpg" alt="Campaña Nacional por un Estado Laico en el Perú" class="principle-item__image" loading="lazy">
+              <span class="principle-item__badge-tag">03 / ESTADO LAICO</span>
             </div>
             <div class="principle-item__card principle-item__card--steel">
-              <h3 class="principle-item__title">Estado Laico</h3>
+              <h3 class="principle-item__title">Estado Laico e Igualdad</h3>
               <p class="principle-item__text">
-                Las instituciones públicas deben actuar con independencia y neutralidad frente a las distintas creencias. Ninguna religión debe determinar las políticas públicas ni recibir un trato privilegiado por parte del Estado.
+                Las instituciones públicas deben actuar con independencia y neutralidad. Ninguna religión debe gozar de privilegios estatales.
               </p>
             </div>
           </article>
 
           <!-- Principio 4: Derechos Humanos -->
-          <article class="principle-item">
+          <article class="principle-item" data-reveal data-reveal-delay="400">
             <div class="principle-item__media">
               <img src="assets/img/principles/principio_derechos.jpg" alt="Dignidad, igualdad y defensa de los derechos humanos universales" class="principle-item__image" loading="lazy">
+              <span class="principle-item__badge-tag">04 / DERECHOS</span>
             </div>
             <div class="principle-item__card principle-item__card--sky">
-              <h3 class="principle-item__title">Derechos Humanos</h3>
+              <h3 class="principle-item__title">Derechos Humanos Universales</h3>
               <p class="principle-item__text">
-                Defendemos una sociedad basada en la dignidad, la igualdad y la libertad de todas las personas, incluidas las minorías religiosas y las personas no creyentes.
+                Defendemos una sociedad basada en la dignidad inalienable, la igualdad y la libertad de todas las personas.
               </p>
             </div>
           </article>
@@ -299,23 +355,31 @@
          SECCIÓN 5: BANNER WHC (EL HUMANISMO MUNDIAL LLEGA A LIMA)
          ========================================================================== -->
     <section class="whc-banner" id="congreso" aria-labelledby="whc-title">
+      <div class="whc-banner__overlay" aria-hidden="true"></div>
       <div class="container whc-banner__grid">
-        <div class="whc-banner__badge-wrapper">
+        <div class="whc-banner__badge-wrapper" data-reveal="left">
           <div class="whc-banner__badge">
+            <div class="whc-banner__badge-glow" aria-hidden="true"></div>
             <img src="assets/img/whc/whc_emblem.png" alt="World Humanist Congress 2026 - Lima, Perú" loading="lazy">
           </div>
         </div>
-        <div class="whc-banner__content">
+        <div class="whc-banner__content" data-reveal="right">
+          <div class="whc-banner__pill">
+            <span class="whc-banner__pill-dot" aria-hidden="true"></span>
+            <span>Evento Histórico Internacional</span>
+          </div>
           <h2 class="whc-banner__title" id="whc-title">El Humanismo Mundial Llega a Lima</h2>
           <p class="whc-banner__paragraph">
-            En 2027, Lima será sede del World Humanist Congress, el encuentro mundial que reúne a organizaciones y activistas humanistas de todo el planeta.
+            En 2027, Lima será sede del <strong>World Humanist Congress</strong>, el encuentro que reúne a organizaciones, pensadores y activistas humanistas de los cinco continentes.
           </p>
           <p class="whc-banner__paragraph">
-            El Congreso es organizado por Humanists International y contará con la colaboración logística de la Asociación Peruana de Ateos.
+            El Congreso es organizado por <strong>Humanists International</strong> con la colaboración de la Asociación Peruana de Ateos. Una oportunidad histórica para posicionar al Perú como punto de encuentro de la razón, los derechos humanos y la libertad de conciencia.
           </p>
-          <p class="whc-banner__paragraph">
-            Será una oportunidad única para que Perú y América Latina sean el punto de encuentro de personas comprometidas con la razón, la ética, los derechos humanos y la libertad de conciencia.
-          </p>
+          <div class="whc-banner__chips">
+            <span class="whc-chip">📍 Lima, Perú</span>
+            <span class="whc-chip">📅 Año 2027</span>
+            <span class="whc-chip">🌐 Red Global</span>
+          </div>
         </div>
       </div>
     </section>
@@ -325,7 +389,7 @@
          ========================================================================== -->
     <section class="articles" id="noticias" aria-labelledby="articles-title">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-reveal>
           <div class="section-header__badge">
             <svg class="section-header__badge-icon" viewBox="0 0 40 40" aria-hidden="true">
               <path fill="#023660" d="M20 2 L5 36 h10 l5 -12 l5 12 h10 z"/>
@@ -334,89 +398,101 @@
           </div>
           <h2 class="section-header__title font-title" id="articles-title">Noticias y Artículos</h2>
           <p class="section-header__subtitle">
-            Noticias, actividades y reflexiones sobre humanismo, laicidad, libertad de conciencia y actualidad.
+            Análisis, actualidad y reflexiones sobre pensamiento crítico, laicidad, libertades ciudadanas y ciencia.
           </p>
         </div>
 
         <div class="articles__grid">
           <!-- Artículo 1 -->
-          <article class="article-card">
+          <article class="article-card" data-reveal data-reveal-delay="100">
             <div class="article-card__media">
               <img src="assets/img/articles/russell.jpg" alt="Bertrand Russell, filósofo y matemático humanista" class="article-card__image" loading="lazy">
+              <span class="article-card__badge-tag">Ateísmo</span>
             </div>
-            <div class="article-card__meta">
-              <span class="article-card__meta-tag">Ateísmo</span>
-              <span class="article-card__meta-sep" aria-hidden="true">■</span>
-              <time class="article-card__meta-date" datetime="2026-08-25">25 Agosto 2026</time>
-            </div>
-            <h3 class="article-card__title">
-              ¿Por qué no creo en Dios? Una mirada racional al ateísmo y la ausencia de evidencia.
-            </h3>
-            <p class="article-card__excerpt">
-              El ateísmo no consiste simplemente en negar una creencia, sino en cuestionar racionalmente las afirmaciones sobre la existencia de dioses. Una reflexión sobre evidencia, pensamiento crítico y libertad intelectual.
-            </p>
-            <a href="#contacto" class="article-card__link">Leer artículo</a>
-            <div class="article-card__divider" aria-hidden="true"></div>
-            <div class="article-card__author">
-              <svg class="article-card__author-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <span class="article-card__author-label">POR:</span>
-              <span class="article-card__author-name">ADRIÁN NÚÑEZ</span>
+            <div class="article-card__body">
+              <div class="article-card__meta">
+                <span class="article-card__meta-tag">Filosofía</span>
+                <span class="article-card__meta-sep" aria-hidden="true">•</span>
+                <time class="article-card__meta-date" datetime="2026-08-25">25 Agosto 2026</time>
+              </div>
+              <h3 class="article-card__title">
+                ¿Por qué no creo en Dios? Una mirada racional al ateísmo y la ausencia de evidencia.
+              </h3>
+              <p class="article-card__excerpt">
+                El ateísmo no consiste simplemente en negar una creencia, sino en cuestionar racionalmente las afirmaciones dogmáticas con rigor, libertad intelectual y evidencia.
+              </p>
+              <div class="article-card__footer">
+                <a href="#contacto" class="article-card__action">
+                  <span>Leer artículo</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                </a>
+                <div class="article-card__author">
+                  <span class="article-card__author-label">Por:</span>
+                  <span class="article-card__author-name">Adrián Núñez</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Artículo 2 -->
-          <article class="article-card">
+          <article class="article-card" data-reveal data-reveal-delay="200">
             <div class="article-card__media">
               <img src="assets/img/articles/articulo_humanismo_asamblea.jpg" alt="Asamblea de la comunidad de APERAT y Humanists International en Lima" class="article-card__image" loading="lazy">
+              <span class="article-card__badge-tag">Humanismo</span>
             </div>
-            <div class="article-card__meta">
-              <span class="article-card__meta-tag">Humanismo</span>
-              <span class="article-card__meta-sep" aria-hidden="true">■</span>
-              <time class="article-card__meta-date" datetime="2026-09-25">25 Sept 2026</time>
-            </div>
-            <h3 class="article-card__title">
-              Humanismo: construir una vida con sentido sin necesidad de respuestas sobrenaturales.
-            </h3>
-            <p class="article-card__excerpt">
-              El humanismo propone que podemos desarrollar una ética basada en la razón, la empatía y la dignidad humana. Una perspectiva sobre cómo encontrar propósito y responsabilidad en un mundo sin certezas divinas.
-            </p>
-            <a href="#contacto" class="article-card__link">Leer artículo</a>
-            <div class="article-card__divider" aria-hidden="true"></div>
-            <div class="article-card__author">
-              <svg class="article-card__author-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <span class="article-card__author-label">POR:</span>
-              <span class="article-card__author-name">ADRIÁN NÚÑEZ</span>
+            <div class="article-card__body">
+              <div class="article-card__meta">
+                <span class="article-card__meta-tag">Comunidad</span>
+                <span class="article-card__meta-sep" aria-hidden="true">•</span>
+                <time class="article-card__meta-date" datetime="2026-09-25">25 Sept 2026</time>
+              </div>
+              <h3 class="article-card__title">
+                Humanismo: construir una vida con sentido sin necesidad de respuestas sobrenaturales.
+              </h3>
+              <p class="article-card__excerpt">
+                El humanismo secular propone que podemos desarrollar una ética solidaria basada en la razón, la empatía compartida y la dignidad inalienable de cada persona.
+              </p>
+              <div class="article-card__footer">
+                <a href="#contacto" class="article-card__action">
+                  <span>Leer artículo</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                </a>
+                <div class="article-card__author">
+                  <span class="article-card__author-label">Por:</span>
+                  <span class="article-card__author-name">Adrián Núñez</span>
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Artículo 3 -->
-          <article class="article-card">
+          <article class="article-card" data-reveal data-reveal-delay="300">
             <div class="article-card__media">
               <img src="assets/img/articles/articulo_marcha_laica.jpg" alt="Marcha en Lima por la defensa del Estado Laico y derechos civiles" class="article-card__image" loading="lazy">
+              <span class="article-card__badge-tag">Estado Laico</span>
             </div>
-            <div class="article-card__meta">
-              <span class="article-card__meta-tag">Estado Laico</span>
-              <span class="article-card__meta-sep" aria-hidden="true">■</span>
-              <time class="article-card__meta-date" datetime="2026-10-25">25 Octubre 2026</time>
-            </div>
-            <h3 class="article-card__title">
-              Defensa del Estado Laico: libertad de conciencia y derechos fundamentales en el Perú
-            </h3>
-            <p class="article-card__excerpt">
-              Un Estado verdaderamente laico no persigue creencias: garantiza que todas las personas convivan bajo leyes comunes, sin privilegios tributarios ni imposiciones dogmáticas en políticas públicas.
-            </p>
-            <a href="#contacto" class="article-card__link">Leer artículo</a>
-            <div class="article-card__divider" aria-hidden="true"></div>
-            <div class="article-card__author">
-              <svg class="article-card__author-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <span class="article-card__author-label">POR:</span>
-              <span class="article-card__author-name">ADRIÁN NÚÑEZ</span>
+            <div class="article-card__body">
+              <div class="article-card__meta">
+                <span class="article-card__meta-tag">Ciudadanía</span>
+                <span class="article-card__meta-sep" aria-hidden="true">•</span>
+                <time class="article-card__meta-date" datetime="2026-10-25">25 Octubre 2026</time>
+              </div>
+              <h3 class="article-card__title">
+                Defensa del Estado Laico: libertad de conciencia y derechos fundamentales en el Perú.
+              </h3>
+              <p class="article-card__excerpt">
+                Un Estado laico no persigue creencias: garantiza un marco neutral donde toda la ciudadanía convive bajo leyes comunes sin imposiciones religiosas en políticas públicas.
+              </p>
+              <div class="article-card__footer">
+                <a href="#contacto" class="article-card__action">
+                  <span>Leer artículo</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                </a>
+                <div class="article-card__author">
+                  <span class="article-card__author-label">Por:</span>
+                  <span class="article-card__author-name">Adrián Núñez</span>
+                </div>
+              </div>
             </div>
           </article>
         </div>
@@ -442,18 +518,31 @@
          SECCIÓN 7: BOLETÍN MENSUAL (NEWSLETTER)
          ========================================================================== -->
     <section class="newsletter" id="participa" aria-labelledby="newsletter-title">
-      <div class="container newsletter__container">
+      <div class="container newsletter__container" data-reveal>
         <div class="newsletter__info">
+          <span class="newsletter__tag">Comunidad & Actualizaciones</span>
           <h2 class="newsletter__title" id="newsletter-title">Boletín Mensual</h2>
-          <p class="newsletter__subtitle">Ingresa tu email y recibe nuestras actualizaciones.</p>
+          <p class="newsletter__subtitle">
+            Recibe noticias, artículos y convocatorias sobre el movimiento humanista y laico en tu correo.
+          </p>
         </div>
-        <form class="newsletter__form" action="#" method="POST">
-          <div class="newsletter__input-capsule">
-            <label for="newsletter-email" class="newsletter__label">Correo</label>
-            <input type="email" id="newsletter-email" class="newsletter__input" placeholder="tu-correo@ejemplo.com" required>
-          </div>
-          <button type="submit" class="newsletter__btn">Enviar</button>
-        </form>
+        <div class="newsletter__action-col">
+          <form class="newsletter__form" action="#" method="POST">
+            <div class="newsletter__input-capsule">
+              <svg class="newsletter__input-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <input type="email" id="newsletter-email" class="newsletter__input" placeholder="tu-correo@ejemplo.com" required aria-label="Correo electrónico para boletín">
+              <button type="submit" class="newsletter__btn">
+                <span>Suscribirme</span>
+              </button>
+            </div>
+          </form>
+          <p class="newsletter__reassurance">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            <span>Cero spam. Puedes cancelar tu suscripción en cualquier momento.</span>
+          </p>
+        </div>
       </div>
     </section>
   </main>
@@ -524,41 +613,40 @@
 
           <div class="footer-social-row">
             <span class="footer-social-label">Redes Sociales:</span>
-            <a href="https://www.facebook.com/APERAT" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Facebook" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/aperatperu/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Instagram" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="https://www.youtube.com/user/ateosperuanos" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="YouTube" aria-label="YouTube">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
+            <div class="footer-social-icons">
+              <a href="https://www.facebook.com/APERAT" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Facebook" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/aperatperu/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Instagram" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/user/ateosperuanos" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="YouTube" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Organizaciones Asociadas -->
-      <section class="partners-section" aria-labelledby="partners-title">
+      <section class="partners-section" aria-labelledby="partners-title" data-reveal>
+        <span class="partners-tag">Alianzas y Redes</span>
         <h3 class="partners-title" id="partners-title">Organizaciones Asociadas</h3>
-        <div class="partners-card">
-          <div class="partner-logo-item" title="Humanists International">
-            <img src="assets/img/logos/hi-logo.svg" alt="Humanists International" loading="lazy">
+        <div class="partners-showcase">
+          <div class="partner-card" title="Humanists International">
+            <img src="assets/img/logos/hi-logo.svg" alt="Humanists International" class="partner-card__img" loading="lazy">
           </div>
-          <div class="partner-divider" aria-hidden="true"></div>
-          <div class="partner-logo-item" title="Atheist Alliance International">
-            <img src="assets/img/partners/partner_2_aai.png" alt="Atheist Alliance International" loading="lazy">
+          <div class="partner-card" title="Atheist Alliance International">
+            <img src="assets/img/partners/partner_2_aai.png" alt="Atheist Alliance International" class="partner-card__img" loading="lazy">
           </div>
-          <div class="partner-divider" aria-hidden="true"></div>
-          <div class="partner-logo-item" title="Sociedad Secular y Humanista del Perú">
-            <img src="assets/img/partners/partner_3_ssh.png" alt="Sociedad Secular y Humanista del Perú" loading="lazy">
+          <div class="partner-card" title="Sociedad Secular y Humanista del Perú">
+            <img src="assets/img/partners/partner_3_ssh.png" alt="Sociedad Secular y Humanista del Perú" class="partner-card__img" loading="lazy">
           </div>
-          <div class="partner-divider" aria-hidden="true"></div>
-          <div class="partner-logo-item" title="Solidaridad y Humanismo">
-            <img src="assets/img/partners/partner_4_secular.png" alt="Solidaridad Humanista" loading="lazy">
+          <div class="partner-card" title="Solidaridad y Humanismo">
+            <img src="assets/img/partners/partner_4_secular.png" alt="Solidaridad Humanista" class="partner-card__img" loading="lazy">
           </div>
-          <div class="partner-divider" aria-hidden="true"></div>
-          <div class="partner-logo-item" title="World Humanist Congress 2026">
-            <img src="assets/img/partners/partner_5_whc.png" alt="World Humanist Congress 2026 Lima Perú" loading="lazy">
+          <div class="partner-card" title="World Humanist Congress 2026/2027">
+            <img src="assets/img/partners/partner_5_whc.png" alt="World Humanist Congress Lima Perú" class="partner-card__img" loading="lazy">
           </div>
         </div>
       </section>
