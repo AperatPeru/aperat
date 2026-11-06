@@ -616,7 +616,7 @@ document.addEventListener('DOMContentLoaded', () => {
     4: {
       badge: '04 / DERECHOS',
       title: 'Derechos humanos universales',
-      image: 'assets/img/principles/principio_derechos.webp',
+      image: 'assets/img/principles/principio_derechos.webp?v=2',
       imageAlt: 'Dignidad, igualdad y defensa de los derechos humanos universales',
       body: `<p>Los derechos humanos son universales, indivisibles e inalienables. No dependen de la fe, la etnia, el género o la clase social de cada persona. APERAT defiende este principio tanto en su trabajo interno como en sus alianzas con otras organizaciones.</p>
       <p>Somos parte de la <strong>Mesa de Justicia de Género y Derechos Humanos</strong>, un espacio plural que reúne a organizaciones laicas, feministas y religiosas para coordinar respuestas conjuntas frente a retrocesos legislativos. Esta participación demuestra que la defensa de los derechos humanos no requiere acuerdo teológico.</p>
