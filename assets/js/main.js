@@ -6,6 +6,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  const isEn = document.documentElement.lang === 'en';
+  const assetPrefix = isEn ? '../' : '';
+
   // 1. Barra de progreso de lectura y Header con sombra/glassmorphism al hacer scroll
   const siteHeader = document.querySelector('.site-header');
   const scrollTopBtn = document.querySelector('.scroll-top-btn');
@@ -226,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (textToCopy) {
         navigator.clipboard.writeText(textToCopy).then(() => {
           const originalText = btn.innerHTML;
-          btn.innerHTML = '✓ ¡Copiado!';
+          btn.innerHTML = isEn ? '✓ Copied!' : '✓ ¡Copiado!';
           btn.style.backgroundColor = '#07a5d6';
           btn.style.color = '#ffffff';
           setTimeout(() => {
@@ -303,8 +306,71 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  // Ordenar de forma descendente por fecha (el más reciente primero)
-  articlesData.sort((a, b) => new Date(b.date) - new Date(a.date));
+  const articlesDataEn = [
+    {
+      id: 'exoneracion-curso-religion-peru',
+      title: 'Can a Student Be Exempted from Religious Education in Peru?',
+      excerpt: 'In Peru, students and their families have the legal right to be exempted from religious education courses on grounds of conscience. Learn about the legislation and how to apply.',
+      category: 'Education & Freedom of Conscience',
+      badge: 'Education',
+      image: assetPrefix + 'assets/img/articles/exoneracion-curso-religion-peru.webp',
+      imageAlt: 'Students in a Peruvian classroom',
+      url: isEn ? 'articles/exemption-religious-education-peru.html' : 'en/articles/exemption-religious-education-peru.html',
+      date: '2026-11-07',
+      dateLabel: 'Nov 7, 2026'
+    },
+    {
+      id: 'ceremonias-humanistas',
+      title: 'Humanist Ceremonies: Celebrating Meaningful Life Milestones Without Religion',
+      excerpt: 'A secular, personalized alternative for weddings, memorials, and significant milestones, centered on people, their stories, and their shared bonds.',
+      category: 'Society & Humanism',
+      badge: 'Ceremonies',
+      image: assetPrefix + 'assets/img/articles/ceremonia-1600x1000.webp',
+      imageAlt: 'Humanist ceremony in Peru',
+      url: isEn ? 'articles/humanist-ceremonies.html' : 'en/articles/humanist-ceremonies.html',
+      date: '2026-11-06',
+      dateLabel: 'Nov 6, 2026'
+    },
+    {
+      id: 'estado-laico-peru',
+      title: 'The Secular State: A Requirement for Freedom and Democracy in Peru',
+      excerpt: 'Why the separation between political power and religious institutions remains an essential, unfinished task in Peru to guarantee equality and rights for all.',
+      category: 'Democracy & Secularism',
+      badge: 'Secular State',
+      image: assetPrefix + 'assets/img/articles/articulo_marcha_laica.webp',
+      imageAlt: 'March in Lima defending state secularism',
+      url: isEn ? 'articles/secular-state-peru.html' : 'en/articles/secular-state-peru.html',
+      date: '2026-11-05',
+      dateLabel: 'Nov 5, 2026'
+    },
+    {
+      id: 'humanismo-laico',
+      title: 'Secular Humanism: A Way of Living with Reason, Freedom, and Compassion',
+      excerpt: 'A worldview rooted in the human capacity to think, care, and build a shared future as the foundation of an ethical and meaningful life.',
+      category: 'Society & Humanism',
+      badge: 'Humanism',
+      image: assetPrefix + 'assets/img/articles/articulo_humanismo_asamblea.webp',
+      imageAlt: 'Assembly of the APERAT community and Humanists International in Lima',
+      url: isEn ? 'articles/secular-humanism.html' : 'en/articles/secular-humanism.html',
+      date: '2026-11-04',
+      dateLabel: 'Nov 4, 2026'
+    },
+    {
+      id: 'por-que-no-creo-en-dios',
+      title: 'Why I Do Not Believe in God: A Rational Perspective on Atheism and Evidence',
+      excerpt: 'Not believing in God does not require having an answer for every mystery in the cosmos: it simply requires not accepting as true that which lacks sufficient evidence.',
+      category: 'Reason & Philosophy',
+      badge: 'Atheism',
+      image: assetPrefix + 'assets/img/articles/russell.webp',
+      imageAlt: 'Bertrand Russell, humanist philosopher and mathematician',
+      url: isEn ? 'articles/why-i-do-not-believe-in-god.html' : 'en/articles/why-i-do-not-believe-in-god.html',
+      date: '2026-11-03',
+      dateLabel: 'Nov 3, 2026'
+    }
+  ];
+
+  const currentArticles = isEn ? articlesDataEn : articlesData;
+  currentArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const articlesGrid = document.getElementById('articles-grid');
   const sliderDotsContainer = document.getElementById('articles-slider-dots');
@@ -313,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (articlesGrid && sliderDotsContainer) {
     const ITEMS_PER_PAGE = 3;
-    const totalPages = Math.ceil(articlesData.length / ITEMS_PER_PAGE);
+    const totalPages = Math.ceil(currentArticles.length / ITEMS_PER_PAGE);
     let currentPage = 0;
 
     // Generar los dots de paginación dinámicamente
@@ -321,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < totalPages; i++) {
       const dot = document.createElement('button');
       dot.className = `slider-dot${i === 0 ? ' active' : ''}`;
-      dot.setAttribute('aria-label', `Página ${i + 1} de noticias`);
+      dot.setAttribute('aria-label', isEn ? `News page ${i + 1}` : `Página ${i + 1} de noticias`);
       if (i === 0) dot.setAttribute('aria-current', 'true');
       dot.addEventListener('click', () => renderArticlesPage(i));
       sliderDotsContainer.appendChild(dot);
@@ -347,7 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(() => {
         const start = currentPage * ITEMS_PER_PAGE;
-        const pageArticles = articlesData.slice(start, start + ITEMS_PER_PAGE);
+        const pageArticles = currentArticles.slice(start, start + ITEMS_PER_PAGE);
 
         articlesGrid.innerHTML = pageArticles.map((art, idx) => `
           <article class="article-card is-revealed" data-reveal data-reveal-delay="${(idx + 1) * 100}">
@@ -368,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <p class="article-card__excerpt">${art.excerpt}</p>
               <div class="article-card__footer">
                 <a href="${art.url}" class="article-card__action">
-                  <span>Leer artículo</span>
+                  <span>${isEn ? 'Read article' : 'Leer artículo'}</span>
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z" />
                   </svg>
@@ -451,7 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
         await sleep(200);
         if (progressBar) {
           progressBar.style.width = '45%';
-          if (progressStatus) progressStatus.textContent = 'Enviando registro de simpatizante...';
+          if (progressStatus) progressStatus.textContent = isEn ? 'Connecting...' : 'Enviando registro de simpatizante...';
           if (progressVal) progressVal.textContent = '45%';
         }
 
@@ -459,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
         await sleep(300);
         if (progressBar) {
           progressBar.style.width = '75%';
-          if (progressStatus) progressStatus.textContent = 'Confirmando en el sistema...';
+          if (progressStatus) progressStatus.textContent = isEn ? 'Registering supporter...' : 'Confirmando en el sistema...';
           if (progressVal) progressVal.textContent = '75%';
         }
 
@@ -473,11 +539,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Fase 4: Avance al 100% (Completado)
         if (progressBar) {
           progressBar.style.width = '100%';
-          if (progressStatus) progressStatus.textContent = '¡Completado con éxito!';
+          if (progressStatus) progressStatus.textContent = isEn ? 'Successfully completed!' : '¡Completado con éxito!';
           if (progressVal) progressVal.textContent = '100%';
         }
 
-        btn.innerHTML = '<span>✓ ¡Registrado!</span>';
+        btn.innerHTML = isEn ? '<span>✓ Joined!</span>' : '<span>✓ ¡Registrado!</span>';
         btn.style.backgroundColor = '#0584ab';
 
         // Pausa de 350ms para que se aprecie la barra al 100%
@@ -495,8 +561,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               </div>
               <div class="newsletter__feedback-body">
-                <div class="newsletter__feedback-title">¡Registro completado con éxito!</div>
-                <p class="newsletter__feedback-text">Te has sumado como simpatizante de APERAT. Recibirás en tu correo las invitaciones a nuestros eventos y actividades gratuitas.</p>
+                <div class="newsletter__feedback-title">${isEn ? 'Registration Completed Successfully!' : '¡Registro completado con éxito!'}</div>
+                <p class="newsletter__feedback-text">${isEn ? 'You have joined as an APERAT supporter. You will receive invitations to our public events, talks, and community activities.' : 'Te has sumado como simpatizante de APERAT. Recibirás en tu correo las invitaciones a nuestros eventos y actividades gratuitas.'}</p>
               </div>
             </div>
           `;
@@ -633,13 +699,91 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const principlesDataEn = {
+    1: {
+      badge: '01 / SCIENCE',
+      title: 'Reason and Critical Thinking',
+      image: assetPrefix + 'assets/img/principles/principio_ciencia.webp',
+      imageAlt: 'Scientific research and methodology as a guide to knowledge',
+      body: `<p>At APERAT, we start from a fundamental premise: reliable knowledge about the world can only be built through observation, evidence, and reason. The scientific method — with its emphasis on empirical verification, peer review, and self-correction — is the most powerful tool humanity has developed to understand reality.</p>
+      <p>This does not mean rejecting the depth of human emotions or cultural traditions. It means that when making collective decisions that affect everyone — in public policy, healthcare, education, or justice — evidence must take precedence over dogma, authority, or unverified belief.</p>
+      <p>Critical thinking is also an essential civic shield. For over a decade, APERAT hosted the radio program <em>Para-Normales de la Noche</em>, inviting astrologers, shamans, and psychics to demonstrate their claims under controlled conditions. None succeeded.</p>
+      <p>Today, we continue this mission through <em>La Señal Humanista</em>, a platform fostering dialogue on civil liberties, democracy, and coexistence from a rational and humanist perspective.</p>`,
+      highlights: [
+        'Over a decade of science communication and critical inquiry (2010–2024)',
+        'Applying scientific skepticism to pseudosciences and charlatanism',
+        'Critical thinking education as a vital tool for civic empowerment'
+      ]
+    },
+    2: {
+      badge: '02 / CONSCIENCE',
+      title: 'Freedom of Conscience',
+      image: assetPrefix + 'assets/img/principles/principio_freedom_of_thought.webp',
+      imageAlt: 'Intellectual liberty and secular humanist thought',
+      body: `<p>Freedom of conscience is the fundamental right of every individual to develop, maintain, or change their beliefs — whether religious, agnostic, humanist, or atheist — without suffering coercion, discrimination, or legal penalties.</p>
+      <p>In Peru, this right is formally recognized in constitutional law but often denied in practice. Children are routinely baptized before they can make an informed choice, and school students are frequently coerced into confessional religious education without genuine alternatives.</p>
+      <p>APERAT actively works to make this freedom tangible and enforceable:</p>
+      <ul>
+        <li>The <strong>Exonérate Perú</strong> initiative provides free legal tools helping families exercise their right to exempt students from confessional religion classes.</li>
+        <li>Since 2010, we have guided hundreds of citizens through formal apostasy from the Catholic Church to reclaim their personal registry privacy.</li>
+        <li>We provide legal aid and public advocacy for non-believers facing discrimination, such as university students forced to complete doctrinal courses to graduate.</li>
+      </ul>
+      <p>We believe that freedom of conscience must be an effective, universal safeguard for all citizens regardless of their worldview.</p>`,
+      highlights: [
+        'Exonérate Perú: Free legal defense and toolkits for families',
+        'Guidance on formal apostasy and registry removal since 2010',
+        'Direct legal assistance for citizens facing discrimination on grounds of belief'
+      ]
+    },
+    3: {
+      badge: '03 / SECULAR STATE',
+      title: 'Secular State and Equality',
+      image: assetPrefix + 'assets/img/principles/principio_laicidad.webp',
+      imageAlt: 'National Campaign for a Secular State in Peru',
+      body: `<p>A secular state is not an anti-religious state. It is an impartial and neutral state: one that neither privileges nor discriminates against any religious faith or secular philosophy, treating every citizen with equal dignity.</p>
+      <p>While Peru’s Constitution mentions religious freedom, it does not explicitly declare the republic secular, and an international agreement (Concordat) with the Holy See continues to grant disproportionate financial and institutional privileges to the Catholic Church.</p>
+      <p>APERAT works on multiple fronts to advance secularism:</p>
+      <ul>
+        <li>In 2024, we presented a constitutional reform bill through Member of Congress Susel Paredes to explicitly designate Peru as a "Secular State" in Articles 43 and 50 of the Constitution.</li>
+        <li>We published the <strong>Secular Report 2022</strong>, an unprecedented audit documenting public funds allocated to Catholic clerical salaries, tax exemptions, and subsidies.</li>
+        <li>We produced the documentary <em>"Is Peru a Secular State?"</em> (2024–2025) with the support of Humanists International.</li>
+      </ul>
+      <p>For us, state secularism is an indispensable precondition for genuine democracy and the equal treatment of all citizens.</p>`,
+      highlights: [
+        'Constitutional reform proposal to officially define Peru as a Secular State',
+        'Secular Report 2022: Public spending audit on church funding and subsidies',
+        'Documentary "Is Peru a Secular State?" supported by Humanists International'
+      ]
+    },
+    4: {
+      badge: '04 / HUMAN RIGHTS',
+      title: 'Universal Human Rights',
+      image: assetPrefix + 'assets/img/principles/principio_derechos.webp?v=2',
+      imageAlt: 'Dignity, equality, and defense of universal human rights',
+      body: `<p>Human rights are universal, inalienable, and indivisible. They do not depend on faith, gender, sexual orientation, ethnicity, or social class. APERAT defends this principle in its daily advocacy and in strategic coalitions.</p>
+      <p>We are active members of the <strong>Roundtable for Gender Justice and Human Rights (Mesa de Justicia de Género y Derechos Humanos)</strong>, a plural civil society coalition uniting secular, feminist, and faith-based groups to resist regressive legislative agendas in Peru. This proves that defending human rights does not require theological alignment.</p>
+      <ul>
+        <li>We conducted the <strong>first recorded humanist ceremony in Peru</strong> (2023) through Ceremonias Laicas.</li>
+        <li>We offer humanist weddings with civil legal validity through partner notaries.</li>
+        <li>We submit periodic recommendations to United Nations human rights mechanisms on international solidarity, ensuring non-religious and humanist citizens are recognized.</li>
+      </ul>
+      <p>We believe a truly just society is one where no one is marginalized for what they believe — or for what they do not believe.</p>`,
+      highlights: [
+        'Active member of the Roundtable for Gender Justice and Human Rights',
+        'Pioneered the first recognized humanist ceremonies and weddings in Peru',
+        'Direct reporting and recommendations to UN Human Rights mechanisms'
+      ]
+    }
+  };
+
   const principlesModal = document.getElementById('principles-modal');
   const principlesModalContent = document.getElementById('principles-modal-content');
   const principlesModalClose = document.getElementById('principles-modal-close');
   const principlesModalOverlay = document.getElementById('principles-modal-overlay');
 
   function openPrincipleModal(id) {
-    const data = principlesData[id];
+    const activePrinciples = isEn ? principlesDataEn : principlesData;
+    const data = activePrinciples[id];
     if (!data || !principlesModal) return;
 
     principlesModalContent.innerHTML = `
@@ -652,7 +796,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="pmodal__body">
         ${data.body}
         <div class="pmodal__highlights">
-          <div class="pmodal__highlights-title">Puntos clave</div>
+          <div class="pmodal__highlights-title">${isEn ? 'Key Points & Milestones' : 'Puntos clave'}</div>
           ${data.highlights.map(h => `<div class="pmodal__highlight-item">${h}</div>`).join('')}
         </div>
       </div>

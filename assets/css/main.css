@@ -1786,10 +1786,18 @@
   .navbar__cta {
     margin-left: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
   }
 
   .navbar__cta .btn {
     width: 100%;
+  }
+
+  .navbar__cta .lang-switch {
+    width: auto;
   }
 
   .community__grid {
