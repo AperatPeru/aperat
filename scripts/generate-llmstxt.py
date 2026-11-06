@@ -45,7 +45,7 @@ FOOTER = """
 
 - [Exonérate Perú](https://www.aperat.org.pe/#sobre-nosotros): Campaña y asesoría jurídica gratuita para familias y estudiantes que solicitan exoneración de cursos de educación religiosa confesional en colegios.
 - [Apostasía Colectiva e Individual](https://www.aperat.org.pe/#sobre-nosotros): Orientación y acompañamiento para el ejercicio del derecho a la desafiliación formal y cancelación de datos en libros parroquiales.
-- [Ceremonias Laicas](https://ceremoniaslaicas.lat/): Red de celebrantes humanistas entrenados para ceremonias de unión, matrimonios civiles y despedidas fúnebres respetuosas y personalizadas.
+- [Ceremonias Laicas](https://ceremoniaslaicas.lat/): Red de celebrantes humanistas entrenados para ceremonias de unión, matrimonios civiles y despedidas humanistas respetuosas y personalizadas.
 - [La Señal Humanista y Divulgación](https://www.aperat.org.pe/#sobre-nosotros): Producción audiovisual y podcasts sobre laicidad, derechos civiles, pensamiento crítico y combate a las pseudociencias.
 
 ## Contacto Institucional

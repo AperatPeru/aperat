@@ -242,6 +242,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // 7. Carrusel / Paginación de Artículos
   const articlesData = [
     {
+      id: 'exoneracion-curso-religion-peru',
+      title: '¿Se puede exonerar a un estudiante del curso de religión en el Perú?',
+      excerpt: 'En el Perú, los estudiantes y sus familias tienen derecho legal a exonerarse del curso de Educación Religiosa por motivos de conciencia. Conoce la normativa y los pasos para el trámite.',
+      category: 'Educación y libertad de conciencia',
+      badge: 'Educación',
+      image: 'assets/img/articles/exoneracion-curso-religion-peru.webp',
+      imageAlt: 'Estudiantes en el aula escolar peruana',
+      url: 'articulos/exoneracion-curso-religion-peru.html',
+      date: '2026-11-07',
+      dateLabel: '7 Noviembre 2026'
+    },
+    {
       id: 'ceremonias-humanistas',
       title: 'Ceremonias humanistas: cómo celebrar los momentos importantes de la vida sin una ceremonia religiosa',
       excerpt: 'Una alternativa laica y personalizada para bodas, funerales y momentos trascendentales, centrada en las personas, sus historias y los vínculos que las unen.',
