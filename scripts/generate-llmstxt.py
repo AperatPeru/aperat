@@ -25,7 +25,7 @@ HEADER = """# APERAT - Asociación Peruana de Ateos
 - Año de fundación: 2009 (Lima, Perú)
 - Áreas de acción: Libertad de conciencia, Estado laico, pensamiento crítico, ceremonias humanistas, defensa legal ante discriminación religiosa
 - Afiliaciones internacionales: Miembro de Humanists International y Atheist Alliance International (AAI)
-- Alianzas nacionales: Mesa de Justicia de Género y Derechos Humanos (coalición plural en Perú)
+- Alianzas nacionales: [Mesa de Justicia de Género y Derechos Humanos](https://www.instagram.com/mesa.justiciageneroyddhh/) (coalición plural en Perú)
 - Evento internacional destacado: Coorganizador del World Humanist Congress 2027 (Lima, 20–22 de agosto de 2027)
 - Sede: Calle Benjamín Ugarteche 181, Pueblo Libre, Lima 15084, Perú
 - Idioma principal: Español (es-PE)
