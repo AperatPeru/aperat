@@ -60,15 +60,15 @@ FOOTER = """
 - YouTube: https://www.youtube.com/user/ateosperuanos
 """
 
-def extract_articles_from_js():
+def extract_articles_from_js(var_name='articlesData'):
     if not MAIN_JS.exists():
         return []
     
     with open(MAIN_JS, 'r', encoding='utf-8') as f:
         js_text = f.read()
     
-    # Buscar bloque articlesData = [ ... ]
-    match = re.search(r'const\s+articlesData\s*=\s*(\[\s*\{.*?\}\s*\]);', js_text, re.DOTALL)
+    # Buscar bloque var_name = [ ... ]
+    match = re.search(rf'const\s+{var_name}\s*=\s*(\[\s*\{{.*?\}}\s*\]);', js_text, re.DOTALL)
     if not match:
         return []
     
@@ -76,22 +76,38 @@ def extract_articles_from_js():
     
     # Extraer objetos de manera individual
     articles = []
-    card_matches = re.finditer(r'\{\s*id:\s*[\'"]([^\'"]+)[\'"].*?title:\s*[\'"]([^\'"]+)[\'"].*?excerpt:\s*[\'"]([^\'"]+)[\'"].*?url:\s*[\'"]([^\'"]+)[\'"]', raw_array, re.DOTALL)
+    card_matches = re.finditer(r'\{\s*id:\s*[\'"]([^\'"]+)[\'"].*?title:\s*[\'"]([^\'"]+)[\'"].*?excerpt:\s*[\'"]([^\'"]+)[\'"].*?url:\s*([^,\n]+)', raw_array, re.DOTALL)
     for m in card_matches:
+        url_expr = m.group(4).strip().strip("'\"")
+        # Si es expresión ternaria, extraer la ruta inglesa
+        if '?' in url_expr:
+            m_url = re.search(r'[\'"](articles/[^\'"]+)[\'"]', url_expr)
+            rel_url = f"en/{m_url.group(1)}" if m_url else url_expr
+        else:
+            rel_url = url_expr
+
         articles.append({
             'id': m.group(1),
             'title': m.group(2),
             'excerpt': m.group(3),
-            'url': f"https://www.aperat.org.pe/{m.group(4)}"
+            'url': f"https://www.aperat.org.pe/{rel_url}"
         })
     return articles
 
 def generate():
-    articles = extract_articles_from_js()
-    lines = [HEADER.strip(), "", "## Artículos y Publicaciones (Blog)", ""]
+    articles_es = extract_articles_from_js('articlesData')
+    articles_en = extract_articles_from_js('articlesDataEn')
+    lines = [HEADER.strip(), "", "## Artículos y Publicaciones (Blog - Español)", ""]
     
-    for art in articles:
+    for art in articles_es:
         lines.append(f"- [{art['title']}]({art['url']}): {art['excerpt']}")
+    
+    if articles_en:
+        lines.append("")
+        lines.append("## Articles and Publications (Blog - English)")
+        lines.append("")
+        for art in articles_en:
+            lines.append(f"- [{art['title']}]({art['url']}): {art['excerpt']}")
     
     lines.append("")
     lines.append(FOOTER.strip())
@@ -106,7 +122,7 @@ def generate():
     with open(OUTPUT_LLM, 'w', encoding='utf-8') as f:
         f.write(content)
         
-    print(f"✓ llms.txt y llm.txt generados exitosamente con {len(articles)} artículos.")
+    print(f"✓ llms.txt y llm.txt generados exitosamente con {len(articles_es)} artículos en español y {len(articles_en)} en inglés.")
 
 if __name__ == '__main__':
     generate()
