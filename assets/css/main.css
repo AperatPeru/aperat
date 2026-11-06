@@ -801,27 +801,34 @@
 
 .article-card__meta {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
   font-family: var(--font-sans-title);
   font-weight: 700;
-  font-size: 0.78125rem;
+  font-size: 0.75rem;
   color: var(--color-secondary);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   margin-bottom: 12px;
 }
 
 .article-card__meta-tag {
   color: var(--color-secondary);
+  line-height: 1.35;
 }
 
 .article-card__meta-sep {
-  margin: 0 8px;
-  color: rgba(7, 165, 214, 0.4);
+  display: none;
 }
 
 .article-card__meta-date {
   color: var(--color-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
 }
 
 .article-card__title {

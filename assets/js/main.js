@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
       imageAlt: 'Estudiantes en el aula escolar peruana',
       url: 'articulos/exoneracion-curso-religion-peru.html',
       date: '2026-11-07',
-      dateLabel: '7 Noviembre 2026'
+      dateLabel: '7 nov. 2026'
     },
     {
       id: 'ceremonias-humanistas',
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
       imageAlt: 'Ceremonia humanista en el Perú',
       url: 'articulos/ceremonias-humanistas.html',
       date: '2026-11-06',
-      dateLabel: '6 Noviembre 2026'
+      dateLabel: '6 nov. 2026'
     },
     {
       id: 'estado-laico-peru',
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
       imageAlt: 'Marcha en Lima por la defensa del Estado Laico',
       url: 'articulos/estado-laico-peru.html',
       date: '2026-11-05',
-      dateLabel: '5 Noviembre 2026'
+      dateLabel: '5 nov. 2026'
     },
     {
       id: 'humanismo-laico',
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
       imageAlt: 'Asamblea de la comunidad de APERAT y Humanists International en Lima',
       url: 'articulos/humanismo-laico.html',
       date: '2026-11-04',
-      dateLabel: '4 Noviembre 2026'
+      dateLabel: '4 nov. 2026'
     },
     {
       id: 'por-que-no-creo-en-dios',
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
       imageAlt: 'Bertrand Russell, filósofo y matemático humanista',
       url: 'articulos/por-que-no-creo-en-dios.html',
       date: '2026-11-03',
-      dateLabel: '3 Noviembre 2026'
+      dateLabel: '3 nov. 2026'
     }
   ];
 
@@ -360,7 +360,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="article-card__body">
               <div class="article-card__meta">
                 <span class="article-card__meta-tag">${art.category}</span>
-                <span class="article-card__meta-sep" aria-hidden="true">•</span>
                 <time class="article-card__meta-date" datetime="${art.date}">${art.dateLabel}</time>
               </div>
               <h3 class="article-card__title">
