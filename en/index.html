@@ -171,179 +171,247 @@
          SECTION 1: HERO
          ========================================================================== -->
     <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__container">
-        <div class="hero__badge">
-          <span class="hero__badge-dot" aria-hidden="true"></span>
-          <span>Freedom of Conscience & Critical Thinking</span>
+        <div class="hero__badge" data-reveal>
+          <span class="hero__badge-pulse" aria-hidden="true"></span>
+          <span>Peruvian Association of Atheists • Since 2009</span>
         </div>
-
-        <h1 class="hero__title font-title" id="hero-title">
-          "Atheism is not a philosophy; it is not even a view of the world. It is simply an admission of the obvious..."
+        <h1 class="hero__title" id="hero-title" data-reveal data-reveal-delay="100">
+          A society where <span class="hero__title-gradient">conscience is free</span>
         </h1>
-
-        <p class="hero__quote-author">
-          Sam Harris &mdash; <em>Letter to a Christian Nation</em>
+        <p class="hero__description" data-reveal data-reveal-delay="200">
+          Since 2009, the Peruvian Association of Atheists (APERAT) brings together atheists, agnostics, humanists, and
+          non-believers defending freedom of conscience, critical thinking, human rights, and a truly secular state.
         </p>
-
-        <p class="hero__subtitle">
-          Since 2009, the Peruvian Association of Atheists (APERAT) defends state secularism, scientific inquiry, and the rights of non-religious citizens across Peru.
-        </p>
-
-        <div class="hero__cta">
-          <a href="#participa" class="btn btn-primary btn-hero">
-            <span>Join the Community</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
+        <div class="hero__cta" data-reveal data-reveal-delay="300">
+          <a href="#sobre-nosotros" class="btn btn-primary btn-hero-primary">
+            <span>Discover APERAT</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z" />
             </svg>
           </a>
-          <a href="#principios" class="btn btn-secondary btn-hero">
-            <span>Explore our principles</span>
+          <a href="#principios" class="btn btn-outline-white btn-hero-secondary">
+            <span>Our principles</span>
           </a>
         </div>
-      </div>
-
-      <!-- Modern Metrics Deck -->
-      <div class="container hero__metrics-wrapper">
-        <div class="stats-deck">
-          <div class="stats-deck__card">
-            <span class="stats-deck__num">+15</span>
-            <span class="stats-deck__label">Years of Action</span>
-            <span class="stats-deck__desc">Defending secularism and freethought in Peru since 2009.</span>
+        <div class="hero__trust" data-reveal data-reveal-delay="400">
+          <div class="hero__trust-badge">
+            <span class="hero__trust-dot" aria-hidden="true"></span>
+            <span>15+ years defending secularism</span>
           </div>
-          <div class="stats-deck__card">
-            <span class="stats-deck__num">WHC 2027</span>
-            <span class="stats-deck__label">World Congress</span>
-            <span class="stats-deck__desc">Lima will host the global humanist movement (Aug 20–22, 2027).</span>
+          <div class="hero__trust-badge">
+            <span class="hero__trust-dot" aria-hidden="true"></span>
+            <span>Members of Humanists International</span>
           </div>
-          <div class="stats-deck__card">
-            <div class="stats-deck__hi-wrap">
-              <img src="../assets/img/logos/hi-logo.svg" alt="Humanists International" class="stats-deck__hi-logo"
-                loading="lazy">
-              <span class="stats-deck__num">Global</span>
-            </div>
-            <span class="stats-deck__label">International Network</span>
-            <span class="stats-deck__desc">Active members of the worldwide humanist alliance.</span>
-          </div>
-          <div class="stats-deck__card">
-            <span class="stats-deck__num">100%</span>
-            <span class="stats-deck__label">Civic & Secular</span>
-            <span class="stats-deck__desc">Independent, transparent, and non-profit civil society organization.</span>
+          <div class="hero__trust-badge">
+            <span class="hero__trust-dot" aria-hidden="true"></span>
+            <span>Open and plural community</span>
           </div>
         </div>
       </div>
 
       <!-- Section Wave Divider -->
       <div class="hero-divider" aria-hidden="true">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#ffffff" fill-opacity="1"
-            d="M0,48L60,42.7C120,37,240,27,360,32C480,37,600,59,720,64C840,69,960,59,1080,48C1200,37,1320,27,1380,21.3L1440,16L1440,80L1380,80C1320,80,1200,80,1080,80C960,80,840,80,720,80C600,80,480,80,360,80C240,80,120,80,60,80L0,80Z">
-          </path>
+        <svg viewBox="0 0 1440 68" fill="none" preserveAspectRatio="none">
+          <path d="M0,0 C360,50 1080,50 1440,0 L1440,68 L0,68 Z" fill="#ffffff"></path>
+          <path d="M0,4 C360,54 1080,54 1440,4" stroke="url(#hero-divider-grad)" stroke-width="2" opacity="0.65"></path>
+          <defs>
+            <linearGradient id="hero-divider-grad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#023660" stop-opacity="0"></stop>
+              <stop offset="50%" stop-color="#07A5D6"></stop>
+              <stop offset="100%" stop-color="#023660" stop-opacity="0"></stop>
+            </linearGradient>
+          </defs>
         </svg>
       </div>
     </section>
 
     <!-- ==========================================================================
-         SECTION 2: ABOUT US / COMMUNITY
+         SECTION 2: COMMUNITY (MORE THAN 15 YEARS BUILDING COMMUNITY)
          ========================================================================== -->
     <section class="community" id="sobre-nosotros" aria-labelledby="community-title">
-      <div class="container community__container">
+      <div class="container">
         <div class="community__grid">
-          <!-- Text Content -->
-          <div class="community__content" data-reveal="left">
-            <span class="community__tag">About APERAT</span>
-            <h2 class="community__title font-title" id="community-title">
-              More than 15 years building a secular and humanist community in Peru
-            </h2>
-            <p class="community__description">
-              Since 2009, the <strong>Peruvian Association of Atheists (APERAT)</strong> works to defend freedom of conscience, critical thinking, human rights, and the establishment of a genuinely secular state.
-            </p>
-            <p class="community__description">
-              We bring together atheists, agnostics, secular humanists, and freethinkers committed to pluralism and civil equality in a society where public institutions still maintain deep historical ties with confessional doctrines.
-            </p>
-
-            <div class="community__milestones">
-              <div class="milestone-item">
-                <div class="milestone-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="milestone-title">Pioneers in Secular Defense</h3>
-                  <p class="milestone-desc">Legal guidance and institutional representation for secular citizens facing religious discrimination in schools and public universities.</p>
-                </div>
-              </div>
-              <div class="milestone-item">
-                <div class="milestone-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="milestone-title">Exonérate Perú Campaign</h3>
-                  <p class="milestone-desc">Free legal toolkits assisting families in exercising their statutory right to exempt children from confessional religious instruction in school.</p>
-                </div>
-              </div>
-              <div class="milestone-item">
-                <div class="milestone-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="milestone-title">Collective Apostasy</h3>
-                  <p class="milestone-desc">Guiding and advising hundreds of Peruvian citizens in the formal cancellation of personal data from baptismal and parish registries.</p>
-                </div>
-              </div>
-              <div class="milestone-item">
-                <div class="milestone-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="milestone-title">Humanist Ceremonies</h3>
-                  <p class="milestone-desc">Creating non-religious weddings, naming ceremonies, and memorials with civil legal validity through partner notaries.</p>
-                </div>
+          <!-- Left Column: Community Photo -->
+          <div class="community__visuals" data-reveal="left">
+            <div class="community__integrantes-wrapper">
+              <img src="../assets/img/community/integrantes.webp?v=2" alt="APERAT working team in Lima"
+                class="community__image-dawkins" loading="lazy">
+              <span class="community__badge-tag">15 / COMMUNITY</span>
+              <div class="community__card">
+                <h3 class="community__card-title">An active community</h3>
+                <p class="community__card-text">
+                  People sharing reason, freedom of conscience, and humanist values in Lima.
+                </p>
               </div>
             </div>
           </div>
 
-          <!-- Visuals Column -->
-          <div class="community__visuals" data-reveal="right">
-            <div class="community__image-wrapper">
-              <img src="../assets/img/community/integrantes.webp?v=2" alt="APERAT working team in Lima"
-                class="community__image" loading="lazy">
-              <div class="community__caption-overlay">
-                <p class="community__caption-text">
-                  <strong>APERAT Working Team</strong> &mdash; Activists, educators, and professionals working for civil liberties and secularism in Peru.
-                </p>
+          <!-- Right Column: Institutional Content -->
+          <div class="community__content" data-reveal="right">
+            <span class="section-tag">Community & History</span>
+            <h2 class="community__title" id="community-title">More than 15 years building community</h2>
+            <p class="community__paragraph">
+              Founded in Lima in 2009, APERAT is the first legally established organization for atheists, agnostics, and humanists in Peru. We promote critical thinking, the unwavering defense of a Secular State, and universal human rights in collaboration with national and international networks like Humanists International.
+            </p>
+
+            <!-- Milestones Accordion -->
+            <div class="community__accordion" id="community-accordion">
+
+              <div class="community__acc-item">
+                <button class="community__acc-trigger" aria-expanded="false" aria-controls="acc-panel-1">
+                  <span class="community__acc-header">
+                    <svg class="community__acc-badge-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1-9c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1s-1-.45-1-1V5zm6 6c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                    </svg>
+                    <span>Critical media and science outreach</span>
+                  </span>
+                  <svg class="community__acc-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                  </svg>
+                </button>
+                <div class="community__acc-panel" id="acc-panel-1" hidden>
+                  <p>Between 2010 and 2020 we hosted the radio show <em>Para-Normales de la Noche</em> on FM Radio Canto Grande, applying skepticism to pseudotherapies, astrology, and charlatanism. Since 2025 we continue this work with <em>La Señal Humanista</em>, focusing on human rights and democracy. We also produced the documentary <em>Is Peru a Secular State?</em> (2024–2025) with the support of Humanists International.</p>
+                </div>
               </div>
+
+              <div class="community__acc-item">
+                <button class="community__acc-trigger" aria-expanded="false" aria-controls="acc-panel-2">
+                  <span class="community__acc-header">
+                    <svg class="community__acc-badge-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v4H7v2h4v4h2v-4h4v-2h-4z"/>
+                    </svg>
+                    <span>Legal defense and rights of conscience</span>
+                  </span>
+                  <svg class="community__acc-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                  </svg>
+                </button>
+                <div class="community__acc-panel" id="acc-panel-2" hidden>
+                  <p>We provide free legal counsel to individuals facing discrimination for their convictions. Our <strong>Exonérate Perú</strong> campaign helps families exercise their statutory right to exempt children from confessional religious instruction in school. Since 2010 we have guided those who wish to formally apostatize from the Catholic Church, helping hundreds regain control over their personal records.</p>
+                </div>
+              </div>
+
+              <div class="community__acc-item">
+                <button class="community__acc-trigger" aria-expanded="false" aria-controls="acc-panel-3">
+                  <span class="community__acc-header">
+                    <svg class="community__acc-badge-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span>Humanist ceremonies</span>
+                  </span>
+                  <svg class="community__acc-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                  </svg>
+                </button>
+                <div class="community__acc-panel" id="acc-panel-3" hidden>
+                  <p>In 2024 we established <strong>Ceremonias Laicas</strong>, featuring celebrants trained under international standards. We conducted the first recorded humanist ceremony in Peru (2023) and offer humanist weddings with civil legal validity through partner notaries. These ceremonies center on people, reason, and shared empathy.</p>
+                </div>
+              </div>
+
+              <div class="community__acc-item">
+                <button class="community__acc-trigger" aria-expanded="false" aria-controls="acc-panel-4">
+                  <span class="community__acc-header">
+                    <svg class="community__acc-badge-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zm-10-7h8v2h-8zm0-4h8v2h-8zm0 8h5v2h-5zm-5-7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.67 0-3 1.33-3 3h6c0-1.67-1.33-3-3-3z"/>
+                    </svg>
+                    <span>Street theater and grassroots activism</span>
+                  </span>
+                  <svg class="community__acc-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                  </svg>
+                </button>
+                <div class="community__acc-panel" id="acc-panel-4" hidden>
+                  <p>Since 2026 we stage nearly weekly street theater performances on Sundays across various community settlements in Lima. The plays use satire to explore the relationship between politics, religion, and democracy, accompanied by community donations for local residents.</p>
+                </div>
+              </div>
+
             </div>
+
+            <a href="#principios" class="btn-magnetic">
+              <span>Our principles</span>
+              <span class="btn-magnetic__arrow">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z" />
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         SECTION 3: PRINCIPLES
+         SECTION 3: INSTITUTIONAL IMPACT (FLOATING METRIC DECK)
+         ========================================================================== -->
+    <section class="stats-section" aria-label="Institutional achievements and trajectory">
+      <div class="container">
+        <div class="stats-deck">
+          <!-- Metric 1 -->
+          <article class="stats-deck__card" data-reveal data-reveal-delay="100">
+            <div class="stats-deck__topline" aria-hidden="true"></div>
+            <div class="stats-deck__number-wrap">
+              <span class="stats-deck__number" data-counter="17">17</span>
+              <span class="stats-deck__plus">+</span>
+            </div>
+            <h3 class="stats-deck__title">Years of Action</h3>
+            <p class="stats-deck__desc">Uninterrupted trajectory defending reason since 2009.</p>
+          </article>
+
+          <!-- Metric 2 -->
+          <article class="stats-deck__card" data-reveal data-reveal-delay="200">
+            <div class="stats-deck__topline" aria-hidden="true"></div>
+            <div class="stats-deck__number-wrap">
+              <span class="stats-deck__number" data-counter="500">500</span>
+              <span class="stats-deck__plus">+</span>
+            </div>
+            <h3 class="stats-deck__title">Members & Supporters</h3>
+            <p class="stats-deck__desc">Active community of freethinkers across the country.</p>
+          </article>
+
+          <!-- Metric 3 -->
+          <article class="stats-deck__card" data-reveal data-reveal-delay="300">
+            <div class="stats-deck__topline" aria-hidden="true"></div>
+            <div class="stats-deck__number-wrap">
+              <span class="stats-deck__number" data-counter="100">100</span>
+              <span class="stats-deck__plus">+</span>
+            </div>
+            <h3 class="stats-deck__title">Events & Conferences</h3>
+            <p class="stats-deck__desc">Public debates on science, philosophy, and civil rights.</p>
+          </article>
+
+          <!-- Metric 4 -->
+          <article class="stats-deck__card stats-deck__card--highlight" data-reveal data-reveal-delay="400">
+            <div class="stats-deck__topline" aria-hidden="true"></div>
+            <div class="stats-deck__icon-wrap">
+              <img src="../assets/img/logos/hi-logo.svg" alt="Humanists International" class="stats-deck__hi-logo"
+                loading="lazy">
+            </div>
+            <h3 class="stats-deck__title">International Network</h3>
+            <p class="stats-deck__desc">Official member of Humanists International.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: OUR PRINCIPLES (2X2 GRID WITH FLOATING CARDS)
          ========================================================================== -->
     <section class="principles" id="principios" aria-labelledby="principles-title">
-      <div class="container principles__container">
+      <div class="container">
         <div class="section-header" data-reveal>
           <div class="section-header__badge">
+            <!-- APERAT Stylized Emblem 'A' -->
             <svg class="section-header__badge-icon" viewBox="0 0 40 40" aria-hidden="true">
               <path fill="#023660" d="M20 2 L5 36 h10 l5 -12 l5 12 h10 z" />
               <path fill="#07A5D6" d="M12 28 a12 12 0 0 1 16 0 z" />
             </svg>
           </div>
-          <h2 class="section-header__title font-title" id="principles-title">Our Core Principles</h2>
+          <h2 class="section-header__title font-title" id="principles-title">Our principles</h2>
           <p class="section-header__subtitle">
-            Rationality, freedom, equality, and state secularism as foundations of a just and democratic society.
+            Ethical, philosophical, and civic pillars guiding our activism for a more just, rational, and free society.
           </p>
         </div>
 
@@ -352,14 +420,14 @@
           <article class="principle-item" data-reveal data-reveal-delay="100">
             <div class="principle-item__media">
               <img src="../assets/img/principles/principio_ciencia.webp"
-                alt="Scientific inquiry and reason as guides to understanding reality" class="principle-item__image"
+                alt="Research and scientific method as guides to knowledge" class="principle-item__image"
                 loading="lazy">
               <span class="principle-item__badge-tag">01 / SCIENCE</span>
             </div>
-            <div class="principle-item__card principle-item__card--navy">
+            <div class="principle-item__card principle-item__card--sky">
               <h3 class="principle-item__title">Reason and critical thinking</h3>
               <p class="principle-item__text">
-                We base our understanding of the world on evidence, the scientific method, and rational skepticism rather than dogma.
+                We seek to understand the world through evidence, reason, and testable scientific knowledge.
               </p>
               <button class="principle-item__btn" data-principle="1" aria-haspopup="dialog">
                 Learn more
@@ -374,14 +442,14 @@
           <article class="principle-item" data-reveal data-reveal-delay="200">
             <div class="principle-item__media">
               <img src="../assets/img/principles/principio_freedom_of_thought.webp"
-                alt="Intellectual liberty and freedom of thought" class="principle-item__image"
+                alt="Intellectual liberty and enlightened humanist thought" class="principle-item__image"
                 loading="lazy">
               <span class="principle-item__badge-tag">02 / CONSCIENCE</span>
             </div>
-            <div class="principle-item__card principle-item__card--orange">
+            <div class="principle-item__card principle-item__card--cosmic">
               <h3 class="principle-item__title">Freedom of conscience</h3>
               <p class="principle-item__text">
-                The inviolable right of every person to think freely, adopt, or abandon beliefs without coercion, discrimination, or stigma.
+                Every person must be able to form, change, or maintain their own convictions without coercion or discrimination.
               </p>
               <button class="principle-item__btn" data-principle="2" aria-haspopup="dialog">
                 Learn more
@@ -396,14 +464,13 @@
           <article class="principle-item" data-reveal data-reveal-delay="300">
             <div class="principle-item__media">
               <img src="../assets/img/principles/principio_laicidad.webp"
-                alt="Campaign for state secularism in Peru" class="principle-item__image"
-                loading="lazy">
+                alt="National Campaign for a Secular State in Peru" class="principle-item__image" loading="lazy">
               <span class="principle-item__badge-tag">03 / SECULAR STATE</span>
             </div>
-            <div class="principle-item__card principle-item__card--cyan">
+            <div class="principle-item__card principle-item__card--steel">
               <h3 class="principle-item__title">Secular state and equality</h3>
               <p class="principle-item__text">
-                A neutral state that neither privileges nor discriminates against any belief, ensuring true equality before the law.
+                Public institutions must act with independence and neutrality. No religion should enjoy state privileges.
               </p>
               <button class="principle-item__btn" data-principle="3" aria-haspopup="dialog">
                 Learn more
