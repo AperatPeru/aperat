@@ -64,3 +64,4 @@ web
 - Contraste cromático conforme a pautas WCAG AA en texto y componentes interactivos.
 - Navegación completa por teclado con indicadores de foco visibles y gestión de atributos ARIA (`aria-expanded`, `aria-controls`, `aria-label`, `role="dialog"`).
 - Estructura jerárquica clara de encabezados (`h1` a `h4`) y textos alternativos descriptivos en todas las imágenes.
+

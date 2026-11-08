@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T21:42:02.108936+00:00",
+  "title": "Design System: APERAT",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Cosmic Navy",
+        "canonical": "#023660",
+        "tonalRamp": [
+          "#000f1c",
+          "#01182c",
+          "#012744",
+          "#023660",
+          "#034b85",
+          "#0f68ad",
+          "#4193d5",
+          "#d4e7f7"
+        ]
+      },
+      "primary-dark": {
+        "role": "primary",
+        "displayName": "Deep Abyss",
+        "canonical": "#011f38",
+        "tonalRamp": [
+          "#000912",
+          "#001424",
+          "#011f38",
+          "#023259",
+          "#03467c",
+          "#065ea6",
+          "#3b8cd0",
+          "#cde3f7"
+        ]
+      },
+      "primary-light": {
+        "role": "primary",
+        "displayName": "Cosmic Blue Mid",
+        "canonical": "#034b85",
+        "tonalRamp": [
+          "#011526",
+          "#012543",
+          "#023864",
+          "#034b85",
+          "#0562ad",
+          "#157fd6",
+          "#59a8ea",
+          "#dcebf8"
+        ]
+      },
+      "secondary": {
+        "role": "secondary",
+        "displayName": "Horizon Cyan",
+        "canonical": "#07A5D6",
+        "tonalRamp": [
+          "#01232e",
+          "#034358",
+          "#056f91",
+          "#07A5D6",
+          "#26b8e5",
+          "#60cced",
+          "#a1e3f6",
+          "#e7f6fd"
+        ]
+      },
+      "secondary-dark": {
+        "role": "secondary",
+        "displayName": "Cyan Dark",
+        "canonical": "#0584ab",
+        "tonalRamp": [
+          "#011b24",
+          "#023747",
+          "#035a74",
+          "#0584ab",
+          "#07a2d1",
+          "#30b9e3",
+          "#7dd3ee",
+          "#e1f4fc"
+        ]
+      },
+      "secondary-light": {
+        "role": "secondary",
+        "displayName": "Cyan Light",
+        "canonical": "#44bbe0",
+        "tonalRamp": [
+          "#042933",
+          "#0a5266",
+          "#1486a6",
+          "#26aed6",
+          "#44bbe0",
+          "#76cfee",
+          "#ade2f5",
+          "#eef9fd"
+        ]
+      },
+      "secondary-tint": {
+        "role": "secondary",
+        "displayName": "Soft Sky Tint",
+        "canonical": "#e7f6fd",
+        "tonalRamp": [
+          "#054359",
+          "#0d7194",
+          "#1ca4d4",
+          "#59c1e7",
+          "#9ad9f2",
+          "#cbe9f9",
+          "#e7f6fd",
+          "#f7fcfe"
+        ]
+      },
+      "secondary-tint-20": {
+        "role": "secondary",
+        "displayName": "Soft Sky Tint 20",
+        "canonical": "#f2faff",
+        "tonalRamp": [
+          "#094460",
+          "#13719e",
+          "#239fd9",
+          "#63beea",
+          "#a0d6f3",
+          "#d0ebfa",
+          "#f2faff",
+          "#fbfdff"
+        ]
+      },
+      "tertiary": {
+        "role": "tertiary",
+        "displayName": "Rationalist Steel",
+        "canonical": "#424D59",
+        "tonalRamp": [
+          "#12161b",
+          "#20262c",
+          "#303841",
+          "#424D59",
+          "#5b6978",
+          "#778696",
+          "#a2aebc",
+          "#e4e8ec"
+        ]
+      },
+      "tertiary-light": {
+        "role": "tertiary",
+        "displayName": "Steel Light",
+        "canonical": "#576575",
+        "tonalRamp": [
+          "#191e24",
+          "#2b343e",
+          "#3f4b58",
+          "#576575",
+          "#718193",
+          "#8f9fb0",
+          "#b5c0cd",
+          "#ebeff3"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Pure White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#1a1a1a",
+          "#404040",
+          "#666666",
+          "#8c8c8c",
+          "#b3b3b3",
+          "#d9d9d9",
+          "#f2f2f2",
+          "#ffffff"
+        ]
+      },
+      "black": {
+        "role": "neutral",
+        "displayName": "Abyss Black",
+        "canonical": "#0c1015",
+        "tonalRamp": [
+          "#040608",
+          "#0c1015",
+          "#161c24",
+          "#232b35",
+          "#333e4c",
+          "#4a596c",
+          "#728399",
+          "#cad2dc"
+        ]
+      },
+      "text-main": {
+        "role": "neutral",
+        "displayName": "Main Text Charcoal",
+        "canonical": "#2b3642",
+        "tonalRamp": [
+          "#0d1115",
+          "#192027",
+          "#2b3642",
+          "#3f4e5e",
+          "#55677b",
+          "#72859b",
+          "#9eb0c3",
+          "#e2e7ec"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Muted Text Slate",
+        "canonical": "#5e6b78",
+        "tonalRamp": [
+          "#191e23",
+          "#2d353d",
+          "#444e59",
+          "#5e6b78",
+          "#7b8997",
+          "#9ba7b4",
+          "#c0c9d2",
+          "#edf1f4"
+        ]
+      },
+      "text-light": {
+        "role": "neutral",
+        "displayName": "Light Text Slate",
+        "canonical": "#8e9ca8",
+        "tonalRamp": [
+          "#23282c",
+          "#3e464c",
+          "#5d6871",
+          "#7c8a95",
+          "#8e9ca8",
+          "#a8b4be",
+          "#c7cfd6",
+          "#f0f3f5"
+        ]
+      },
+      "bg-page": {
+        "role": "neutral",
+        "displayName": "Page White Canvas",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#222222",
+          "#444444",
+          "#666666",
+          "#888888",
+          "#aaaaaa",
+          "#cccccc",
+          "#eeeeee",
+          "#ffffff"
+        ]
+      },
+      "bg-alt": {
+        "role": "neutral",
+        "displayName": "Soft Mist Canvas",
+        "canonical": "#f0f7fb",
+        "tonalRamp": [
+          "#0f354a",
+          "#1e5473",
+          "#357da6",
+          "#60a7ce",
+          "#9ecce5",
+          "#cce6f4",
+          "#f0f7fb",
+          "#fbfdfe"
+        ]
+      },
+      "bg-footer": {
+        "role": "neutral",
+        "displayName": "Footer Sky Tint",
+        "canonical": "#eaf5fc",
+        "tonalRamp": [
+          "#0c3349",
+          "#1b5273",
+          "#317ba8",
+          "#5fa6d1",
+          "#9bcbe8",
+          "#c9e4f5",
+          "#eaf5fc",
+          "#f9fcfe"
+        ]
+      },
+      "border-light": {
+        "role": "neutral",
+        "displayName": "Border Light",
+        "canonical": "rgba(2, 54, 96, 0.08)",
+        "tonalRamp": [
+          "#023660",
+          "#034b85",
+          "#0f68ad",
+          "#4193d5",
+          "#7fb7e4",
+          "#b5d5f1",
+          "#e1eefa",
+          "#f2f7fc"
+        ]
+      },
+      "border-subtle": {
+        "role": "neutral",
+        "displayName": "Border Subtle Cyan",
+        "canonical": "rgba(7, 165, 214, 0.15)",
+        "tonalRamp": [
+          "#034358",
+          "#056f91",
+          "#07A5D6",
+          "#26b8e5",
+          "#60cced",
+          "#a1e3f6",
+          "#d4f2fb",
+          "#f2faff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Hero",
+        "purpose": "Hero page headlines and major slogans."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Section titles, modal headers, major milestones."
+      },
+      "title": {
+        "displayName": "Card & Component Title",
+        "purpose": "Card headings, article titles, accordion triggers."
+      },
+      "body": {
+        "displayName": "Body Reading",
+        "purpose": "Articles, longform paragraphs, continuous reading copy."
+      },
+      "label": {
+        "displayName": "Overline & Button Label",
+        "purpose": "Category badges, section overline tags, button labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "subtle-surface",
+        "value": "0 2px 8px rgba(2, 54, 96, 0.06)",
+        "purpose": "Resting state for small cards, pills and floating indicators."
+      },
+      {
+        "name": "resting-card",
+        "value": "0 14px 34px -4px rgba(2, 54, 96, 0.07), 0 4px 12px -2px rgba(2, 54, 96, 0.03)",
+        "purpose": "Multi-stop ambient foundation for article cards and features."
+      },
+      {
+        "name": "elevated-hover",
+        "value": "0 24px 50px -8px rgba(2, 54, 96, 0.14), 0 10px 24px -4px rgba(7, 165, 214, 0.15)",
+        "purpose": "Tactile lift on interactive cards combining navy shadow with cyan glow."
+      },
+      {
+        "name": "header-glass",
+        "value": "0 10px 30px -10px rgba(2, 54, 96, 0.12)",
+        "purpose": "Frosted glass grounding for sticky header on scroll."
+      }
+    ],
+    "motion": [
+      {
+        "name": "transition-fast",
+        "value": "0.18s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Micro-interactions, badge hover, icon nudges."
+      },
+      {
+        "name": "transition-normal",
+        "value": "0.28s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Standard cards, button hovers, dropdown animations."
+      },
+      {
+        "name": "transition-slow",
+        "value": "0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Modal backdrop fade-ins and full section transitions."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "576px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "992px"
+      },
+      {
+        "name": "xl",
+        "value": "1200px"
+      },
+      {
+        "name": "2xl",
+        "value": "1400px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA pill button with dual-stop cyan gradient, uppercase label and subtle hover lift.",
+      "html": "<button class=\"ds-btn-primary\">Únete a la causa</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; font-family: \"Plus Jakarta Sans\", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ffffff; background: linear-gradient(135deg, #07A5D6 0%, #0584ab 100%); padding: 12px 28px; border: none; border-radius: 9999px; cursor: pointer; box-shadow: 0 4px 14px rgba(7, 165, 214, 0.35); transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: linear-gradient(135deg, #0584ab 0%, #036888 100%); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(7, 165, 214, 0.45); } .ds-btn-primary:focus-visible { outline: 2px solid #07A5D6; outline-offset: 3px; }"
+    },
+    {
+      "name": "Hero Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary frosted button for hero backgrounds with subtle glass blur and solid white hover.",
+      "html": "<button class=\"ds-btn-outline\">Conoce más</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; font-family: \"Plus Jakarta Sans\", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); padding: 12px 28px; border: 1.5px solid rgba(255, 255, 255, 0.55); border-radius: 9999px; cursor: pointer; transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-outline:hover { background: #ffffff; color: #023660; border-color: #ffffff; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); } .ds-btn-outline:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Magnetic Link Button",
+      "kind": "button",
+      "description": "Asymmetrical pill button pairing dark navy body with circular forward arrow indicator.",
+      "html": "<a href=\"#\" class=\"ds-btn-magnetic\"><span class=\"ds-btn-magnetic__text\">Nuestros Principios</span><span class=\"ds-btn-magnetic__icon\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8h10M9 4l4 4-4 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a>",
+      "css": ".ds-btn-magnetic { display: inline-flex; align-items: center; gap: 12px; background: #023660; color: #ffffff; font-family: \"Plus Jakarta Sans\", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; padding: 6px 6px 6px 24px; border-radius: 9999px; transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-magnetic__icon { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #07A5D6; color: #ffffff; transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-magnetic:hover { background: #011f38; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(2, 54, 96, 0.25); } .ds-btn-magnetic:hover .ds-btn-magnetic__icon { transform: translateX(3px); background: #44bbe0; }"
+    },
+    {
+      "name": "Section Category Tag",
+      "kind": "chip",
+      "description": "Category and topic tag pill with subtle cyan tint background and soft border.",
+      "html": "<span class=\"ds-section-tag\">Laicismo y Estado</span>",
+      "css": ".ds-section-tag { display: inline-flex; align-items: center; padding: 6px 14px; font-family: \"Plus Jakarta Sans\", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #07A5D6; background: #e7f6fd; border: 1px solid rgba(7, 165, 214, 0.25); border-radius: 9999px; }"
+    },
+    {
+      "name": "Pulsing Status Badge",
+      "kind": "chip",
+      "description": "Institutional founding badge with animated pulsating cyan status dot.",
+      "html": "<div class=\"ds-badge-pulse\"><span class=\"ds-badge-pulse__dot\"></span><span>Fundada en Perú &bull; 2009</span></div>",
+      "css": ".ds-badge-pulse { display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px; background: rgba(2, 54, 96, 0.06); border: 1px solid rgba(2, 54, 96, 0.12); border-radius: 9999px; font-family: \"Plus Jakarta Sans\", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: #023660; text-transform: uppercase; } .ds-badge-pulse__dot { width: 8px; height: 8px; border-radius: 50%; background: #07A5D6; box-shadow: 0 0 0 0 rgba(7, 165, 214, 0.7); animation: ds-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1); } @keyframes ds-pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(7, 165, 214, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(7, 165, 214, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(7, 165, 214, 0); } }"
+    },
+    {
+      "name": "Article Preview Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Elevated white container card with metadata header, high-contrast title, and interactive arrow link.",
+      "html": "<article class=\"ds-card-article\"><div class=\"ds-card-article__header\"><span class=\"ds-section-tag\">Sociedad Laica</span><time class=\"ds-card-article__date\">24 OCT 2026</time></div><h3 class=\"ds-card-article__title\">El Estado Laico y la Garantía Universal de Derechos</h3><p class=\"ds-card-article__excerpt\">Reflexión sobre el principio de neutralidad estatal como salvaguarda innegociable de la libertad de conciencia y el progreso civil.</p><a href=\"#\" class=\"ds-card-article__link\"><span>Leer artículo</span><svg width=\"14\" height=\"14\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8h10M9 4l4 4-4 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></article>",
+      "css": ".ds-card-article { display: flex; flex-direction: column; background: #ffffff; border-radius: 16px; padding: 24px; border: 1px solid rgba(2, 54, 96, 0.08); box-shadow: 0 14px 34px -4px rgba(2, 54, 96, 0.07), 0 4px 12px -2px rgba(2, 54, 96, 0.03); font-family: \"Karla\", sans-serif; transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1); } .ds-card-article:hover { transform: translateY(-4px); border-color: rgba(7, 165, 214, 0.3); box-shadow: 0 24px 50px -8px rgba(2, 54, 96, 0.14), 0 10px 24px -4px rgba(7, 165, 214, 0.15); } .ds-card-article__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; } .ds-card-article__date { font-family: \"Plus Jakarta Sans\", sans-serif; font-size: 0.75rem; font-weight: 600; color: #5e6b78; } .ds-card-article__title { font-family: \"Plus Jakarta Sans\", sans-serif; font-size: 1.25rem; font-weight: 700; line-height: 1.35; color: #023660; margin: 0 0 10px 0; } .ds-card-article__excerpt { font-size: 0.9375rem; line-height: 1.6; color: #2b3642; margin: 0 0 20px 0; flex-grow: 1; } .ds-card-article__link { display: inline-flex; align-items: center; gap: 8px; font-family: \"Plus Jakarta Sans\", sans-serif; font-size: 0.875rem; font-weight: 700; color: #07A5D6; text-decoration: none; transition: color 0.2s ease, transform 0.2s ease; } .ds-card-article__link:hover { color: #0584ab; transform: translateX(4px); }"
+    },
+    {
+      "name": "Bilingual Language Switcher",
+      "kind": "nav",
+      "description": "Capsule switcher component for seamless toggling between Spanish and English versions.",
+      "html": "<nav class=\"ds-lang-switch\" aria-label=\"Selector de idioma\"><button class=\"ds-lang-btn ds-lang-btn--active\">ES</button><button class=\"ds-lang-btn\">EN</button></nav>",
+      "css": ".ds-lang-switch { display: inline-flex; align-items: center; background: rgba(2, 54, 96, 0.06); padding: 3px; border-radius: 9999px; border: 1px solid rgba(2, 54, 96, 0.1); font-family: \"Plus Jakarta Sans\", sans-serif; } .ds-lang-btn { padding: 5px 14px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; border: none; border-radius: 9999px; background: transparent; color: #5e6b78; cursor: pointer; transition: all 0.2s ease; } .ds-lang-btn:hover { color: #023660; } .ds-lang-btn--active { background: #023660; color: #ffffff; box-shadow: 0 2px 6px rgba(2, 54, 96, 0.25); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Secular Agora",
+    "overview": "The visual language of APERAT balances institutional authority with civic openness. Evoking an enlightened agora, the system provides high clarity, dignified contrast, and expansive breathing room. It is designed to represent reason, scientific curiosity, and universal rights without dogmatic solemnity, coldness, or aggressive confrontation.\n\nThe aesthetic pairs deep cosmic navy blues (anchor of institutional permanence) with luminous sky cyans (symbol of progressive clarity and forward-looking freethought). White and pale-blue paper tints dominate content surfaces, ensuring reading comfort and legibility across both desktop monitors and mobile devices in high ambient light.",
+    "keyCharacteristics": [
+      "High legibility & civic dignity: High-contrast text hierarchies, generous line spacing, and disciplined semantic color usage.",
+      "Layered atmospheric depth: Surfaces remain flat at rest with delicate multi-stop shadows and subtle luminous highlights appearing on hover and interaction.",
+      "Confident & friendly tactility: Pill-shaped actions, rounded interactive cards, and smooth cubic-bezier transitions that feel welcoming rather than rigid.",
+      "Bilingual architectural parity: Symmetrical layout balance across Spanish and English surfaces."
+    ],
+    "rules": [
+      {
+        "name": "The Civic Accent Rule",
+        "body": "Horizon Cyan (#07A5D6) is reserved for interactive signals and active navigation states. It must never coat entire informational content blocks, maintaining its power as an intentional call-to-action.",
+        "section": "colors"
+      },
+      {
+        "name": "The Contrast Floor Rule",
+        "body": "All text against white or light tints must meet or exceed WCAG AA 4.5:1 contrast ratio. When using white text, it must only sit on Cosmic Navy (#023660) or Deep Abyss (#011f38) surfaces.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Family Boundary Rule",
+        "body": "Plus Jakarta Sans owns headings, labels, buttons, and navigation; Karla owns continuous reading copy. Neither family borrows the other's territory.",
+        "section": "typography"
+      },
+      {
+        "name": "The Responsive Lift Rule",
+        "body": "Shadows are never purely decorative static dark blobs; they must respond to state changes (hover, focus, modal display) and pair a slight physical displacement (transform: translateY(-2px) to -4px) with shadow expansion.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use Plus Jakarta Sans for all headings, titles, buttons, and badges, and Karla for continuous paragraphs and body copy.",
+      "Do use pill-shaped borders (border-radius: 9999px) on buttons, filter chips, tags, and search bars to reinforce the approachable civic aesthetic.",
+      "Do maintain the 135-degree cyan gradient (#07A5D6 to #0584ab) on primary interactive actions to ensure consistent visual hierarchy.",
+      "Do preserve full structural and layout parity between Spanish (/) and English (/en/) pages.",
+      "Do optimize all photographic imagery in WebP format with descriptive alternative text for accessibility."
+    ],
+    "donts": [
+      "Don't use pure solid black (#000000) for text or backgrounds; use #0c1015 or Cosmic Navy #023660 for deep tones, and #2b3642 for body text.",
+      "Don't introduce harsh, sharp-cornered rectangular buttons or heavy solid borders that break the soft, fluid agora aesthetic.",
+      "Don't use decorative religious, militaristic, or esoteric symbols as design motifs; rely strictly on clean geometric, scientific, and humanistic forms.",
+      "Don't use pure saturated accent colors (like raw red or yellow) outside semantic feedback states (error/warning)."
+    ]
+  }
+}
