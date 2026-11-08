@@ -218,3 +218,4 @@ The form language is **softly curved, tactile, and continuous**:
 - **Don't** introduce harsh, sharp-cornered rectangular buttons or heavy solid borders that break the soft, fluid agora aesthetic.
 - **Don't** use decorative religious, militaristic, or esoteric symbols as design motifs; rely strictly on clean geometric, scientific, and humanistic forms.
 - **Don't** use pure saturated accent colors (like raw red or yellow) outside semantic feedback states (error/warning).
+

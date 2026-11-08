@@ -244,8 +244,12 @@
 }
 
 .lang-switch__btn {
-  display: inline-block;
-  padding: 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  min-width: 36px;
+  padding: 6px 12px;
   border-radius: var(--radius-pill);
   color: var(--color-text-muted);
   text-decoration: none;
@@ -270,18 +274,19 @@
   user-select: none;
 }
 
-/* Botón Hamburguesa Móvil Moderno */
+/* Botón Hamburguesa Móvil Moderno con área táctil accesible (WCAG 2.1 AA) */
 .navbar__toggle {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 34px;
-  height: 28px;
-  padding: 2px;
+  width: 44px;
+  height: 44px;
+  padding: 10px 8px;
   background: transparent;
+  border: none;
   cursor: pointer;
   z-index: calc(var(--z-header) + 1);
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-sm);
 }
 
 .navbar__toggle-bar {
@@ -474,7 +479,7 @@
   box-shadow: 0 6px 18px rgba(7, 165, 214, 0.4);
 }
 
-/* Tag de sección overline */
+/* Tag de sección overline (Alto contraste accesible WCAG AA/AAA) */
 .section-tag {
   display: inline-block;
   font-family: var(--font-sans-title);
@@ -482,12 +487,12 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-secondary);
+  color: #024b75;
   background-color: var(--color-secondary-tint);
   padding: 5px 14px;
   border-radius: var(--radius-pill);
   margin-bottom: 14px;
-  border: 1px solid rgba(7, 165, 214, 0.2);
+  border: 1px solid rgba(7, 165, 214, 0.35);
 }
 
 /* ==========================================================================

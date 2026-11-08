@@ -23,7 +23,7 @@
   background-position: center 25%;
   background-repeat: no-repeat;
   color: var(--color-white);
-  padding: 120px 0 140px;
+  padding: 120px 24px 140px;
   text-align: center;
   overflow: hidden;
 }
@@ -445,7 +445,7 @@
    4. SECCIÓN NUESTROS PRINCIPIOS (Modern Grid Cards)
    ========================================================================== */
 .principles {
-  padding: 110px 0 120px;
+  padding: 110px 24px 120px;
   background-color: #f7fafc;
 }
 
@@ -580,7 +580,7 @@
   background-size: cover;
   background-position: center;
   color: var(--color-white);
-  padding: 95px 0;
+  padding: 95px 24px;
   overflow: hidden;
 }
 
@@ -974,12 +974,12 @@
 }
 
 /* ==========================================================================
-   7. BOLETÍN MENSUAL (Newsletter)
+   7. BOLETÍN MENSUAL (Newsletter & Participación) - Alto Contraste Accesible
    ========================================================================== */
 .newsletter {
-  background: linear-gradient(135deg, #011f38 0%, var(--color-primary) 40%, #056a9e 85%, #07a5d6 100%);
+  background: linear-gradient(135deg, #011627 0%, var(--color-primary) 50%, #034b85 100%);
   color: var(--color-white);
-  padding: 70px 0;
+  padding: 70px clamp(16px, 3vw, 24px);
   position: relative;
   overflow: hidden;
 }
@@ -1003,12 +1003,12 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #7fe1ff;
-  background: rgba(7, 165, 214, 0.2);
+  color: #ffffff;
+  background: rgba(7, 165, 214, 0.3);
   padding: 4px 14px;
   border-radius: var(--radius-pill);
   margin-bottom: 12px;
-  border: 1px solid rgba(7, 165, 214, 0.35);
+  border: 1px solid rgba(7, 165, 214, 0.55);
 }
 
 .newsletter__title {
@@ -1024,7 +1024,7 @@
 .newsletter__subtitle {
   font-family: var(--font-sans-body);
   font-size: 1.0625rem;
-  color: #e2edfa;
+  color: #f0f7fb;
   line-height: 1.6;
 }
 
@@ -1271,7 +1271,7 @@
   gap: 8px;
   font-family: var(--font-sans-body);
   font-size: 0.8125rem;
-  color: #c9e0f5;
+  color: #d8edf8;
 }
 
 .newsletter__reassurance svg {
@@ -1832,7 +1832,7 @@
 @media (max-width: 480px) {
   .hero {
     min-height: 75vh;
-    padding: 60px 0 100px;
+    padding: 60px 16px 100px;
   }
 
   .hero__title {
