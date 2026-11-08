@@ -5,6 +5,7 @@ Thumbs.db
 *~
 .idea/
 .vscode/
+.gemini/
 
 # Logs y temporales
 *.log
@@ -16,6 +17,9 @@ node_modules/
 dist/
 build/
 .cache/
+
+# Impeccable configuración local
+.impeccable/config.local.json
 
 # Copia temporal de respaldo / referencia local
 version-anterior/
