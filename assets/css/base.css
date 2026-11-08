@@ -4,30 +4,6 @@
 
 /* 1. Fuentes Oficiales Locales */
 @font-face {
-  font-family: 'Asterone';
-  src: url('../fonts/Asterone-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Noway';
-  src: url('../fonts/Noway.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Noway';
-  src: url('../fonts/Noway.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Karla';
   src: url('../fonts/Karla-Medium.ttf') format('truetype');
   font-weight: 400;
@@ -119,6 +95,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: -0.02em;
   font-feature-settings: 'kern' 1;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 .font-display {
