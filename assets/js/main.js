@@ -856,6 +856,150 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 10b. Slider de Galería de la Comunidad (8 Fotos con Efecto Fade & Ken Burns)
+  const communitySlider = document.getElementById('community-slider');
+  if (communitySlider) {
+    const slides = communitySlider.querySelectorAll('.community__slide');
+    const dots = communitySlider.querySelectorAll('.community__slider-dot');
+    const prevBtn = communitySlider.querySelector('.community__slider-btn--prev');
+    const nextBtn = communitySlider.querySelector('.community__slider-btn--next');
+    const counterCurrent = communitySlider.querySelector('.community__slider-current');
+    const cardTitle = communitySlider.querySelector('.community__card-title');
+    const cardText = communitySlider.querySelector('.community__card-text');
+
+    const captionsEs = [
+      { title: 'Una comunidad activa', text: 'Personas que comparten razón, libertad de conciencia y valores humanistas en Lima.' },
+      { title: 'Diálogo y pensamiento crítico', text: 'Conversatorios abiertos para debatir ideas con rigor científico y respeto mutuo.' },
+      { title: 'Encuentros presenciales', text: 'Espacios de confraternidad y apoyo para la comunidad secular en el Perú.' },
+      { title: 'Defensa del Estado Laico', text: 'Incidencia ciudadana por la neutralidad estatal y la libertad de conciencia.' },
+      { title: 'Talleres y actividades', text: 'Promoviendo el humanismo, los derechos humanos y la divulgación científica.' },
+      { title: 'Comunidad diversa y abierta', text: 'Más de 15 años sumando voces diversas unidas por la razón y la empatía.' },
+      { title: 'Acción y voluntariado', text: 'Iniciativas ciudadanas para garantizar igualdad y educación laica en el país.' },
+      { title: 'El Ágora Laica', text: 'Un espacio donde cada persona puede dudar, preguntar y pertenecer libremente.' }
+    ];
+
+    const captionsEn = [
+      { title: 'An active community', text: 'People sharing reason, freedom of conscience, and humanist values in Lima.' },
+      { title: 'Dialogue and critical thinking', text: 'Open panels discussing ideas with scientific rigor and mutual respect.' },
+      { title: 'In-person community meetups', text: 'Spaces for camaraderie and support for the secular community in Peru.' },
+      { title: 'Secular state advocacy', text: 'Civic engagement for state neutrality and freedom of conscience.' },
+      { title: 'Workshops and activities', text: 'Promoting humanism, human rights, and scientific dissemination.' },
+      { title: 'A diverse, open community', text: 'Over 15 years uniting diverse voices bound by reason and empathy.' },
+      { title: 'Action and volunteering', text: 'Civic initiatives ensuring equality and secular education nationwide.' },
+      { title: 'The Secular Agora', text: 'A place where everyone can doubt, question, and freely belong.' }
+    ];
+
+    const captions = isEn ? captionsEn : captionsEs;
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let autoplayTimer = null;
+    let isPaused = false;
+
+    const goToSlide = (index) => {
+      if (index < 0) {
+        currentSlide = totalSlides - 1;
+      } else if (index >= totalSlides) {
+        currentSlide = 0;
+      } else {
+        currentSlide = index;
+      }
+
+      // Actualizar slides
+      slides.forEach((slide, idx) => {
+        const isActive = idx === currentSlide;
+        slide.classList.toggle('is-active', isActive);
+        slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+      });
+
+      // Actualizar dots
+      dots.forEach((dot, idx) => {
+        const isActive = idx === currentSlide;
+        dot.classList.toggle('is-active', isActive);
+        dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      // Actualizar contador
+      if (counterCurrent) {
+        counterCurrent.textContent = currentSlide + 1;
+      }
+
+      // Transición suave de texto de la tarjeta
+      if (cardTitle && cardText && captions[currentSlide]) {
+        cardTitle.style.opacity = '0';
+        cardText.style.opacity = '0';
+        setTimeout(() => {
+          cardTitle.textContent = captions[currentSlide].title;
+          cardText.textContent = captions[currentSlide].text;
+          cardTitle.style.opacity = '1';
+          cardText.style.opacity = '1';
+        }, 220);
+      }
+    };
+
+    const nextSlide = () => goToSlide(currentSlide + 1);
+    const prevSlide = () => goToSlide(currentSlide - 1);
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        nextSlide();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        prevSlide();
+      });
+    }
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        goToSlide(idx);
+      });
+    });
+
+    // Autoplay automático cada 4.8 segundos con pausa en hover
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const startAutoplay = () => {
+      if (prefersReducedMotion || autoplayTimer) return;
+      autoplayTimer = setInterval(() => {
+        if (!isPaused) {
+          nextSlide();
+        }
+      }, 4800);
+    };
+
+    communitySlider.addEventListener('mouseenter', () => { isPaused = true; });
+    communitySlider.addEventListener('mouseleave', () => { isPaused = false; });
+    communitySlider.addEventListener('focusin', () => { isPaused = true; });
+    communitySlider.addEventListener('focusout', () => { isPaused = false; });
+
+    // Soporte para gestos táctiles (Swipe en móviles y tabletas)
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    communitySlider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    communitySlider.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diffX = touchEndX - touchStartX;
+      if (Math.abs(diffX) > 40) {
+        if (diffX < 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+    }, { passive: true });
+
+    startAutoplay();
+  }
+
   // 11. Búsqueda Rápida en Footer
   const footerSearchForm = document.querySelector('.footer-search');
   if (footerSearchForm) {

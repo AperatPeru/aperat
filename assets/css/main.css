@@ -188,12 +188,14 @@
   position: relative;
   display: block;
   width: 100%;
+  height: 520px;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  background: var(--color-white);
+  background: #011627;
   border: 1px solid rgba(12, 16, 21, 0.08);
   transition: all var(--transition-normal);
+  user-select: none;
 }
 
 .community__integrantes-wrapper:hover {
@@ -202,17 +204,47 @@
   border-color: rgba(7, 165, 214, 0.35);
 }
 
+.community__slides-track {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.community__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.04);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.85s;
+  pointer-events: none;
+}
+
+.community__slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.community__slide-img,
 .community__image-dawkins {
   width: 100%;
-  height: 520px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  transition: transform var(--transition-slow);
+  transition: transform 3s ease-out;
 }
 
-.community__integrantes-wrapper:hover .community__image-dawkins {
-  transform: scale(1.05);
+.community__integrantes-wrapper:hover .community__slide.is-active .community__slide-img,
+.community__integrantes-wrapper:hover .community__slide.is-active .community__image-dawkins {
+  transform: scale(1.04);
 }
 
 .community__badge-tag {
@@ -233,6 +265,100 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 3;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Controles de Navegación del Slider */
+.community__slider-controls {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(1, 26, 46, 0.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-pill);
+  padding: 3px 6px;
+  z-index: 3;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.community__slider-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0;
+}
+
+.community__slider-btn:hover {
+  background: rgba(7, 165, 214, 0.35);
+  color: #7fe1ff;
+  transform: scale(1.08);
+}
+
+.community__slider-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.community__slider-counter {
+  font-family: var(--font-sans-title);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 0 6px;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+/* Indicadores de progreso (Dots) */
+.community__slider-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(1, 26, 46, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.community__slider-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.community__slider-dot:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.community__slider-dot.is-active {
+  width: 18px;
+  border-radius: 4px;
+  background: #07A5D6;
 }
 
 .community__card {
@@ -261,6 +387,7 @@
   line-height: 1.25;
   margin-bottom: 8px;
   letter-spacing: -0.01em;
+  transition: opacity 0.25s ease;
 }
 
 .community__card-text {
@@ -268,6 +395,7 @@
   font-size: 0.90625rem;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.95);
+  transition: opacity 0.25s ease;
 }
 
 .community__content {
@@ -1829,13 +1957,23 @@
     max-width: 100%;
   }
 
-  .community__image-dawkins {
-    height: 340px;
+  .community__integrantes-wrapper {
+    height: 380px;
   }
 
   .community__card {
-    width: 86%;
-    padding: 18px 20px;
+    width: 92%;
+    padding: 16px 18px;
+  }
+
+  .community__card-title {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .community__card-text {
+    font-size: 0.8125rem;
+    line-height: 1.45;
   }
 
   .principle-item__media {

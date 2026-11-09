@@ -234,12 +234,63 @@
     <section class="community" id="sobre-nosotros" aria-labelledby="community-title">
       <div class="container">
         <div class="community__grid">
-          <!-- Left Column: Community Photo -->
+          <!-- Left Column: Community Photo Gallery -->
           <div class="community__visuals" data-reveal="left">
-            <div class="community__integrantes-wrapper">
-              <img src="../assets/img/community/integrantes.webp?v=2" alt="APERAT working team in Lima"
-                class="community__image-dawkins" loading="lazy">
+            <div class="community__integrantes-wrapper" id="community-slider" role="region" aria-roledescription="carousel" aria-label="APERAT community photo gallery">
+              <div class="community__slides-track">
+                <div class="community__slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 8">
+                  <img src="../assets/img/community/integrantes.webp?v=2" alt="APERAT working team and founders in community activities" class="community__slide-img" loading="eager">
+                </div>
+                <div class="community__slide" role="group" aria-roledescription="slide" aria-label="2 of 8">
+                  <img src="../assets/img/community/aperat1.webp" alt="APERAT freethought community meetup in Lima" class="community__slide-img" loading="lazy">
+                </div>
+                <div class="community__slide" role="group" aria-roledescription="slide" aria-label="3 of 8">
+                  <img src="../assets/img/community/aperat2.webp" alt="Public activities and events organized by the APERAT community" class="community__slide-img" loading="lazy">
+                </div>
+                <div class="community__slide" role="group" aria-roledescription="slide" aria-label="4 of 8">
+                  <img src="../assets/img/community/aperat3.webp" alt="Civic participation and secular state advocacy" class="community__slide-img" loading="lazy">
+                </div>
+                <div class="community__slide" role="group" aria-roledescription="slide" aria-label="5 of 8">
+                  <img src="../assets/img/community/aperat4.webp" alt="Discussion panels and public debates held by the association" class="community__slide-img" loading="lazy">
+                </div>
+                <div class="community__slide" role="group" aria-roledescription="slide" aria-label="6 of 8">
+                  <img src="../assets/img/community/aperat5.webp" alt="Cultural outreach and critical thinking advocacy in Peru" class="community__slide-img" loading="lazy">
+                </div>
+                <div class="community__slide" role="group" aria-roledescription="slide" aria-label="7 of 8">
+                  <img src="../assets/img/community/aperat6.webp" alt="Humanist and freethought community gathering in Lima" class="community__slide-img" loading="lazy">
+                </div>
+                <div class="community__slide" role="group" aria-roledescription="slide" aria-label="8 of 8">
+                  <img src="../assets/img/community/aperat7.webp" alt="Members and collaborators of APERAT" class="community__slide-img" loading="lazy">
+                </div>
+              </div>
+
               <span class="community__badge-tag">15 / COMMUNITY</span>
+
+              <!-- Slider Navigation Controls -->
+              <div class="community__slider-controls">
+                <button class="community__slider-btn community__slider-btn--prev" aria-label="Previous photo" title="Previous photo">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                </button>
+                <div class="community__slider-counter" aria-live="polite">
+                  <span class="community__slider-current">1</span>/<span class="community__slider-total">8</span>
+                </div>
+                <button class="community__slider-btn community__slider-btn--next" aria-label="Next photo" title="Next photo">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                </button>
+              </div>
+
+              <!-- Slider Indicators (Dots) -->
+              <div class="community__slider-indicators" role="tablist" aria-label="Photo selector">
+                <button class="community__slider-dot is-active" role="tab" aria-selected="true" aria-label="Go to photo 1"></button>
+                <button class="community__slider-dot" role="tab" aria-selected="false" aria-label="Go to photo 2"></button>
+                <button class="community__slider-dot" role="tab" aria-selected="false" aria-label="Go to photo 3"></button>
+                <button class="community__slider-dot" role="tab" aria-selected="false" aria-label="Go to photo 4"></button>
+                <button class="community__slider-dot" role="tab" aria-selected="false" aria-label="Go to photo 5"></button>
+                <button class="community__slider-dot" role="tab" aria-selected="false" aria-label="Go to photo 6"></button>
+                <button class="community__slider-dot" role="tab" aria-selected="false" aria-label="Go to photo 7"></button>
+                <button class="community__slider-dot" role="tab" aria-selected="false" aria-label="Go to photo 8"></button>
+              </div>
+
               <div class="community__card">
                 <p class="community__card-title">An active community</p>
                 <p class="community__card-text">

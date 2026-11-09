@@ -273,6 +273,11 @@ h1, h2, h3, h4, h5, h6, p, blockquote, li {
     animation: none !important;
   }
 
+  .community__slide {
+    transition: opacity 0.01ms !important;
+    transform: none !important;
+  }
+
   a, button, input {
     transition: color 0.01ms, background-color 0.01ms, border-color 0.01ms !important;
   }
