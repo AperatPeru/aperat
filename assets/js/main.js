@@ -868,25 +868,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardText = communitySlider.querySelector('.community__card-text');
 
     const captionsEs = [
-      { title: 'Una comunidad activa', text: 'Personas que comparten razón, libertad de conciencia y valores humanistas en Lima.' },
-      { title: 'Diálogo y pensamiento crítico', text: 'Conversatorios abiertos para debatir ideas con rigor científico y respeto mutuo.' },
-      { title: 'Encuentros presenciales', text: 'Espacios de confraternidad y apoyo para la comunidad secular en el Perú.' },
-      { title: 'Defensa del Estado Laico', text: 'Incidencia ciudadana por la neutralidad estatal y la libertad de conciencia.' },
-      { title: 'Talleres y actividades', text: 'Promoviendo el humanismo, los derechos humanos y la divulgación científica.' },
+      { title: 'Comunidad activa', text: 'Personas que comparten razón, libertad de conciencia y valores humanistas en Lima.' },
+      { title: 'Comunidad activa', text: 'Espacios de diálogo, integración y apoyo mutuo para librepensadores y humanistas.' },
+      { title: 'Activismo laico', text: 'Presencia pública y movilización pacífica en defensa de las libertades civiles y la laicidad.' },
+      { title: 'Incidencia ciudadana', text: 'Acciones de vigilancia y participación ciudadana por la neutralidad del Estado y los derechos humanos.' },
+      { title: 'Incidencia ciudadana', text: 'Pronunciamientos y campañas activas para garantizar la igualdad ante la ley sin discriminación religiosa.' },
       { title: 'Comunidad diversa y abierta', text: 'Más de 15 años sumando voces diversas unidas por la razón y la empatía.' },
       { title: 'Acción y voluntariado', text: 'Iniciativas ciudadanas para garantizar igualdad y educación laica en el país.' },
-      { title: 'El Ágora Laica', text: 'Un espacio donde cada persona puede dudar, preguntar y pertenecer libremente.' }
+      { title: 'Incidencia en el Estado', text: 'Reunión de trabajo en el Congreso de la República presentando una propuesta de proyecto de ley sobre libertad de conciencia y laicidad.' }
     ];
 
     const captionsEn = [
-      { title: 'An active community', text: 'People sharing reason, freedom of conscience, and humanist values in Lima.' },
-      { title: 'Dialogue and critical thinking', text: 'Open panels discussing ideas with scientific rigor and mutual respect.' },
-      { title: 'In-person community meetups', text: 'Spaces for camaraderie and support for the secular community in Peru.' },
-      { title: 'Secular state advocacy', text: 'Civic engagement for state neutrality and freedom of conscience.' },
-      { title: 'Workshops and activities', text: 'Promoting humanism, human rights, and scientific dissemination.' },
+      { title: 'Active community', text: 'People sharing reason, freedom of conscience, and humanist values in Lima.' },
+      { title: 'Active community', text: 'Spaces for dialogue, integration, and mutual support for freethinkers and humanists.' },
+      { title: 'Secular activism', text: 'Public presence and peaceful civic action in defense of civil liberties and secularism.' },
+      { title: 'Civic advocacy', text: 'Civic monitoring and advocacy initiatives for state neutrality and human rights.' },
+      { title: 'Civic advocacy', text: 'Statements and campaigns ensuring equality before the law without religious discrimination.' },
       { title: 'A diverse, open community', text: 'Over 15 years uniting diverse voices bound by reason and empathy.' },
       { title: 'Action and volunteering', text: 'Civic initiatives ensuring equality and secular education nationwide.' },
-      { title: 'The Secular Agora', text: 'A place where everyone can doubt, question, and freely belong.' }
+      { title: 'State & legislative advocacy', text: 'Working meeting at the Congress of the Republic presenting a legislative bill proposal for secularism and freedom of conscience.' }
     ];
 
     const captions = isEn ? captionsEn : captionsEs;
