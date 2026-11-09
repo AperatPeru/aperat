@@ -172,7 +172,6 @@
          ========================================================================== -->
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero__overlay" aria-hidden="true"></div>
-      <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__container">
         <div class="hero__badge" data-reveal>
           <span class="hero__badge-pulse" aria-hidden="true"></span>
@@ -193,7 +192,7 @@
             </svg>
           </a>
           <a href="#principios" class="btn btn-outline-white btn-hero-secondary">
-            <span>Our principles</span>
+            Our principles
           </a>
         </div>
         <div class="hero__trust" data-reveal data-reveal-delay="400">
@@ -302,7 +301,6 @@
 
           <!-- Right Column: Institutional Content -->
           <div class="community__content" data-reveal="right">
-            <span class="section-tag">Community & History</span>
             <h2 class="community__title" id="community-title">More than 17 years building community</h2>
             <p class="community__paragraph">
               Founded in Lima in 2009, APERAT is the first legally established organization for atheists, agnostics, and humanists in Peru. We promote critical thinking, the unwavering defense of a Secular State, and universal human rights in collaboration with national and international networks like Humanists International.
@@ -382,7 +380,7 @@
             </div>
 
             <a href="#principios" class="btn-magnetic">
-              <span>Our principles</span>
+              <span class="btn-magnetic__text">Our principles</span>
               <span class="btn-magnetic__arrow">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z" />
@@ -813,8 +811,7 @@
 
       <!-- Associated Organizations -->
       <section class="partners-section" aria-labelledby="partners-title" data-reveal>
-        <span class="partners-tag">Alliances & Networks</span>
-        <h3 class="partners-title" id="partners-title">Associated Organizations</h3>
+        <h3 class="partners-title" id="partners-title">International Alliances & Networks</h3>
         <div class="partners-showcase">
           <a href="https://humanists.international/" target="_blank" rel="noopener noreferrer" class="partner-card" title="Humanists International">
             <div class="partner-card__logo-wrap">
@@ -872,7 +869,7 @@
         <button class="modal__close" data-close-modal aria-label="Close dialog">&times;</button>
       </div>
       <div class="modal__body">
-        <p style="margin-bottom: 20px; font-size: 0.95rem; color: #556270;">
+        <p class="modal__intro">
           Your contribution empowers legal defense for non-believers, advocacy for state secularism, scientific education, and public humanist conferences in Peru.
         </p>
 
@@ -884,15 +881,13 @@
 
         <!-- Tab 1: Yape / Plin -->
         <div class="modal__tab-content active" id="tab-yape" role="tabpanel">
-          <div style="background: #f0f7fc; padding: 18px; border-radius: 12px; margin-bottom: 16px;">
-            <p style="font-weight: 700; color: #023660; margin-bottom: 6px;">Instant mobile transfer in Peru:</p>
-            <p
-              style="font-size: 1.25rem; font-family: monospace; font-weight: bold; color: #023660; margin-bottom: 8px;">
+          <div class="modal__card">
+            <p class="modal__card-label">Instant mobile transfer in Peru:</p>
+            <p class="modal__card-value">
               997 230 431
             </p>
-            <p style="font-size: 0.875rem; color: #5a6b7c; margin-bottom: 12px;">Account holder: Asociación Peruana de Ateos</p>
-            <button class="btn btn-primary btn-copy" data-copy="997230431"
-              style="font-size: 0.8125rem; padding: 8px 18px;">
+            <p class="modal__card-sub">Account holder: Asociación Peruana de Ateos</p>
+            <button class="btn btn-primary btn-copy modal__btn-copy" data-copy="997230431">
               Copy number
             </button>
           </div>
@@ -900,12 +895,12 @@
 
         <!-- Tab 2: BBVA -->
         <div class="modal__tab-content" id="tab-bbva" role="tabpanel">
-          <div style="background: #f8fafc; padding: 22px 18px; border-radius: 12px; margin-bottom: 16px; text-align: center; border: 1px dashed #cbd5e1;">
-            <p style="font-weight: 700; color: #334155; margin-bottom: 6px;">BBVA Bank Transfer</p>
-            <span style="display: inline-block; background: #fee2e2; color: #b91c1c; font-weight: 700; font-size: 0.8125rem; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">
+          <div class="modal__card modal__card--center modal__card--notice">
+            <p class="modal__card-label">BBVA Bank Transfer</p>
+            <span class="modal__badge-notice">
               Currently unavailable
             </span>
-            <p style="font-size: 0.875rem; color: #64748b; line-height: 1.6; margin: 0;">
+            <p class="modal__card-desc">
               Our institutional bank account is currently undergoing authorization. Please use <strong>Yape / Plin</strong> or <strong>PayPal</strong> to support our work.
             </p>
           </div>
@@ -913,14 +908,13 @@
 
         <!-- Tab 3: PayPal -->
         <div class="modal__tab-content" id="tab-paypal" role="tabpanel">
-          <div
-            style="background: #f0f7fc; padding: 18px; border-radius: 12px; margin-bottom: 16px; text-align: center;">
-            <p style="font-weight: 700; color: #023660; margin-bottom: 8px;">International contributions in USD:</p>
-            <p style="font-size: 0.9375rem; color: #5a6b7c; margin-bottom: 16px;">
+          <div class="modal__card modal__card--center">
+            <p class="modal__card-label">International contributions in USD:</p>
+            <p class="modal__card-sub">
               Accepts credit cards, debit cards, or PayPal balance from any country worldwide.
             </p>
             <a href="https://www.paypal.com/donate/?hosted_button_id=H8B4X4392YQCE" target="_blank"
-              rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex;">
+              rel="noopener noreferrer" class="btn btn-primary modal__btn-donate">
               Donate with PayPal
             </a>
           </div>

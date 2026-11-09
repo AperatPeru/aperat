@@ -173,7 +173,6 @@
          ========================================================================== -->
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero__overlay" aria-hidden="true"></div>
-      <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__container">
         <div class="hero__badge" data-reveal>
           <span class="hero__badge-pulse" aria-hidden="true"></span>
@@ -195,7 +194,7 @@
             </svg>
           </a>
           <a href="#principios" class="btn btn-outline-white btn-hero-secondary">
-            <span>Nuestros principios</span>
+            Nuestros principios
           </a>
         </div>
         <div class="hero__trust" data-reveal data-reveal-delay="400">
@@ -304,7 +303,6 @@
 
           <!-- Columna Derecha: Contenido Institucional -->
           <div class="community__content" data-reveal="right">
-            <span class="section-tag">Comunidad & Trayectoria</span>
             <h2 class="community__title" id="community-title">Más de 17 años construyendo comunidad</h2>
             <p class="community__paragraph">
               Fundada en Lima en 2009, la APERAT es el primer espacio legalmente constituido para personas ateas, agnósticas y humanistas en el Perú. Promovemos el pensamiento crítico, la defensa irrestricta del Estado Laico y los derechos humanos universales en colaboración con redes nacionales e internacionales como Humanists International.
@@ -396,7 +394,7 @@
             </div>
 
             <a href="#principios" class="btn-magnetic">
-              <span>Nuestros principios</span>
+              <span class="btn-magnetic__text">Nuestros principios</span>
               <span class="btn-magnetic__arrow">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z" />
@@ -842,8 +840,7 @@
 
       <!-- Organizaciones Asociadas -->
       <section class="partners-section" aria-labelledby="partners-title" data-reveal>
-        <span class="partners-tag">Alianzas y redes</span>
-        <h3 class="partners-title" id="partners-title">Organizaciones asociadas</h3>
+        <h3 class="partners-title" id="partners-title">Alianzas y redes internacionales</h3>
         <div class="partners-showcase">
           <a href="https://humanists.international/" target="_blank" rel="noopener noreferrer" class="partner-card" title="Humanists International">
             <div class="partner-card__logo-wrap">
@@ -902,7 +899,7 @@
         <button class="modal__close" data-close-modal aria-label="Cerrar ventana modal">&times;</button>
       </div>
       <div class="modal__body">
-        <p style="margin-bottom: 20px; font-size: 0.95rem; color: #556270;">
+        <p class="modal__intro">
           Tu contribución hace posible la defensa legal de ateos, la promoción del Estado laico, la educación científica
           y la realización de conferencias y proyectos en el Perú.
         </p>
@@ -915,16 +912,13 @@
 
         <!-- Tab 1: Yape / Plin -->
         <div class="modal__tab-content active" id="tab-yape" role="tabpanel">
-          <div style="background: #f0f7fc; padding: 18px; border-radius: 12px; margin-bottom: 16px;">
-            <p style="font-weight: 700; color: #023660; margin-bottom: 6px;">Transferencia inmediata por celular:</p>
-            <p
-              style="font-size: 1.25rem; font-family: monospace; font-weight: bold; color: #023660; margin-bottom: 8px;">
+          <div class="modal__card">
+            <p class="modal__card-label">Transferencia inmediata por celular:</p>
+            <p class="modal__card-value">
               997 230 431
             </p>
-            <p style="font-size: 0.875rem; color: #5a6b7c; margin-bottom: 12px;">Titular: Asociación Peruana de Ateos
-            </p>
-            <button class="btn btn-primary btn-copy" data-copy="997230431"
-              style="font-size: 0.8125rem; padding: 8px 18px;">
+            <p class="modal__card-sub">Titular: Asociación Peruana de Ateos</p>
+            <button class="btn btn-primary btn-copy modal__btn-copy" data-copy="997230431">
               Copiar número
             </button>
           </div>
@@ -932,12 +926,12 @@
 
         <!-- Tab 2: BBVA -->
         <div class="modal__tab-content" id="tab-bbva" role="tabpanel">
-          <div style="background: #f8fafc; padding: 22px 18px; border-radius: 12px; margin-bottom: 16px; text-align: center; border: 1px dashed #cbd5e1;">
-            <p style="font-weight: 700; color: #334155; margin-bottom: 6px;">Transferencia bancaria BBVA</p>
-            <span style="display: inline-block; background: #fee2e2; color: #b91c1c; font-weight: 700; font-size: 0.8125rem; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">
+          <div class="modal__card modal__card--center modal__card--notice">
+            <p class="modal__card-label">Transferencia bancaria BBVA</p>
+            <span class="modal__badge-notice">
               No disponible por el momento
             </span>
-            <p style="font-size: 0.875rem; color: #64748b; line-height: 1.6; margin: 0;">
+            <p class="modal__card-desc">
               Nuestra cuenta bancaria institucional se encuentra temporalmente en proceso de habilitación. Por favor, utiliza <strong>Yape / Plin</strong> o <strong>PayPal</strong> para realizar tu aporte.
             </p>
           </div>
@@ -945,15 +939,13 @@
 
         <!-- Tab 3: PayPal -->
         <div class="modal__tab-content" id="tab-paypal" role="tabpanel">
-          <div
-            style="background: #f0f7fc; padding: 18px; border-radius: 12px; margin-bottom: 16px; text-align: center;">
-            <p style="font-weight: 700; color: #023660; margin-bottom: 8px;">Donaciones en dólares / internacionales:
-            </p>
-            <p style="font-size: 0.9375rem; color: #5a6b7c; margin-bottom: 16px;">
+          <div class="modal__card modal__card--center">
+            <p class="modal__card-label">Donaciones en dólares / internacionales:</p>
+            <p class="modal__card-sub">
               Acepta tarjetas de crédito, débito o saldo PayPal desde cualquier país.
             </p>
             <a href="https://www.paypal.com/donate/?hosted_button_id=H8B4X4392YQCE" target="_blank"
-              rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex;">
+              rel="noopener noreferrer" class="btn btn-primary modal__btn-donate">
               Donar con PayPal
             </a>
           </div>
