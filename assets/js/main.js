@@ -873,7 +873,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { title: 'Activismo laico', text: 'Presencia pública y movilización pacífica en defensa de las libertades civiles y la laicidad.' },
       { title: 'Incidencia ciudadana', text: 'Acciones de vigilancia y participación ciudadana por la neutralidad del Estado y los derechos humanos.' },
       { title: 'Incidencia ciudadana', text: 'Pronunciamientos y campañas activas para garantizar la igualdad ante la ley sin discriminación religiosa.' },
-      { title: 'Comunidad diversa y abierta', text: 'Más de 15 años sumando voces diversas unidas por la razón y la empatía.' },
+      { title: 'Comunidad diversa y abierta', text: 'Más de 17 años sumando voces diversas unidas por la razón y la empatía.' },
       { title: 'Acción y voluntariado', text: 'Iniciativas ciudadanas para garantizar igualdad y educación laica en el país.' },
       { title: 'Incidencia en el Estado', text: 'Reunión de trabajo en el Congreso de la República presentando una propuesta de proyecto de ley sobre libertad de conciencia y laicidad.' }
     ];
@@ -884,7 +884,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { title: 'Secular activism', text: 'Public presence and peaceful civic action in defense of civil liberties and secularism.' },
       { title: 'Civic advocacy', text: 'Civic monitoring and advocacy initiatives for state neutrality and human rights.' },
       { title: 'Civic advocacy', text: 'Statements and campaigns ensuring equality before the law without religious discrimination.' },
-      { title: 'A diverse, open community', text: 'Over 15 years uniting diverse voices bound by reason and empathy.' },
+      { title: 'A diverse, open community', text: 'Over 17 years uniting diverse voices bound by reason and empathy.' },
       { title: 'Action and volunteering', text: 'Civic initiatives ensuring equality and secular education nationwide.' },
       { title: 'State & legislative advocacy', text: 'Working meeting at the Congress of the Republic presenting a legislative bill proposal for secularism and freedom of conscience.' }
     ];
