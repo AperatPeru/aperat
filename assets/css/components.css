@@ -578,7 +578,7 @@
 }
 
 /* ==========================================================================
-   5. Divisor Curvo Moderno (Organic Section Divider)
+   5. Adorno Geométrico Bicolor del Hero (Diseño Oficial APERAT)
    ========================================================================== */
 .hero-divider {
   position: absolute;
@@ -595,7 +595,7 @@
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 68px;
+  height: clamp(34px, 3.2vw, 54px);
 }
 
 /* ==========================================================================
