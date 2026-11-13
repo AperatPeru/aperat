@@ -91,6 +91,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   height: var(--header-nav-height);
   padding: 0 10px;
 }
@@ -108,7 +109,7 @@
 }
 
 .navbar__logo {
-  height: 48px;
+  height: 36px;
   width: auto;
   transition: transform var(--transition-fast);
 }
@@ -119,36 +120,48 @@
 
 .navbar__divider {
   width: 1px;
-  height: 34px;
+  height: 28px;
   background-color: rgba(2, 54, 96, 0.12);
-  margin: 0 6px;
+  margin: 0 4px;
+  flex-shrink: 0;
 }
 
 .navbar__menu {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .navbar__list {
   display: flex;
   align-items: center;
   gap: 2px;
+  flex-shrink: 0;
 }
 
 .navbar__item {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .navbar__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
   font-family: var(--font-sans-title);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 700;
+  line-height: 1.4;
   color: var(--color-primary);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 8px 12px;
+  letter-spacing: 0.015em;
+  white-space: nowrap;
+  padding: 8px 6px;
   position: relative;
   background-color: transparent;
   transition: color var(--transition-fast);
@@ -162,7 +175,7 @@
   right: 12px;
   height: 2.5px;
   border-radius: 2px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary-dark);
   opacity: 0;
   transform: scaleX(0);
   transform-origin: center;
@@ -190,6 +203,7 @@
 }
 
 .navbar__separator {
+  display: none;
   width: 1px;
   height: 20px;
   background-color: rgba(2, 54, 96, 0.1);
@@ -199,19 +213,20 @@
 .navbar__socials {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 10px;
+  gap: 6px;
+  padding: 0 4px;
+  flex-shrink: 0;
 }
 
 .navbar__social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: var(--color-secondary-tint);
-  color: var(--color-secondary);
+  color: var(--color-secondary-dark);
   transition: all var(--transition-fast);
   border: 1px solid rgba(7, 165, 214, 0.2);
 }
@@ -219,7 +234,7 @@
 .navbar__social-link svg {
   width: 15px;
   height: 15px;
-  fill: var(--color-secondary);
+  fill: var(--color-secondary-action);
   transition: fill var(--transition-fast);
 }
 
@@ -237,8 +252,9 @@
 .navbar__cta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-left: 10px;
+  gap: 8px;
+  margin-left: 0;
+  flex-shrink: 0;
 }
 
 /* Selector de Idioma (ES / EN) Moderno */
@@ -260,9 +276,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 36px;
-  min-width: 36px;
-  padding: 6px 12px;
+  min-height: 32px;
+  min-width: 32px;
+  padding: 5px 9px;
   border-radius: var(--radius-pill);
   color: var(--color-text-muted);
   text-decoration: none;
@@ -336,7 +352,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 12px 28px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-pill);
   transition: all var(--transition-fast);
   text-align: center;
   cursor: pointer;
@@ -379,8 +395,9 @@
 
 .btn-donar {
   border-radius: var(--radius-pill);
-  padding: 10px 24px;
-  font-size: 0.875rem;
+  padding: 10px 18px;
+  font-size: 0.8125rem;
+  line-height: 1.4;
 }
 
 .btn-icon-heart {
@@ -411,7 +428,7 @@
   background-color: rgba(255, 255, 255, 0.08);
   color: var(--color-white);
   border: 1.5px solid rgba(255, 255, 255, 0.55);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-pill);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
@@ -466,7 +483,7 @@
   font-family: var(--font-sans-title);
   font-weight: 700;
   font-size: 0.9375rem;
-  color: var(--color-secondary);
+  color: var(--color-secondary-dark);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   padding: 10px 18px 10px 4px;
@@ -475,7 +492,7 @@
 }
 
 .btn-magnetic__text {
-  color: var(--color-secondary);
+  color: var(--color-secondary-dark);
 }
 
 .btn-magnetic__arrow {
@@ -483,7 +500,7 @@
   height: 38px;
   border-radius: 50%;
   background: var(--color-secondary-tint);
-  color: var(--color-secondary);
+  color: var(--color-secondary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -629,8 +646,12 @@
   background-color: var(--color-white);
   border-radius: var(--radius-xl);
   max-width: 580px;
+  max-height: calc(100vh - 40px);
+  max-height: calc(100dvh - 40px);
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transform: translateY(24px) scale(0.96);
@@ -661,8 +682,9 @@
 .modal__close {
   background: rgba(255, 255, 255, 0.1);
   color: var(--color-white);
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -679,6 +701,8 @@
 
 .modal__body {
   padding: 30px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .modal__tabs {
@@ -693,6 +717,7 @@
 
 .modal__tab-btn {
   flex: 1;
+  min-height: 44px;
   padding: 10px 16px;
   font-family: var(--font-sans-title);
   font-weight: 700;
@@ -718,6 +743,7 @@
 
 .modal__tab-content.active {
   display: block;
+  visibility: visible;
 }
 
 @keyframes fadeIn {
@@ -793,8 +819,14 @@
 }
 
 .modal__btn-copy {
+  min-height: 44px;
   font-size: 0.8125rem;
   padding: 8px 18px;
+}
+
+.btn-copy.is-error {
+  background: #8f1d1d;
+  color: var(--color-white);
 }
 
 .modal__btn-donate {

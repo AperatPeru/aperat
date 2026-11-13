@@ -51,7 +51,7 @@ Para maximizar la citabilidad y visibilidad en motores de búsqueda basados en I
 
 ## 📝 Regla de Artículos del Blog
 
-- **Estructura**: Todo artículo nuevo debe alojarse en `articulos/<slug-del-articulo>.html`.
+- **Estructura**: Todo artículo nuevo en español debe alojarse en `articulos/<slug-del-articulo>/index.html`, de modo que su URL pública sea `/articulos/<slug-del-articulo>/` (sin extensión `.html`). En inglés se usa `en/articles/<slug-del-articulo>/index.html`, con URL pública `/en/articles/<slug-del-articulo>/`.
 - **Autoría**: Por directriz editorial de APERAT, **ningún artículo debe mostrar nombres de autores personales**; se mantiene siempre la firma institucional de la asociación.
 - **Categorías oficiales permitidas**:
   1. `Razón y filosofía`
@@ -66,4 +66,5 @@ Para maximizar la citabilidad y visibilidad en motores de búsqueda basados en I
 ---
 
 ## ⚡ Rendimiento y Caché
-- Al modificar `assets/css/main.css` o `assets/js/main.js`, incrementar el parámetro de versión de caché en `index.html` (ejemplo: `?v=2027.X` o `?v=2026.X`).
+- Al modificar `assets/css/main.css` o `assets/js/main.js`, incrementar el parámetro de versión de caché en todas las páginas que los carguen (ejemplo: `?v=2027.X` o `?v=2026.X`).
+- **URLs públicas**: Todas las páginas y artículos usan directorios sin extensión: `/sobre-nosotros/`, `/que-hacemos/`, `/laicidad-y-derechos/` y `/articulos/<slug>/`. Las URL antiguas `.html` se conservan únicamente como redirecciones `noindex, follow`.

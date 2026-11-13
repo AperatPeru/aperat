@@ -23,27 +23,133 @@
   <!-- Open Graph / Redes Sociales -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.aperat.org.pe/">
-  <meta property="og:title" content="APERAT - Asociación Peruana de Ateos">
+  <meta property="og:title" content="APERAT - Asociación Peruana de Ateos | Estado Laico y Humanismo">
   <meta property="og:description"
-    content="Defendiendo la razón, la libertad de conciencia y el Estado laico en el Perú desde 2009.">
+    content="Defendiendo la razón, la libertad de conciencia y el Estado laico en el Perú desde 2009. Conoce nuestros proyectos, comunidad y el World Humanist Congress Lima 2027.">
   <meta property="og:image" content="https://www.aperat.org.pe/assets/img/hero/hero_bg.webp">
+  <meta property="og:locale" content="es_PE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="APERAT - Asociación Peruana de Ateos">
+  <meta name="twitter:description" content="Defendiendo la razón, la libertad de conciencia y el Estado laico en el Perú desde 2009.">
+  <meta name="twitter:image" content="https://www.aperat.org.pe/assets/img/hero/hero_bg.webp">
 
-  <!-- Favicon Oficial -->
-  <link rel="icon" type="image/png" href="img/logo.png">
-  <link rel="apple-touch-icon" href="img/logo.png">
+  <!-- Favicon e Iconos Multiplataforma -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/logos/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logos/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logos/favicon-16.png">
+  <link rel="alternate icon" href="assets/img/logos/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logos/apple-touch-icon.png">
+  <meta name="theme-color" content="#07A5D6">
 
-  <!-- Tipografía Moderna Google Fonts (Plus Jakarta Sans & Karla) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
-    rel="stylesheet">
+  <!-- Tipografía Moderna Google Fonts (Plus Jakarta Sans &amp; Karla) -->
+  <link rel="preload" href="assets/fonts/karla-latin-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-subset.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Hojas de Estilo Vanilla Modernas -->
-  <link rel="stylesheet" href="assets/css/main.css?v=2027.9">
+  <link rel="preload" as="image" href="assets/img/hero/fondo-hero-1-960.webp"
+    imagesrcset="assets/img/hero/fondo-hero-1-960.webp 960w, assets/img/hero/fondo-hero-1-1440.webp 1440w, assets/img/hero/fondo-hero-1.webp 1920w"
+    imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/variables.css?v=2027.23">
+  <link rel="stylesheet" href="assets/css/base.css?v=2027.23">
+  <link rel="stylesheet" href="assets/css/components.css?v=2027.23">
+  <link rel="stylesheet" href="assets/css/main.css?v=2027.23">
+
+  <!-- Datos Estructurados JSON-LD (SEO y GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "NGO",
+        "@id": "https://www.aperat.org.pe/#organization",
+        "name": "Asociación Peruana de Ateos",
+        "alternateName": ["APERAT", "Peruvian Association of Atheists"],
+        "url": "https://www.aperat.org.pe/",
+        "logo": "https://www.aperat.org.pe/assets/img/logos/aperat-horizontal.webp",
+        "image": "https://www.aperat.org.pe/assets/img/hero/hero_bg.webp",
+        "foundingDate": "2009",
+        "description": "Asociación civil peruana sin fines de lucro dedicada a la defensa del Estado laico, la libertad de conciencia, el pensamiento crítico y el humanismo secular en el Perú.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Benjamín Ugarteche 181",
+          "addressLocality": "Pueblo Libre",
+          "addressRegion": "Lima",
+          "postalCode": "15084",
+          "addressCountry": "PE"
+        },
+        "telephone": "+51997230431",
+        "email": "contacto@aperat.org.pe",
+        "sameAs": [
+          "https://www.facebook.com/APERAT",
+          "https://www.instagram.com/aperatperu/",
+          "https://www.youtube.com/user/ateosperuanos"
+        ],
+        "knowsAbout": [
+          "Estado Laico en el Perú",
+          "Libertad de Conciencia y Religión",
+          "Humanismo Secular",
+          "Ateísmo y Pensamiento Crítico",
+          "Exoneración del Curso de Religión Escolar",
+          "Artículo 50 Constitución Política del Perú",
+          "Jurisprudencia STC 06111-2009-PA/TC"
+        ],
+        "memberOf": [
+          {
+            "@type": "Organization",
+            "name": "Humanists International",
+            "url": "https://humanists.international/"
+          },
+          {
+            "@type": "Organization",
+            "name": "Atheist Alliance International",
+            "url": "https://www.atheistalliance.org/"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.aperat.org.pe/#website",
+        "url": "https://www.aperat.org.pe/",
+        "name": "APERAT - Asociación Peruana de Ateos",
+        "publisher": {
+          "@id": "https://www.aperat.org.pe/#organization"
+        },
+        "inLanguage": ["es-PE", "en-US"]
+      },
+      {
+        "@type": "Event",
+        "@id": "https://www.aperat.org.pe/#whc2027",
+        "name": "World Humanist Congress Lima 2027",
+        "description": "El congreso mundial del movimiento humanista organizado por Humanists International con APERAT como anfitriona local en Lima, Perú.",
+        "startDate": "2027-08-20",
+        "endDate": "2027-08-22",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Lima, Perú",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lima",
+            "addressCountry": "PE"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Humanists International",
+          "url": "https://humanists.international/"
+        },
+        "contributor": {
+          "@id": "https://www.aperat.org.pe/#organization"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   <!-- Barra de Progreso de Lectura -->
   <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
 
@@ -79,14 +185,13 @@
   </aside>
 
   <!-- ==========================================================================
-       HEADER & NAVEGACIÓN PRINCIPAL
+       HEADER &amp; NAVEGACIÓN PRINCIPAL
        ========================================================================== -->
   <header class="site-header" id="site-header">
     <div class="container navbar">
       <div class="navbar__brand">
-        <a href="index.html" class="navbar__brand-link" aria-label="Ir a Inicio - APERAT">
-          <img src="assets/img/logos/aperat-horizontal.webp?v=2026.4" alt="APERAT - Asociación Peruana de Ateos"
-            class="navbar__logo">
+        <a href="./" class="navbar__brand-link" aria-label="Ir a Inicio - APERAT">
+          <img src="assets/img/logos/aperat-horizontal-300.webp" srcset="assets/img/logos/aperat-horizontal-300.webp 300w, assets/img/logos/aperat-horizontal.webp 600w" sizes="200px" width="300" height="54" alt="APERAT - Asociación Peruana de Ateos" class="navbar__logo" decoding="async">
         </a>
       </div>
 
@@ -101,15 +206,19 @@
         <div class="navbar__divider" aria-hidden="true"></div>
         <ul class="navbar__list">
           <li class="navbar__item">
-            <a href="#inicio" class="navbar__link active">Inicio</a>
+            <a href="./" class="navbar__link active" aria-current="page">Inicio</a>
           </li>
           <li class="navbar__separator" aria-hidden="true"></li>
           <li class="navbar__item">
-            <a href="#sobre-nosotros" class="navbar__link">Sobre Nosotros</a>
+            <a href="sobre-nosotros/" class="navbar__link">Sobre Nosotros</a>
           </li>
           <li class="navbar__separator" aria-hidden="true"></li>
           <li class="navbar__item">
-            <a href="#principios" class="navbar__link">Laicidad y Derechos</a>
+            <a href="que-hacemos/" class="navbar__link">Qué Hacemos</a>
+          </li>
+          <li class="navbar__separator" aria-hidden="true"></li>
+          <li class="navbar__item">
+            <a href="laicidad-y-derechos/" class="navbar__link">Laicidad y Derechos</a>
           </li>
           <li class="navbar__separator" aria-hidden="true"></li>
           <li class="navbar__item">
@@ -155,7 +264,7 @@
             <span class="lang-switch__divider" aria-hidden="true">/</span>
             <a href="en/" class="lang-switch__btn" hreflang="en" title="English">EN</a>
           </div>
-          <a href="#donar" class="btn btn-primary btn-donar" data-open-modal="donar" role="button">
+          <a href="#modal-donar" class="btn btn-primary btn-donar" data-open-modal="donar" role="button">
             <svg class="btn-icon-heart" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
@@ -167,11 +276,18 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- ==========================================================================
          SECCIÓN 1: HERO (PORTADA SAM HARRIS)
          ========================================================================== -->
-    <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <section class="hero has-hero-slideshow" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-slideshow" data-hero-slideshow data-hero-images="assets/img/hero/fondo-hero-1,assets/img/hero/fondo-hero-2,assets/img/hero/fondo-hero-3,assets/img/hero/fondo-hero-4,assets/img/hero/fondo-hero-5" aria-hidden="true">
+        <div class="hero-slideshow__slide hero-slideshow__slide--1 is-active"></div>
+        <div class="hero-slideshow__slide hero-slideshow__slide--2"></div>
+        <div class="hero-slideshow__slide hero-slideshow__slide--3"></div>
+        <div class="hero-slideshow__slide hero-slideshow__slide--4"></div>
+        <div class="hero-slideshow__slide hero-slideshow__slide--5"></div>
+      </div>
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="container hero__container">
         <div class="hero__badge" data-reveal>
@@ -234,28 +350,60 @@
             <div class="community__integrantes-wrapper" id="community-slider" role="region" aria-roledescription="carousel" aria-label="Galería fotográfica de la comunidad APERAT">
               <div class="community__slides-track">
                 <div class="community__slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 8">
-                  <img src="assets/img/community/integrantes.webp?v=2" alt="Comunidad activa: grupo de trabajo y fundadores de APERAT" class="community__slide-img" loading="eager">
+                  <img data-src="assets/img/community/integrantes-480.webp"
+                    data-srcset="assets/img/community/integrantes-480.webp 480w, assets/img/community/integrantes-800.webp 800w, assets/img/community/integrantes.webp 1000w"
+                    sizes="(max-width: 600px) calc(100vw - 32px), 530px" width="1000" height="590"
+                    alt="Comunidad activa: grupo de trabajo y fundadores de APERAT" class="community__slide-img"
+                    decoding="async">
                 </div>
                 <div class="community__slide" role="group" aria-roledescription="slide" aria-label="2 de 8">
-                  <img src="assets/img/community/aperat1.webp" alt="Comunidad activa: encuentro de confraternidad y diálogo" class="community__slide-img" loading="lazy">
+                  <img data-src="assets/img/community/aperat1-480.webp"
+                    data-srcset="assets/img/community/aperat1-480.webp 480w, assets/img/community/aperat1-800.webp 800w, assets/img/community/aperat1.webp 1000w"
+                    sizes="(max-width: 600px) calc(100vw - 32px), 530px" width="1000" height="1000"
+                    alt="Comunidad activa: encuentro de confraternidad y diálogo" class="community__slide-img"
+                    decoding="async">
                 </div>
                 <div class="community__slide" role="group" aria-roledescription="slide" aria-label="3 de 8">
-                  <img src="assets/img/community/aperat2.webp" alt="Activismo laico: presencia pública y defensa de las libertades civiles" class="community__slide-img" loading="lazy">
+                  <img data-src="assets/img/community/aperat2-480.webp"
+                    data-srcset="assets/img/community/aperat2-480.webp 480w, assets/img/community/aperat2-800.webp 800w, assets/img/community/aperat2.webp 1000w"
+                    sizes="(max-width: 600px) calc(100vw - 32px), 530px" width="1000" height="1000"
+                    alt="Activismo laico: presencia pública y defensa de las libertades civiles" class="community__slide-img"
+                    decoding="async">
                 </div>
                 <div class="community__slide" role="group" aria-roledescription="slide" aria-label="4 de 8">
-                  <img src="assets/img/community/aperat3.webp" alt="Incidencia ciudadana: acciones y vigilancia por la neutralidad del Estado" class="community__slide-img" loading="lazy">
+                  <img data-src="assets/img/community/aperat3-480.webp"
+                    data-srcset="assets/img/community/aperat3-480.webp 480w, assets/img/community/aperat3-800.webp 800w, assets/img/community/aperat3.webp 1000w"
+                    sizes="(max-width: 600px) calc(100vw - 32px), 530px" width="1000" height="1000"
+                    alt="Incidencia ciudadana: acciones y vigilancia por la neutralidad del Estado" class="community__slide-img"
+                    decoding="async">
                 </div>
                 <div class="community__slide" role="group" aria-roledescription="slide" aria-label="5 de 8">
-                  <img src="assets/img/community/aperat4.webp" alt="Incidencia ciudadana: pronunciamientos y campañas por la igualdad ante la ley" class="community__slide-img" loading="lazy">
+                  <img data-src="assets/img/community/aperat4-480.webp"
+                    data-srcset="assets/img/community/aperat4-480.webp 480w, assets/img/community/aperat4-800.webp 800w, assets/img/community/aperat4.webp 1000w"
+                    sizes="(max-width: 600px) calc(100vw - 32px), 530px" width="1000" height="1000"
+                    alt="Incidencia ciudadana: pronunciamientos y campañas por la igualdad ante la ley" class="community__slide-img"
+                    decoding="async">
                 </div>
                 <div class="community__slide" role="group" aria-roledescription="slide" aria-label="6 de 8">
-                  <img src="assets/img/community/aperat5.webp" alt="Comunidad diversa y abierta: integrantes sumando voces unidas por la razón" class="community__slide-img" loading="lazy">
+                  <img data-src="assets/img/community/aperat5-480.webp"
+                    data-srcset="assets/img/community/aperat5-480.webp 480w, assets/img/community/aperat5-800.webp 800w, assets/img/community/aperat5.webp 1000w"
+                    sizes="(max-width: 600px) calc(100vw - 32px), 530px" width="1000" height="1000"
+                    alt="Comunidad diversa y abierta: integrantes sumando voces unidas por la razón" class="community__slide-img"
+                    decoding="async">
                 </div>
                 <div class="community__slide" role="group" aria-roledescription="slide" aria-label="7 de 8">
-                  <img src="assets/img/community/aperat6.webp" alt="Acción y voluntariado: iniciativas por una educación laica e igualdad" class="community__slide-img" loading="lazy">
+                  <img data-src="assets/img/community/aperat6-480.webp"
+                    data-srcset="assets/img/community/aperat6-480.webp 480w, assets/img/community/aperat6-800.webp 800w, assets/img/community/aperat6.webp 1000w"
+                    sizes="(max-width: 600px) calc(100vw - 32px), 530px" width="1000" height="1000"
+                    alt="Acción y voluntariado: iniciativas por una educación laica e igualdad" class="community__slide-img"
+                    decoding="async">
                 </div>
                 <div class="community__slide" role="group" aria-roledescription="slide" aria-label="8 de 8">
-                  <img src="assets/img/community/aperat7.webp" alt="Incidencia en el Estado: reunión en el Congreso presentando propuesta de proyecto de ley" class="community__slide-img" loading="lazy">
+                  <img data-src="assets/img/community/aperat7-480.webp"
+                    data-srcset="assets/img/community/aperat7-480.webp 480w, assets/img/community/aperat7-800.webp 800w, assets/img/community/aperat7.webp 1000w"
+                    sizes="(max-width: 600px) calc(100vw - 32px), 530px" width="1000" height="1000"
+                    alt="Incidencia en el Estado: reunión en el Congreso presentando propuesta de proyecto de ley" class="community__slide-img"
+                    decoding="async">
                 </div>
               </div>
 
@@ -271,6 +419,9 @@
                 </div>
                 <button class="community__slider-btn community__slider-btn--next" aria-label="Siguiente foto" title="Siguiente foto">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                </button>
+                <button class="community__slider-btn community__slider-autoplay" aria-label="Pausar reproducción automática" aria-pressed="false" title="Pausar reproducción automática">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
                 </button>
               </div>
 
@@ -572,6 +723,10 @@
          SECCIÓN 5: BANNER WHC (EL HUMANISMO MUNDIAL LLEGA A LIMA)
          ========================================================================== -->
     <section class="whc-banner" id="congreso" aria-labelledby="whc-title">
+      <img src="assets/img/whc/earth_bg-960.webp"
+        srcset="assets/img/whc/earth_bg-960.webp 960w, assets/img/whc/earth_bg.webp 1200w"
+        sizes="100vw" width="1200" height="523" alt="" class="whc-banner__bg" loading="lazy"
+        decoding="async">
       <div class="whc-banner__overlay" aria-hidden="true"></div>
       <div class="container whc-banner__grid">
         <div class="whc-banner__badge-wrapper" data-reveal="left">
@@ -664,7 +819,7 @@
     <section class="newsletter" id="participa" aria-labelledby="newsletter-title">
       <div class="container newsletter__container" data-reveal>
         <div class="newsletter__info">
-          <span class="newsletter__tag">Comunidad & participación</span>
+          <span class="newsletter__tag">Comunidad &amp; participación</span>
           <h2 class="newsletter__title" id="newsletter-title">Súmate como simpatizante</h2>
           <p class="newsletter__subtitle">
             Recibe invitaciones a nuestros eventos gratuitos, conversatorios y actividades para participar activamente
@@ -732,8 +887,7 @@
       <div class="footer-top">
         <!-- Columna 1: Identidad y Misión -->
         <div class="footer-col__brand">
-          <img src="assets/img/logos/aperat-vertical.webp?v=2026.4" alt="APERAT - Asociación Peruana de Ateos"
-            class="footer-col__logo">
+          <img src="assets/img/logos/aperat-vertical-240.webp" srcset="assets/img/logos/aperat-vertical-240.webp 240w, assets/img/logos/aperat-vertical.webp 600w" sizes="190px" width="240" height="119" alt="APERAT - Asociación Peruana de Ateos" class="footer-col__logo" loading="lazy" decoding="async">
           <p class="footer-col__desc">
             Desde 2009 trabajando por la libertad de conciencia, el pensamiento crítico, los derechos humanos y un
             Estado laico.
@@ -744,13 +898,12 @@
         <div class="footer-col__nav">
           <h3 class="footer-col__heading">Quicklinks</h3>
           <ul class="footer-col__nav-list">
-            <li class="footer-col__nav-item"><a href="#inicio" class="footer-col__nav-link">Inicio</a></li>
-            <li class="footer-col__nav-item"><a href="#sobre-nosotros" class="footer-col__nav-link">Sobre Nosotros</a>
-            </li>
-            <li class="footer-col__nav-item"><a href="#principios" class="footer-col__nav-link">Laicidad y Derechos</a>
-            </li>
+            <li class="footer-col__nav-item"><a href="./" class="footer-col__nav-link">Inicio</a></li>
+            <li class="footer-col__nav-item"><a href="sobre-nosotros/" class="footer-col__nav-link">Sobre Nosotros</a></li>
+            <li class="footer-col__nav-item"><a href="que-hacemos/" class="footer-col__nav-link">Qué Hacemos</a></li>
+            <li class="footer-col__nav-item"><a href="laicidad-y-derechos/" class="footer-col__nav-link">Laicidad y Derechos</a></li>
             <li class="footer-col__nav-item"><a href="#participa" class="footer-col__nav-link">Participa</a></li>
-            <li class="footer-col__nav-item"><a href="#donar" class="footer-col__nav-link"
+            <li class="footer-col__nav-item"><a href="#modal-donar" class="footer-col__nav-link"
                 data-open-modal="donar">Donar</a></li>
           </ul>
         </div>
@@ -886,7 +1039,7 @@
        MODAL DE DONACIÓN
        ========================================================================== -->
   <div class="modal" id="modal-donar" role="dialog" aria-modal="true" aria-labelledby="modal-donar-title"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="modal__dialog">
       <div class="modal__header">
         <h3 class="modal__title" id="modal-donar-title">Apoya a APERAT</h3>
@@ -957,7 +1110,7 @@
   </button>
 
   <!-- Script Vanilla Principal Moderno -->
-  <script src="assets/js/main.js?v=2026.10"></script>
+  <script src="assets/js/main.js?v=2027.23"></script>
 </body>
 
 </html>

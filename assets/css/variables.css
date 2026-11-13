@@ -17,7 +17,9 @@
 
   --color-secondary: #07A5D6;
   --color-secondary-rgb: 7, 165, 214;
-  --color-secondary-dark: #0584ab;
+  --color-secondary-dark: #03769b;
+  --color-secondary-action: #03769b;
+  --color-secondary-action-hover: #026681;
   --color-secondary-light: #44bbe0;
   --color-secondary-tint: #e7f6fd;
   --color-secondary-tint-20: #f2faff;
@@ -83,8 +85,8 @@
 
   /* Gradientes Modernos */
   --gradient-primary: linear-gradient(135deg, #023660 0%, #034b85 100%);
-  --gradient-secondary: linear-gradient(135deg, #07A5D6 0%, #0584ab 100%);
-  --gradient-secondary-hover: linear-gradient(135deg, #20aed9 0%, #07A5D6 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary-action) 0%, var(--color-secondary-action-hover) 100%);
+  --gradient-secondary-hover: linear-gradient(135deg, var(--color-secondary-action-hover) 0%, #024b75 100%);
   --gradient-accent: linear-gradient(135deg, #07A5D6 0%, #44bbe0 50%, #7fe1ff 100%);
   --gradient-hero: linear-gradient(180deg, rgba(2, 24, 44, 0.55) 0%, rgba(1, 15, 28, 0.92) 100%);
   --gradient-card-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(240, 247, 251, 0.88) 100%);

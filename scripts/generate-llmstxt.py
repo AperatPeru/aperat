@@ -17,7 +17,7 @@ OUTPUT_LLM = BASE_DIR / 'llm.txt'
 
 HEADER = """# APERAT - Asociación Peruana de Ateos
 
-> Asociación civil peruana sin fines de lucro, fundada en 2009, dedicada a la defensa del Estado laico, la libertad de conciencia, los derechos humanos universales y el pensamiento crítico basado en la ciencia y el humanismo secular.
+> Asociación civil peruana fundada en 2009 que defiende el Estado laico, la libertad de conciencia, los derechos humanos y el pensamiento crítico.
 
 ## Key Facts
 - Organización: Asociación Peruana de Ateos (APERAT)
@@ -34,20 +34,25 @@ HEADER = """# APERAT - Asociación Peruana de Ateos
 ## Secciones Principales
 
 - [Inicio / Portada Institucional](https://www.aperat.org.pe/): Presentación de la misión de APERAT, principios fundamentales, trayectoria comunitaria y noticias destacadas.
-- [Sobre Nosotros y Trayectoria](https://www.aperat.org.pe/#sobre-nosotros): Más de 17 años de historia construyendo comunidad humanista y laica en el Perú desde 2009.
+- [Sobre Nosotros](https://www.aperat.org.pe/sobre-nosotros/): Historia institucional, cronología desde 2009, alianzas internacionales y consejo directivo de APERAT.
+- [Qué Hacemos](https://www.aperat.org.pe/que-hacemos/): Pilares de acción, defensa legal, cultura científica, laicidad, comunidad y proyectos emblemáticos.
+- [Laicidad y Derechos](https://www.aperat.org.pe/laicidad-y-derechos/): Fundamentos de la laicidad, libertad de conciencia, derechos, asesoría y recursos ciudadanos.
 - [Nuestros Principios](https://www.aperat.org.pe/#principios): Los cuatro pilares de APERAT: razón y ciencia, libertad de pensamiento y expresión, Estado laico neutral, y derechos humanos universales.
 - [World Humanist Congress 2027 Lima](https://www.aperat.org.pe/#congreso): Información sobre el Congreso Mundial de Humanismo organizado junto a Humanists International en Lima (20–22 de agosto de 2027).
 - [Participa y Súmate como Simpatizante](https://www.aperat.org.pe/#participa): Registro libre y gratuito para recibir invitaciones a actividades, charlas, eventos y debates de la comunidad librepensadora.
-- [English Portal / About APERAT](https://www.aperat.org.pe/en/): Official English landing page for international delegates, organizations, and the World Humanist Congress 2027 in Lima.
+- [English Portal](https://www.aperat.org.pe/en/): Official English landing page for international delegates, organizations, and the World Humanist Congress 2027 in Lima.
+- [About APERAT](https://www.aperat.org.pe/en/about-us/): APERAT’s institutional history, international affiliations, timeline, and leadership in English.
+- [What We Do (English)](https://www.aperat.org.pe/en/what-we-do/): APERAT's 4 core action pillars, legal defense for freedom of conscience, scientific outreach, and humanist ceremonies.
+- [Secularism & Rights (English)](https://www.aperat.org.pe/en/secularism-and-rights/): Constitutional foundations of secularism in Peru, rights of non-believers, TC jurisprudence, and exemption guides.
 """
 
 FOOTER = """
 ## Iniciativas y Proyectos
 
-- [Exonérate Perú](https://www.aperat.org.pe/#sobre-nosotros): Campaña y asesoría jurídica gratuita para familias y estudiantes que solicitan exoneración de cursos de educación religiosa confesional en colegios.
+- [Exonérate Perú](https://www.aperat.org.pe/articulos/exoneracion-curso-religion-peru/): Campaña y asesoría jurídica gratuita para familias y estudiantes que solicitan exoneración de cursos de educación religiosa confesional en colegios.
 - [Apostasía Colectiva e Individual](https://www.aperat.org.pe/#sobre-nosotros): Orientación y acompañamiento para el ejercicio del derecho a la desafiliación formal y cancelación de datos en libros parroquiales.
 - [Ceremonias Laicas](https://ceremoniaslaicas.lat/): Red de celebrantes humanistas entrenados para ceremonias de unión, matrimonios civiles y despedidas humanistas respetuosas y personalizadas.
-- [La Señal Humanista y Divulgación](https://www.aperat.org.pe/#sobre-nosotros): Producción audiovisual y podcasts sobre laicidad, derechos civiles, pensamiento crítico y combate a las pseudociencias.
+- [La Señal Humanista y Divulgación](https://www.aperat.org.pe/que-hacemos/): Producción audiovisual y podcasts sobre laicidad, derechos civiles, pensamiento crítico y combate a las pseudociencias.
 
 ## Contacto Institucional
 
@@ -79,9 +84,14 @@ def extract_articles_from_js(var_name='articlesData'):
     card_matches = re.finditer(r'\{\s*id:\s*[\'"]([^\'"]+)[\'"].*?title:\s*[\'"]([^\'"]+)[\'"].*?excerpt:\s*[\'"]([^\'"]+)[\'"].*?url:\s*([^,\n]+)', raw_array, re.DOTALL)
     for m in card_matches:
         url_expr = m.group(4).strip().strip("'\"")
-        # Si es expresión ternaria, extraer la ruta inglesa
-        if '?' in url_expr:
-            m_url = re.search(r'[\'"](articles/[^\'"]+)[\'"]', url_expr)
+        m_english = re.search(r"englishArticleUrl\(['\"]([^'\"]+)['\"]\)", url_expr)
+        m_spanish = re.search(r"spanishArticleUrl\(['\"]([^'\"]+)['\"]\)", url_expr)
+        if m_english:
+            rel_url = f"en/articles/{m_english.group(1)}/"
+        elif m_spanish:
+            rel_url = f"articulos/{m_spanish.group(1)}/"
+        elif '?' in url_expr:
+            m_url = re.search(r"['\"](articles/[^'\"]+)['\"]", url_expr)
             rel_url = f"en/{m_url.group(1)}" if m_url else url_expr
         else:
             rel_url = url_expr
@@ -90,7 +100,7 @@ def extract_articles_from_js(var_name='articlesData'):
             'id': m.group(1),
             'title': m.group(2),
             'excerpt': m.group(3),
-            'url': f"https://www.aperat.org.pe/{rel_url}"
+            'url': f"https://www.aperat.org.pe/{rel_url.lstrip('/')}"
         })
     return articles
 

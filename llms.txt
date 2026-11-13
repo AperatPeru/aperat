@@ -1,6 +1,6 @@
 # APERAT - Asociación Peruana de Ateos
 
-> Asociación civil peruana sin fines de lucro, fundada en 2009, dedicada a la defensa del Estado laico, la libertad de conciencia, los derechos humanos universales y el pensamiento crítico basado en la ciencia y el humanismo secular.
+> Asociación civil peruana fundada en 2009 que defiende el Estado laico, la libertad de conciencia, los derechos humanos y el pensamiento crítico.
 
 ## Key Facts
 - Organización: Asociación Peruana de Ateos (APERAT)
@@ -17,34 +17,39 @@
 ## Secciones Principales
 
 - [Inicio / Portada Institucional](https://www.aperat.org.pe/): Presentación de la misión de APERAT, principios fundamentales, trayectoria comunitaria y noticias destacadas.
-- [Sobre Nosotros y Trayectoria](https://www.aperat.org.pe/#sobre-nosotros): Más de 17 años de historia construyendo comunidad humanista y laica en el Perú desde 2009.
+- [Sobre Nosotros](https://www.aperat.org.pe/sobre-nosotros/): Historia institucional, cronología desde 2009, alianzas internacionales y consejo directivo de APERAT.
+- [Qué Hacemos](https://www.aperat.org.pe/que-hacemos/): Pilares de acción, defensa legal, cultura científica, laicidad, comunidad y proyectos emblemáticos.
+- [Laicidad y Derechos](https://www.aperat.org.pe/laicidad-y-derechos/): Fundamentos de la laicidad, libertad de conciencia, derechos, asesoría y recursos ciudadanos.
 - [Nuestros Principios](https://www.aperat.org.pe/#principios): Los cuatro pilares de APERAT: razón y ciencia, libertad de pensamiento y expresión, Estado laico neutral, y derechos humanos universales.
 - [World Humanist Congress 2027 Lima](https://www.aperat.org.pe/#congreso): Información sobre el Congreso Mundial de Humanismo organizado junto a Humanists International en Lima (20–22 de agosto de 2027).
 - [Participa y Súmate como Simpatizante](https://www.aperat.org.pe/#participa): Registro libre y gratuito para recibir invitaciones a actividades, charlas, eventos y debates de la comunidad librepensadora.
-- [English Portal / About APERAT](https://www.aperat.org.pe/en/): Official English landing page for international delegates, organizations, and the World Humanist Congress 2027 in Lima.
+- [English Portal](https://www.aperat.org.pe/en/): Official English landing page for international delegates, organizations, and the World Humanist Congress 2027 in Lima.
+- [About APERAT](https://www.aperat.org.pe/en/about-us/): APERAT’s institutional history, international affiliations, timeline, and leadership in English.
+- [What We Do (English)](https://www.aperat.org.pe/en/what-we-do/): APERAT's 4 core action pillars, legal defense for freedom of conscience, scientific outreach, and humanist ceremonies.
+- [Secularism & Rights (English)](https://www.aperat.org.pe/en/secularism-and-rights/): Constitutional foundations of secularism in Peru, rights of non-believers, TC jurisprudence, and exemption guides.
 
 ## Artículos y Publicaciones (Blog - Español)
 
-- [¿Se puede exonerar a un estudiante del curso de religión en el Perú?](https://www.aperat.org.pe/articulos/exoneracion-curso-religion-peru.html): En el Perú, los estudiantes y sus familias tienen derecho legal a exonerarse del curso de Educación Religiosa por motivos de conciencia. Conoce la normativa y los pasos para el trámite.
-- [Ceremonias humanistas: cómo celebrar los momentos importantes de la vida sin una ceremonia religiosa](https://www.aperat.org.pe/articulos/ceremonias-humanistas.html): Una alternativa laica y personalizada para bodas, funerales y momentos trascendentales, centrada en las personas, sus historias y los vínculos que las unen.
-- [El Estado laico: una condición para la libertad y la democracia en el Perú](https://www.aperat.org.pe/articulos/estado-laico-peru.html): Por qué la separación entre el poder político y las instituciones religiosas sigue siendo una tarea pendiente de nuestra República para garantizar la igualdad y los derechos de todos.
-- [Humanismo laico: una forma de vivir con razón, libertad y humanidad](https://www.aperat.org.pe/articulos/humanismo-laico.html): Una visión del mundo que encuentra en la capacidad humana de pensar, cuidar y construir un futuro compartido las bases de una vida con sentido y ética.
-- [¿Por qué no creo en Dios? Una mirada racional al ateísmo y la ausencia de evidencia](https://www.aperat.org.pe/articulos/por-que-no-creo-en-dios.html): No creer en Dios no exige tener una explicación para cada misterio del universo: exige no aceptar como verdadero aquello para lo que no encontramos razones suficientes.
+- [¿Se puede exonerar a un estudiante del curso de religión en el Perú?](https://www.aperat.org.pe/articulos/exoneracion-curso-religion-peru/): En el Perú, los estudiantes y sus familias tienen derecho legal a exonerarse del curso de Educación Religiosa por motivos de conciencia. Conoce la normativa y los pasos para el trámite.
+- [Ceremonias humanistas: cómo celebrar los momentos importantes de la vida sin una ceremonia religiosa](https://www.aperat.org.pe/articulos/ceremonias-humanistas/): Una alternativa laica y personalizada para bodas, funerales y momentos trascendentales, centrada en las personas, sus historias y los vínculos que las unen.
+- [El Estado laico: una condición para la libertad y la democracia en el Perú](https://www.aperat.org.pe/articulos/estado-laico-peru/): Por qué la separación entre el poder político y las instituciones religiosas sigue siendo una tarea pendiente de nuestra República para garantizar la igualdad y los derechos de todos.
+- [Humanismo laico: una forma de vivir con razón, libertad y humanidad](https://www.aperat.org.pe/articulos/humanismo-laico/): Una visión del mundo que encuentra en la capacidad humana de pensar, cuidar y construir un futuro compartido las bases de una vida con sentido y ética.
+- [¿Por qué no creo en Dios? Una mirada racional al ateísmo y la ausencia de evidencia](https://www.aperat.org.pe/articulos/por-que-no-creo-en-dios/): No creer en Dios no exige tener una explicación para cada misterio del universo: exige no aceptar como verdadero aquello para lo que no encontramos razones suficientes.
 
 ## Articles and Publications (Blog - English)
 
-- [Can a Student Be Exempted from Religious Education in Peru?](https://www.aperat.org.pe/en/articles/exemption-religious-education-peru.html): In Peru, students and their families have the legal right to be exempted from religious education courses on grounds of conscience. Learn about the legislation and how to apply.
-- [Humanist Ceremonies: Celebrating Meaningful Life Milestones Without Religion](https://www.aperat.org.pe/en/articles/humanist-ceremonies.html): A secular, personalized alternative for weddings, memorials, and significant milestones, centered on people, their stories, and their shared bonds.
-- [The Secular State: A Requirement for Freedom and Democracy in Peru](https://www.aperat.org.pe/en/articles/secular-state-peru.html): Why the separation between political power and religious institutions remains an essential, unfinished task in Peru to guarantee equality and rights for all.
-- [Secular Humanism: A Way of Living with Reason, Freedom, and Compassion](https://www.aperat.org.pe/en/articles/secular-humanism.html): A worldview rooted in the human capacity to think, care, and build a shared future as the foundation of an ethical and meaningful life.
-- [Why I Do Not Believe in God: A Rational Perspective on Atheism and Evidence](https://www.aperat.org.pe/en/articles/why-i-do-not-believe-in-god.html): Not believing in God does not require having an answer for every mystery in the cosmos: it simply requires not accepting as true that which lacks sufficient evidence.
+- [Can a Student Be Exempted from Religious Education in Peru?](https://www.aperat.org.pe/en/articles/exemption-religious-education-peru/): In Peru, students and their families have the legal right to be exempted from religious education courses on grounds of conscience. Learn about the legislation and how to apply.
+- [Humanist Ceremonies: Celebrating Meaningful Life Milestones Without Religion](https://www.aperat.org.pe/en/articles/humanist-ceremonies/): A secular, personalized alternative for weddings, memorials, and significant milestones, centered on people, their stories, and their shared bonds.
+- [The Secular State: A Requirement for Freedom and Democracy in Peru](https://www.aperat.org.pe/en/articles/secular-state-peru/): Why the separation between political power and religious institutions remains an essential, unfinished task in Peru to guarantee equality and rights for all.
+- [Secular Humanism: A Way of Living with Reason, Freedom, and Compassion](https://www.aperat.org.pe/en/articles/secular-humanism/): A worldview rooted in the human capacity to think, care, and build a shared future as the foundation of an ethical and meaningful life.
+- [Why I Do Not Believe in God: A Rational Perspective on Atheism and Evidence](https://www.aperat.org.pe/en/articles/why-i-do-not-believe-in-god/): Not believing in God does not require having an answer for every mystery in the cosmos: it simply requires not accepting as true that which lacks sufficient evidence.
 
 ## Iniciativas y Proyectos
 
-- [Exonérate Perú](https://www.aperat.org.pe/#sobre-nosotros): Campaña y asesoría jurídica gratuita para familias y estudiantes que solicitan exoneración de cursos de educación religiosa confesional en colegios.
+- [Exonérate Perú](https://www.aperat.org.pe/articulos/exoneracion-curso-religion-peru/): Campaña y asesoría jurídica gratuita para familias y estudiantes que solicitan exoneración de cursos de educación religiosa confesional en colegios.
 - [Apostasía Colectiva e Individual](https://www.aperat.org.pe/#sobre-nosotros): Orientación y acompañamiento para el ejercicio del derecho a la desafiliación formal y cancelación de datos en libros parroquiales.
 - [Ceremonias Laicas](https://ceremoniaslaicas.lat/): Red de celebrantes humanistas entrenados para ceremonias de unión, matrimonios civiles y despedidas humanistas respetuosas y personalizadas.
-- [La Señal Humanista y Divulgación](https://www.aperat.org.pe/#sobre-nosotros): Producción audiovisual y podcasts sobre laicidad, derechos civiles, pensamiento crítico y combate a las pseudociencias.
+- [La Señal Humanista y Divulgación](https://www.aperat.org.pe/que-hacemos/): Producción audiovisual y podcasts sobre laicidad, derechos civiles, pensamiento crítico y combate a las pseudociencias.
 
 ## Contacto Institucional
 

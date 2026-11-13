@@ -6,7 +6,9 @@ colors:
   primary-dark: "#011f38"
   primary-light: "#034b85"
   secondary: "#07A5D6"
-  secondary-dark: "#0584ab"
+  secondary-dark: "#03769b"
+  secondary-action: "#03769b"
+  secondary-action-hover: "#026681"
   secondary-light: "#44bbe0"
   secondary-tint: "#e7f6fd"
   secondary-tint-20: "#f2faff"
@@ -110,8 +112,9 @@ The palette is rooted in nautical and atmospheric tones, balancing the solemnity
 - **Deep Abyss** (`#011f38`): Deepest tier shade used for high-contrast shadows, dark header sections, and hero gradient backdrops.
 
 ### Secondary
-- **Horizon Cyan** (`#07A5D6`): The active energetic signal. Used for primary call-to-action buttons, active navigation indicators, key highlights, progress bars, and hover state accents.
-- **Cyan Dark** (`#0584ab`): Interactive hover state for cyan actions ensuring optimal contrast on white.
+- **Horizon Cyan** (`#07A5D6`): The energetic brand signal used for decorative accents, active indicators, and highlights on dark surfaces.
+- **Action Cyan** (`#03769b`): Accessible cyan-derived text and action color on white and pale tints (5.16:1 against white).
+- **Action Cyan Hover** (`#026681`): Darker interactive hover state (6.52:1 against white) used in the accessible action gradient.
 - **Soft Sky Tint** (`#e7f6fd`): Ambient background for badges, category chips, active tab pills, and secondary interactive areas.
 
 ### Tertiary
@@ -126,7 +129,7 @@ The palette is rooted in nautical and atmospheric tones, balancing the solemnity
 ### Named Rules
 **The Civic Accent Rule.** Horizon Cyan (`#07A5D6`) is reserved for interactive signals and active navigation states. It must never coat entire informational content blocks, maintaining its power as an intentional call-to-action.
 
-**The Contrast Floor Rule.** All text against white or light tints must meet or exceed WCAG AA 4.5:1 contrast ratio. When using white text, it must only sit on Cosmic Navy (`#023660`) or Deep Abyss (`#011f38`) surfaces.
+**The Contrast Floor Rule.** All text against white or light tints must meet or exceed WCAG AA 4.5:1 contrast ratio. White text may sit on Cosmic Navy (`#023660`), Deep Abyss (`#011f38`), or the accessible Action Cyan gradient (`#03769b` to `#026681`).
 
 ## Typography
 
@@ -182,13 +185,13 @@ The form language is **softly curved, tactile, and continuous**:
 ## Components
 
 ### Buttons
-- **Primary Action (`.btn-primary`):** Pill-shaped (`border-radius: 9999px`), background gradient `linear-gradient(135deg, #07A5D6 0%, #0584ab 100%)`, bold uppercase text, white text color, padding `12px 28px`. Includes subtle shine animation on hover and gentle lift.
+- **Primary Action (`.btn-primary`):** Pill-shaped (`border-radius: 9999px`), background gradient `linear-gradient(135deg, #03769b 0%, #026681 100%)`, bold uppercase text, white text color, padding `12px 28px`. Includes subtle shine animation on hover and gentle lift.
 - **Hero Secondary (`.btn-outline-white`):** Translucent backdrop blur pill with `1.5px solid rgba(255, 255, 255, 0.55)`, turning solid white with primary text color on hover.
 - **Magnetic Link (`.btn-magnetic`):** Asymmetrical pill combining uppercase title text with an animated circular arrow badge (`38px` diameter) that scales and shifts on interaction.
 - **Heart Donate Button (`.btn-donar`):** Compact pill with responsive heart icon that scales up slightly (`scale(1.2)`) on hover.
 
 ### Badges & Overline Tags
-- **Section Tag (`.section-tag`):** Compact pill, uppercase label typography, background `var(--color-secondary-tint)` (`#e7f6fd`), text `var(--color-secondary)` (`#07A5D6`), border `1px solid rgba(7, 165, 214, 0.2)`.
+- **Section Tag (`.section-tag`):** Compact pill, uppercase label typography, background `var(--color-secondary-tint)` (`#e7f6fd`), text `var(--color-secondary-dark)` (`#03769b`), border `1px solid rgba(7, 165, 214, 0.2)`.
 - **Pulse Badge (`.hero__badge`):** Frosted glass pill with embedded `8px` pulsating cyan dot, advertising institutional identity and founding year.
 
 ### Cards
@@ -209,7 +212,7 @@ The form language is **softly curved, tactile, and continuous**:
 ### Do:
 - **Do** use `Plus Jakarta Sans` for all headings, titles, buttons, and badges, and `Karla` for continuous paragraphs and body copy.
 - **Do** use pill-shaped borders (`border-radius: 9999px`) on buttons, filter chips, tags, and search bars to reinforce the approachable civic aesthetic.
-- **Do** maintain the 135-degree cyan gradient (`#07A5D6` to `#0584ab`) on primary interactive actions to ensure consistent visual hierarchy.
+- **Do** maintain the accessible 135-degree cyan gradient (`#03769b` to `#026681`) on primary interactive actions, reserving brighter Horizon Cyan for decorative accents.
 - **Do** preserve full structural and layout parity between Spanish (`/`) and English (`/en/`) pages.
 - **Do** optimize all photographic imagery in WebP format with descriptive alternative text for accessibility.
 

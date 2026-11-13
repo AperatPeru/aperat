@@ -1,0 +1,1532 @@
+/**
+ * APERAT - Estilos para Páginas Internas
+ * (Sobre Nosotros, Qué Hacemos, Laicidad y Derechos)
+ * Integrado con el sistema de tokens oficial de APERAT.
+ */
+
+/* ==========================================================================
+   1. HERO COMPACTO PARA PÁGINAS INTERNAS
+   ========================================================================== */
+.page-hero {
+  position: relative;
+  min-height: 46vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #070d14;
+  background-image:
+    radial-gradient(circle at 50% 30%, rgba(7, 165, 214, 0.22) 0%, rgba(12, 16, 21, 0.6) 50%, rgba(1, 15, 28, 0.95) 100%),
+    url('../img/hero/hero_bg.webp');
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding: 130px 24px 90px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.page-hero__container {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero__decor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.page-hero__decor svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: clamp(34px, 3.2vw, 54px);
+}
+
+.page-hero__kicker {
+  display: inline-block;
+  font-family: var(--font-sans-title);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--secondary-40);
+  background: rgba(7, 165, 214, 0.15);
+  border: 1px solid rgba(7, 165, 214, 0.35);
+  padding: 5px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 16px;
+}
+
+.page-hero__title {
+  font-family: var(--font-sans-title);
+  font-size: clamp(2.3rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-white);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.page-hero__title-accent {
+  color: var(--color-secondary-light);
+}
+
+.page-hero__subtitle {
+  font-family: var(--font-sans-body);
+  font-size: clamp(1rem, 1.8vw, 1.1875rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. SECCIONES DE CONTENIDO GENERAL
+   ========================================================================== */
+.content-section {
+  padding: 90px 0;
+  position: relative;
+}
+
+.content-section--alt {
+  background-color: #f7fafc;
+}
+
+.content-section__intro {
+  max-width: 780px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.content-section__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.content-section__title {
+  font-family: var(--font-sans-title);
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.25;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.content-section__title--cyan {
+  color: var(--color-secondary-dark);
+}
+
+.content-section__paragraph {
+  font-family: var(--font-sans-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-text-main);
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   3. BLOQUE DE HISTORIA Y HUMANISMO (Sobre Nosotros)
+   ========================================================================== */
+.page-hero--about {
+  background-image:
+    linear-gradient(180deg, rgba(2, 22, 38, 0.45) 0%, rgba(2, 22, 38, 0.65) 100%),
+    url('../img/about/hero_quienes_somos.webp');
+  background-position: center 35%;
+  background-size: cover;
+}
+
+.page-hero__kicker-subtle {
+  display: block;
+  font-family: var(--font-sans-title);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 12px;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-section-title {
+  font-family: var(--font-sans-title);
+  font-size: clamp(2rem, 3.2vw, 2.65rem);
+  font-weight: 800;
+  color: var(--color-secondary-dark);
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.about-intro-grid__text p {
+  font-family: var(--font-sans-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-text-main);
+  margin-bottom: 18px;
+}
+
+.about-intro-grid__text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-intro-grid__img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  display: block;
+  object-fit: cover;
+}
+
+/* Banner ¿Qué entendemos por humanismo? */
+.about-humanismo-section {
+  padding: 30px 0 80px;
+}
+
+.about-humanismo-banner {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-image: url('../img/about/about_humanismo_bg.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 85px 48px;
+  text-align: center;
+  box-shadow: 0 16px 48px rgba(1, 22, 39, 0.28);
+}
+
+.about-humanismo-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(2, 22, 38, 0.88) 0%, rgba(3, 16, 28, 0.92) 100%);
+  pointer-events: none;
+}
+
+.about-humanismo-banner__content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.about-humanismo-banner__title {
+  font-family: var(--font-sans-title);
+  font-size: clamp(2rem, 3.2vw, 2.65rem);
+  font-weight: 800;
+  color: var(--color-secondary-light);
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.about-humanismo-banner__text p {
+  font-family: var(--font-sans-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #e2edfa;
+  margin-bottom: 18px;
+}
+
+.about-humanismo-banner__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline y visuales */
+.about-timeline-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.about-timeline {
+  position: relative;
+  padding-left: 36px;
+}
+
+.about-timeline::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 7px;
+  width: 2px;
+  background: var(--color-secondary);
+}
+
+.about-timeline__item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.about-timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.about-timeline__dot {
+  position: absolute;
+  left: -36px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  border: 3px solid var(--color-white);
+  box-shadow: 0 0 0 1px rgba(7, 165, 214, 0.4);
+}
+
+.about-timeline__year {
+  font-family: var(--font-sans-title);
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-secondary-dark);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.about-timeline__text {
+  font-family: var(--font-sans-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+.about-timeline__visuals {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+}
+
+.about-timeline__img-wrap {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  width: 85%;
+}
+
+.about-timeline__img-wrap--offset {
+  margin-left: auto;
+}
+
+.about-timeline__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Movimiento Global */
+.about-global-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-kicker {
+  display: inline-block;
+  font-family: var(--font-sans-title);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.about-global-grid__text p {
+  font-family: var(--font-sans-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-text-main);
+  margin-bottom: 18px;
+}
+
+.about-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans-title);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-secondary-dark);
+  text-decoration: none;
+  margin-top: 10px;
+  transition: all var(--transition-fast);
+}
+
+.about-link-arrow svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: transform var(--transition-fast);
+}
+
+.about-link-arrow:hover {
+  color: var(--color-secondary-dark);
+}
+
+.about-link-arrow:hover svg {
+  transform: translateX(4px);
+}
+
+.about-global-grid__img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  display: block;
+}
+
+/* Tarjetas de equipo simplificadas para Quiénes Somos */
+.team-card--simple {
+  padding: 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  text-align: center;
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(12, 16, 21, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card__img-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #023660;
+}
+
+.team-card__img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-card--simple .team-card__body {
+  padding: 24px 20px;
+}
+
+.team-card--simple .team-card__name {
+  font-family: var(--font-sans-title);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.team-card--simple .team-card__role {
+  font-family: var(--font-sans-title);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-secondary-dark);
+}
+
+.about-collaborators {
+  text-align: center;
+  max-width: 800px;
+  margin: 70px auto 0;
+}
+
+.about-collaborators__title {
+  font-family: var(--font-sans-title);
+  font-size: clamp(1.6rem, 2.8vw, 2.15rem);
+  font-weight: 800;
+  color: var(--color-secondary-dark);
+  margin-bottom: 12px;
+}
+
+.about-collaborators__text {
+  font-family: var(--font-sans-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   4. CRONOLOGÍA INTERACTIVA (Timeline 2009 - 2027)
+   ========================================================================== */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 14px;
+  width: 3px;
+  background: linear-gradient(180deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+  border-radius: 2px;
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: 40px;
+  transition: all var(--transition-normal);
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__dot {
+  position: absolute;
+  top: 4px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 3.5px solid var(--color-secondary);
+  box-shadow: 0 2px 8px rgba(7, 165, 214, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all var(--transition-fast);
+}
+
+.timeline__item:hover .timeline__dot {
+  background: var(--color-secondary);
+  border-color: var(--color-white);
+  transform: scale(1.15);
+}
+
+.timeline__content {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(12, 16, 21, 0.08);
+  transition: all var(--transition-normal);
+}
+
+.timeline__item:hover .timeline__content {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(7, 165, 214, 0.35);
+}
+
+.timeline__year {
+  display: inline-block;
+  font-family: var(--font-sans-title);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.timeline__title {
+  font-family: var(--font-sans-title);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-secondary-dark);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.timeline__desc {
+  font-family: var(--font-sans-body);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   5. EQUIPO DIRECTIVO Y COLABORADORES (Sobre Nosotros)
+   ========================================================================== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.team-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(12, 16, 21, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all var(--transition-normal);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(7, 165, 214, 0.35);
+}
+
+.team-card__avatar-wrap {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 22px;
+  border: 4px solid var(--color-secondary-tint);
+  box-shadow: 0 6px 20px rgba(12, 16, 21, 0.1);
+  background: #eef2f6;
+  flex-shrink: 0;
+}
+
+.team-card__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-fast);
+}
+
+.team-card:hover .team-card__avatar {
+  transform: scale(1.05);
+}
+
+.team-card__name {
+  font-family: var(--font-sans-title);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.team-card__role {
+  font-family: var(--font-sans-title);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-secondary-dark);
+  margin-bottom: 14px;
+}
+
+.team-card__bio {
+  font-family: var(--font-sans-body);
+  font-size: 0.90625rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   6. PILARES DE ACCIÓN (Qué Hacemos)
+   ========================================================================== */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.pillar-card {
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 44px 34px 36px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(12, 16, 21, 0.08);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(7, 165, 214, 0.35);
+}
+
+.pillar-card__badge {
+  position: absolute;
+  top: -24px;
+  left: 34px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 1.45rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(2, 54, 96, 0.35);
+}
+
+.pillar-card:nth-child(2) .pillar-card__badge {
+  background: var(--color-secondary);
+  box-shadow: 0 4px 14px rgba(7, 165, 214, 0.35);
+}
+
+.pillar-card:nth-child(3) .pillar-card__badge {
+  background: var(--color-tertiary);
+  box-shadow: 0 4px 14px rgba(66, 77, 89, 0.35);
+}
+
+.pillar-card:nth-child(4) .pillar-card__badge {
+  background: var(--color-secondary-dark);
+  box-shadow: 0 4px 14px rgba(5, 132, 171, 0.35);
+}
+
+.pillar-card__title {
+  font-family: var(--font-sans-title);
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.pillar-card__lead {
+  font-family: var(--font-sans-body);
+  font-size: 0.98rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-secondary-dark);
+  margin-bottom: 16px;
+  line-height: 1.45;
+}
+
+.pillar-card__desc {
+  font-family: var(--font-sans-body);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   7. PROYECTOS EMBLEMÁTICOS (Modern Grid Cards similares a principles__grid)
+   ========================================================================== */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 36px;
+  row-gap: 40px;
+  margin-top: 48px;
+}
+
+.topic-card {
+  position: relative;
+  display: block;
+  min-height: 520px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: var(--color-white);
+  border: 1px solid rgba(12, 16, 21, 0.08);
+  transition: all var(--transition-normal);
+  padding: 0;
+}
+
+.topic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(7, 165, 214, 0.35);
+}
+
+.topic-card__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #02223c;
+}
+
+.topic-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.topic-card:hover .topic-card__image {
+  transform: scale(1.05);
+}
+
+.topic-card__badge-tag {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(1, 26, 46, 0.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-family: var(--font-sans-title);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.topic-card__card {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 72%;
+  height: auto;
+  min-height: 58%;
+  padding: 24px 26px;
+  border-top-left-radius: var(--radius-lg);
+  color: var(--color-white);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: -6px -6px 20px rgba(0, 0, 0, 0.12);
+  transition: all var(--transition-normal);
+}
+
+.topic-card__card--sky {
+  background: linear-gradient(135deg, rgba(3, 118, 155, 0.97) 0%, rgba(2, 102, 129, 0.98) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.topic-card__card--cosmic {
+  background: linear-gradient(135deg, rgba(12, 16, 21, 0.95) 0%, rgba(1, 31, 56, 0.98) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-left: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.topic-card__card--steel {
+  background: linear-gradient(135deg, rgba(66, 77, 89, 0.95) 0%, rgba(47, 56, 66, 0.98) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-left: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.topic-card__title {
+  font-family: var(--font-sans-title);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.25;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.topic-card__text {
+  font-family: var(--font-sans-body);
+  font-size: 0.90625rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0;
+}
+
+.topic-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-family: var(--font-sans-title);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.topic-card__btn:hover {
+  background: #ffffff;
+  color: var(--color-primary);
+  border-color: #ffffff;
+  transform: translateX(3px);
+}
+
+.topic-card__btn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  transition: transform var(--transition-fast);
+}
+
+.topic-card__btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   8. BANNER DE ORIENTACIÓN Y ASESORÍA (Laicidad y Derechos)
+   ========================================================================== */
+.advisory-banner {
+  background: linear-gradient(135deg, #011627 0%, var(--color-primary) 60%, #034b85 100%);
+  color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 60px 48px;
+  text-align: center;
+  margin: 60px auto 0;
+  max-width: 1040px;
+  box-shadow: 0 16px 40px rgba(1, 22, 39, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.advisory-banner__title {
+  font-family: var(--font-sans-title);
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.advisory-banner__text {
+  font-family: var(--font-sans-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 720px;
+  margin: 0 auto 28px;
+}
+
+.advisory-banner__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   9. RECURSOS Y DOCUMENTOS DESCARGABLES
+   ========================================================================== */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.resource-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 26px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(12, 16, 21, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(7, 165, 214, 0.35);
+}
+
+.resource-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-secondary-tint);
+  color: var(--color-secondary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.resource-card__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.resource-card__title {
+  font-family: var(--font-sans-title);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.resource-card__desc {
+  font-family: var(--font-sans-body);
+  font-size: 0.90625rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.resource-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans-title);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary-dark);
+  transition: all var(--transition-fast);
+}
+
+.resource-card__link:hover {
+  color: var(--color-secondary-dark);
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   10. RESPONSIVE DESIGN PARA PÁGINAS INTERNAS
+   ========================================================================== */
+@media (max-width: 992px) {
+  .about-overview,
+  .about-intro-grid,
+  .about-timeline-grid,
+  .about-global-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-timeline__visuals {
+    margin-top: 20px;
+  }
+
+  .about-timeline__img-wrap {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topics-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .topic-card__media {
+    height: 100%;
+  }
+
+  .topic-card__card {
+    width: 85%;
+    height: auto;
+    min-height: 55%;
+    padding: 20px 22px;
+  }
+
+  .resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .page-hero {
+    min-height: auto;
+    padding: 100px 16px 70px;
+  }
+
+  .about-humanismo-banner {
+    padding: 50px 20px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 32px;
+  }
+
+  .timeline__dot {
+    left: -32px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .advisory-banner {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .topic-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .topic-card__media {
+    position: relative;
+    inset: auto;
+    height: 200px;
+    flex-shrink: 0;
+  }
+
+  .topic-card__card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 18px 22px;
+    box-shadow: none;
+  }
+
+  .topic-card__title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .topic-card__text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .topic-card__btn {
+    margin-top: 12px;
+    padding: 8px 18px;
+  }
+}
+
+
+/* Seguridad global para SVGs y disclaimers */
+svg {
+  max-width: 100%;
+}
+
+.newsletter__reassurance svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Página: Laicidad y Derechos (Diseño Oficial)
+   ========================================================================== */
+.page-hero--laicidad {
+  background-image: linear-gradient(180deg, rgba(12, 16, 21, 0.45) 0%, rgba(2, 54, 96, 0.75) 100%),
+    url('../img/laicidad/hero_laicidad.webp');
+  background-position: center 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ==========================================================================
+   Sección 1: Laicidad y Derechos en el Perú (#laicidad-peru)
+   Diseño fiel a la maqueta oficial (Desktop & Mobile)
+   ========================================================================== */
+#laicidad-peru {
+  background-color: var(--color-white);
+  padding: 100px 0 110px;
+  position: relative;
+  overflow: hidden;
+}
+
+.laicidad-intro-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(48px, 6vw, 84px);
+  align-items: flex-start;
+}
+
+/* Columna visual izquierda: Dos fotos escalonadas con halos celestes */
+.laicidad-intro-visuals {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 2.2vw, 24px);
+  align-items: start;
+  width: 100%;
+  max-width: 580px;
+  padding: 10px 0 20px;
+}
+
+/* Halos celestes con resplandor suave y difuso */
+.laicidad-intro-halo {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(45px);
+  opacity: 0.85;
+}
+
+.laicidad-intro-halo--top {
+  top: 4%;
+  right: 4%;
+  width: clamp(240px, 26vw, 360px);
+  height: clamp(240px, 26vw, 360px);
+  background: radial-gradient(circle, rgba(7, 165, 214, 0.45) 0%, rgba(7, 165, 214, 0.15) 50%, rgba(7, 165, 214, 0) 72%);
+}
+
+.laicidad-intro-halo--bottom {
+  bottom: 4%;
+  left: 0;
+  width: clamp(220px, 24vw, 320px);
+  height: clamp(220px, 24vw, 320px);
+  background: radial-gradient(circle, rgba(7, 165, 214, 0.38) 0%, rgba(7, 165, 214, 0.12) 50%, rgba(7, 165, 214, 0) 72%);
+}
+
+/* Tarjetas de fotos escalonadas */
+.laicidad-intro-card {
+  position: relative;
+  z-index: 1;
+  align-self: start;
+  border-radius: clamp(26px, 3.2vw, 42px);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(2, 54, 96, 0.08);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  background-color: transparent;
+}
+
+.laicidad-intro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 50px rgba(2, 54, 96, 0.14);
+}
+
+.laicidad-intro-card--primary {
+  margin-top: 0;
+}
+
+.laicidad-intro-card--secondary {
+  margin-top: clamp(140px, 15vw, 220px);
+}
+
+.laicidad-intro-card__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 658 / 1136;
+  object-fit: cover;
+  display: block;
+}
+
+.laicidad-intro-card--secondary .laicidad-intro-card__img {
+  aspect-ratio: 658 / 1225;
+}
+
+/* Columna de Texto */
+.laicidad-intro-content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.laicidad-intro-kicker {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.laicidad-intro-kicker__logo {
+  height: clamp(20px, 2vw, 26px);
+  width: auto;
+  display: block;
+}
+
+.laicidad-intro-title {
+  font-family: var(--font-sans-title);
+  font-size: clamp(2.2rem, 3.4vw, 2.95rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-secondary-dark);
+  margin-bottom: 28px;
+  letter-spacing: -0.015em;
+}
+
+.laicidad-intro-text p {
+  font-family: var(--font-sans-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-text-main);
+  margin-bottom: 22px;
+}
+
+.laicidad-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-timeline-grid--reversed {
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 64px;
+}
+
+/* Grilla de Temas de Trabajo (6 tarjetas oficiales) */
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px 32px;
+  margin-top: 24px;
+}
+
+.theme-card {
+  background: #eaf4f9;
+  border-radius: var(--radius-lg);
+  padding: 44px 36px 36px;
+  position: relative;
+  border: 1px solid rgba(7, 165, 214, 0.15);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(2, 54, 96, 0.1);
+  border-color: rgba(7, 165, 214, 0.4);
+}
+
+.theme-card__badge {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-secondary-dark);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans-title);
+  font-weight: 700;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 10px rgba(2, 54, 96, 0.25);
+  transition: background-color var(--transition-fast);
+}
+
+.theme-card:hover .theme-card__badge {
+  background-color: var(--color-primary);
+}
+
+.theme-card:nth-child(even) .theme-card__badge {
+  background-color: var(--color-primary);
+}
+
+.theme-card:nth-child(even):hover .theme-card__badge {
+  background-color: var(--color-secondary-dark);
+}
+
+.theme-card__title {
+  font-family: var(--font-sans-title);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-secondary-dark);
+  margin-bottom: 14px;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.theme-card__text {
+  font-family: var(--font-sans-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  text-align: center;
+  margin: 0;
+}
+
+/* Banner Asesoría Laicidad (Lady Justice con overlay) */
+.laicidad-advisory {
+  position: relative;
+  background-image: url('../img/laicidad/laicidad_asesoria_bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px clamp(16px, 4vw, 40px);
+  color: var(--color-white);
+  text-align: center;
+  overflow: hidden;
+}
+
+.laicidad-advisory__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 16, 21, 0.65);
+  z-index: 1;
+}
+
+.laicidad-advisory__container {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.laicidad-advisory__title {
+  font-family: var(--font-sans-title);
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.laicidad-advisory__subtitle {
+  font-family: var(--font-sans-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 auto 32px;
+  max-width: 760px;
+}
+
+.laicidad-advisory__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  white-space: normal;
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  padding: 14px 34px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans-title);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.03em;
+  transition: all var(--transition-fast);
+}
+
+.laicidad-advisory__btn:hover {
+  background: #ffffff;
+  color: var(--color-secondary-dark);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección Recursos Laicidad */
+.laicidad-recursos-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.laicidad-recursos-grid__text {
+  font-family: var(--font-sans-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text-main);
+  margin: 20px 0 28px;
+  max-width: 520px;
+}
+
+.laicidad-recursos-grid__btn {
+  display: inline-flex;
+  padding: 13px 32px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.laicidad-recursos-grid__img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 35px rgba(2, 54, 96, 0.15);
+}
+
+@media (max-width: 992px) {
+  #laicidad-peru {
+    padding: 60px 0 80px;
+  }
+
+  .laicidad-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* Según maqueta mobile (APERAT Website-06.jpg): texto primero, visuales después */
+  .laicidad-intro-content {
+    order: 1;
+    max-width: 100%;
+  }
+
+  .laicidad-intro-visuals {
+    order: 2;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 440px;
+  }
+
+  .laicidad-intro-card--secondary {
+    margin-top: clamp(80px, 16vw, 130px);
+  }
+
+  .about-timeline-grid--reversed {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .themes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .laicidad-recursos-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}

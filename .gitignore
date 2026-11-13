@@ -9,6 +9,9 @@ Thumbs.db
 
 # Logs y temporales
 *.log
+*.bak
+__pycache__/
+*.pyc
 npm-debug.log*
 yarn-debug.log*
 
