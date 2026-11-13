@@ -141,7 +141,7 @@
 .page-hero--about {
   background-image:
     linear-gradient(180deg, rgba(2, 22, 38, 0.45) 0%, rgba(2, 22, 38, 0.65) 100%),
-    url('../img/about/hero_quienes_somos.webp');
+    url('../img/about/sobre-nosotros-hero.webp');
   background-position: center 35%;
   background-size: cover;
 }
@@ -1387,7 +1387,7 @@ svg {
 /* Banner Asesoría Laicidad (Lady Justice con overlay) */
 .laicidad-advisory {
   position: relative;
-  background-image: url('../img/laicidad/laicidad_asesoria_bg.webp');
+  background-image: url('../img/about/problema-derechos-bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
